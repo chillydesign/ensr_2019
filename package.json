@@ -1,0 +1,34 @@
+{
+  "name": "ensr_2019",
+  "version": "1.0.0",
+  "description": "ensr 2019 wordpress theme",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "say hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chillydesign/ensr_2019.git"
+  },
+  "keywords": [
+    "ensr",
+    "wordpress"
+  ],
+  "author": "webfactor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chillydesign/ensr_2019/issues"
+  },
+  "homepage": "https://github.com/chillydesign/ensr_2019#readme",
+  "devDependencies": {
+    "extend": ">=3.0.2",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-image-resize": "^0.13.0",
+    "gulp-minify": "^3.0.15",
+    "gulp-sass": "^4.0.1",
+    "gulp-watch": "^5.0.1",
+    "lodash": "^4.17.11"
+  },
+  "dependencies": {}
+}

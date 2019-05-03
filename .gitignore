@@ -1,0 +1,10 @@
+.DS_Store
+/node_modules
+node_modules/
+yarn.lock
+package-lock.json
+.ftpconfig
+.ftpignore
+id_rsa
+.git
+/.vscode

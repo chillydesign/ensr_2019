@@ -1,0 +1,63 @@
+footer {
+    background: $blue;
+    position: relative;
+
+    padding: 30px 0 0 ;
+    margin:  0;
+    color: white;
+
+    .footer_background {
+        background: url('../images/diamonds_2.png') no-repeat right bottom;
+        background-size: 200px;
+        height: 100%;
+        width: 100%;
+        top:0;
+        left: 0;
+        z-index: 1;
+        position: absolute;
+
+        @media (min-width: $mobile_width) {
+            background-position: 100% 56px
+        }
+
+    }
+
+    .container {
+        position: relative;
+        z-index: 20;
+    }
+    p {
+        padding: 0;
+
+    }
+    h3 {
+        font-style: italic;
+        padding: 30px 0 30px;
+        margin: 0;
+
+        @media (min-width: $mobile_width) {
+            padding-top: 0;
+        }
+    }
+    a {
+
+        color: white;
+        &:visited, &:active, &:link {
+            color: white;
+        }
+    }
+
+
+    #copyright_notice {
+        position: relative;
+        z-index: 30;
+        border-top: 2px solid white;
+        margin: 30px 0 0;
+        background: $dark_blue;
+        p {
+            padding: 20px 0;
+            text-align: center;
+            margin: 0;
+        }
+    }
+}
