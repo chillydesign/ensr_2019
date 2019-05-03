@@ -1,3 +1,3 @@
-# Webfactor Blank Theme
+# ENSR 2019 Wordpress Theme by Webfactor
 
-This is the blank theme used by webfactor.ch when starting new wordpress projects. It is based on https://github.com/toddmotto/html5blank/
+ ENSR 2019 Wordpress Theme by Webfactor
