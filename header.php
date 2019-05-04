@@ -19,8 +19,8 @@
     <div id="top_nav">
         <div class="container">
             <ul>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Inscription</a></li>
+                    <?php chilly_nav('top-navigation'); ?>
+
             </ul>
         </div>
     </div>

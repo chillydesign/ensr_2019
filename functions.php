@@ -62,33 +62,8 @@ load_theme_textdomain('webfactor', get_template_directory() . '/languages');
 Functions
 \*------------------------------------*/
 
-// HTML5 Blank navigationh
-function webfactor_nav()
-{
-    wp_nav_menu(
-        array(
-            'theme_location'  => 'header-menu',
-            'menu'            => '',
-            'container'       => 'div',
-            'container_class' => 'menu-{menu slug}-container',
-            'container_id'    => '',
-            'menu_class'      => 'menu',
-            'menu_id'         => '',
-            'echo'            => true,
-            'fallback_cb'     => 'wp_page_menu',
-            'before'          => '',
-            'after'           => '',
-            'link_before'     => '',
-            'link_after'      => '',
-            'items_wrap'      => '<ul>%3$s</ul>',
-            'depth'           => 0,
-            'walker'          => ''
-        )
-    );
-}
-
 function wf_version(){
-    return '0.1.4';
+    return '0.0.1';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -146,8 +121,8 @@ function register_html5_menu()
 {
     register_nav_menus(array( // Using array to specify more menus if needed
         'primary-navigation' => __('Primary Menu', 'webfactor'), // Main Navigation
-        'sidebar-menu' => __('Sidebar Menu', 'webfactor'), // Sidebar Navigation
-        'extra-menu' => __('Extra Menu', 'webfactor') // Extra Navigation if needed (duplicate as many as you need!)
+        'footer-navigation' => __('Footer Menu', 'webfactor'), // Sidebar Navigation
+        'top-navigation' => __('Top Menu', 'webfactor') // Extra Navigation if needed (duplicate as many as you need!)
     ));
 }
 

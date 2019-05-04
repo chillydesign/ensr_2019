@@ -9,13 +9,7 @@
             <div class="col-sm-4">
                 <h3>Liens utiles</h3>
                 <ul>
-
-                    <li><a href="#">INSCRIPTIONS</a></li>
-                    <li><a href="#">Enseignement</a></li>
-                    <li><a href="#">Internat</a></li>
-                    <li><a href="#">Inscription activités</a></li>
-                    <li><a href="#">Camps été - hiver</a></li>
-
+                    <?php chilly_nav('footer-navigation'); ?>
                 </ul>
             </div>
             <div class="col-sm-4">

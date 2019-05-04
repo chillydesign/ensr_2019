@@ -90,36 +90,39 @@ a {
         box-shadow: 0 0 5px $blue;
     }
 
-    &.button {
-        display: inline-block;
-        padding: 10px 30px;
-        background: $blue;
-        color: white;
-        font-weight: bold;
-        font-size: $font_size;
-        text-transform: uppercase;
 
-        &:link, &:visited, &:active, &:hover {
-            color: white;
-
-        }
-        &:hover {
-            transform: scale(1.05);
-            background-color: $dark_blue;
-
-        }
-        &.margin_top {
-            margin-top: 20px;
-        }
-        &.margin_bottom {
-            margin-bottom: 20px;
-        }
-    }
 
 
 }
 
 
+
+
+a.button, h6 a, a h6 {
+    display: inline-block;
+    padding: 10px 30px;
+    background: $blue;
+    color: white;
+    font-weight: bold;
+    font-size: $font_size;
+    text-transform: uppercase;
+
+    &:link, &:visited, &:active, &:hover {
+        color: white;
+
+    }
+    &:hover {
+        transform: scale(1.05);
+        background-color: $dark_blue;
+
+    }
+    &.margin_top {
+        margin-top: 20px;
+    }
+    &.margin_bottom {
+        margin-bottom: 20px;
+    }
+}
 
 form {
 
