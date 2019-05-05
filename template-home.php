@@ -1,5 +1,7 @@
 <?php /* Template Name: Home Page */ get_header(); ?>
 
+<?php $home_url =  home_url(); ?>
+
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 
@@ -16,7 +18,7 @@
 
                         <div class="welcome_text_inner">
                             <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in lacus hendrerit nunc elementum blandit. </h2>
-                            <a href="#" class="button">Nous contacter</a>
+                            <a href="<?php echo $home_url; ?>" class="button">Nous contacter</a>
                         </div>
 
                     </div>
@@ -89,12 +91,25 @@
         <section class="section section_icons">
             <div class="container" id="section_nos_services">
                 <ul>
-                    <li class="ramassage_scolaire"><a href="#"><img src="images/icon_bus.png" alt="" /><span>Ramassage scolaire</span></a></li>
-                    <li class="restauration_de_qualite"><a href="#"><img src="images/icon_restauration.png" alt="" /><span>Restauration de qualité</span></a></li>
-                    <li class="etude_surveillee"><a href="#"><img src="images/icon_etude.png" alt="" /><span>Étude surveillée</span></a></li>
-                    <li class="internat"><a href="#"><img src="images/icon_internat.png" alt="" /><span>Internat</span></a></li>
-                    <li class="activites_et_camps"><a href="#"><img src="images/icon_activities.png" alt="" /><span>Activités et camps</span></a></li>
-                    <li class="accent_surles_langues"><a href="#"><img src="images/icon_langues.png" alt="" /><span>Accent sur les langues</span></a></li>
+                    <li class="ramassage_scolaire">
+                        <a href="<?php echo $home_url; ?>"><img src="images/icon_bus.png" alt="" /><span>Ramassage scolaire</span></a>
+                    </li>
+                    <li class="restauration_de_qualite">
+                        <a href="<?php echo $home_url; ?>"><img src="images/icon_restauration.png" alt="" /><span>Restauration de qualité</span>
+                        </a>
+                    </li>
+                    <li class="etude_surveillee">
+                        <a href="<?php echo $home_url; ?>"><img src="images/icon_etude.png" alt="" /><span>Étude surveillée</span></a>
+                    </li>
+                    <li class="internat">
+                        <a href="<?php echo $home_url; ?>"><img src="images/icon_internat.png" alt="" /><span>Internat</span></a>
+                    </li>
+                    <li class="activites_et_camps">
+                        <a href="<?php echo $home_url; ?>"><img src="images/icon_activities.png" alt="" /><span>Activités et camps</span></a>
+                    </li>
+                    <li class="accent_surles_langues">
+                        <a href="<?php echo $home_url; ?>"><img src="images/icon_langues.png" alt="" /><span>Accent sur les langues</span></a>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -107,209 +122,127 @@
 
                         <?php while ( have_rows('nos_atouts') ) : the_row(); ?>
 
-                        <?php $texte = get_sub_field('texte'); ?>
-                        <?php $image = get_sub_field('image'); ?>
+                            <?php $texte = get_sub_field('texte'); ?>
+                            <?php $image = get_sub_field('image'); ?>
 
-                        <div class="slide">
-                            <div class="row">
-                                <div class="col-sm-6 col-sm-push-6">
-                                    <div class="section_text">
-                                        <?php echo $texte; ?>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-sm-pull-6">
-                                    <div class="white_gradients">
-                                        <div class="white_gradient_img" style="background-image:url( <?php echo $image['sizes']['medium']; ?>)">
+                            <div class="slide">
+                                <div class="row">
+                                    <div class="col-sm-6 col-sm-push-6">
+                                        <div class="section_text">
+                                            <?php echo $texte; ?>
                                         </div>
                                     </div>
+
+                                    <div class="col-sm-6 col-sm-pull-6">
+                                        <div class="white_gradients">
+                                            <div class="white_gradient_img" style="background-image:url( <?php echo $image['sizes']['medium']; ?>)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- END OF .row -->
+                            </div><!-- END OF .slide -->
+
+                        <?php endwhile; ?>
+                    </div><!-- END OF .slick_slider -->
+                </div><!-- END OF .container -->
+            </section>
+
+        <?php endif; // end if have_rows $nos_atouts ?>
+
+
+
+
+
+
+        <?php  $news_loop = new WP_Query( array('post_type' => 'post', 'posts_per_page' => 8 ) ); ?>
+        <?php if ($news_loop->have_posts() ) : ?>
+
+            <section class="section section_events">
+                <div class="container" id="section_actualites">
+                    <div class="row title_row">
+                        <div class="col-sm-6 col-sm-push-3" >
+                            <h2>L’Actualité ENSR</h2>
+                        </div>
+                        <div class="col-sm-3 col-sm-pull-6">
+                            <a href="#" class="button">Toute l'actualité </a>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <a href="#" class="button">Calendrier</a>
+                        </div>
+                    </div><!--  END OF ROW -->
+
+                    <ul>
+                        <?php $p = 0; while($news_loop->have_posts()) : $news_loop->the_post(); ?>
+                            <?php $image = ''; ?>
+                            <?php $post_classes = array(); ?>
+                            <?php $has_pic = (($p + floor($p / 4)) % 2);   // 4 is number of cols  same as in_array( $p, array(1,3,4,6)   ?>
+                            <?php if ( $has_pic ) array_push($post_classes, 'event_with_picture'); ?>
+                            <?php if ( $p >= 4 )  array_push($post_classes, 'hide_on_mobile'); ?>
+                            <li class="ensr_event <?php echo implode($post_classes, ' ');  ?>"
+                                style="background-image:url('<?php echo $image; ?>')">
+                                <a href="<?php echo get_the_permalink(); ?>">
+                                    <div class="date_container">
+                                        <div class="day">mercredi</div>
+                                        <div class="date">23</div>
+                                        <div class="month">septembre</div>
+                                    </div>
+                                    <div class="event_content">
+                                        <p><?php echo get_the_excerpt(); ?> </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <?php $p++; endwhile; // end while of news loop ?>
+
+                        </ul>
+                    </div><!--  END OF .container -->
+                    <div class="shield_background"></div>
+                </section>
+
+            <?php endif;  // end if have news ?>
+            <?php wp_reset_query(); ?>
+
+
+
+
+
+            <section class="section section_text_with_image">
+
+                <div class="container" id="section_s_inscrire">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="section_text">
+                                <h2>Un enseignement de qualité</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec volutpat massa, et cursus est. Nulla facilisi. Mauris ut nulla tempor, vulputate ligula ac, maximus nisi. Vivamus blandit finibus nisl, ut rhoncus est Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec volutpat massa, et cursus est. Nulla facilisi. Mauris ut nulla tempor, vulputate ligula ac, maximus nisi. Vivamus blandit finibus nisl, ut rhoncus est Lorem ipsum.</p>
+                                <a href="#" class="button">Plus d’informations</a>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6">
+                            <div class="white_gradients">
+                                <div class="white_gradient_img" style="background-image:url(images/building_1.jpg)">
                                 </div>
-                            </div><!-- END OF .row -->
-                        </div><!-- END OF .slide -->
+                            </div>
 
-                    <?php endwhile; ?>
-                </div><!-- END OF .slick_slider -->
-            </div><!-- END OF .container -->
-        </section>
-
-    <?php endif; // end if have_rows $nos_atouts ?>
-
-
-
-    <section class="section section_events">
-        <div class="container" id="section_actualites">
-            <div class="row title_row">
-                <div class="col-sm-6 col-sm-push-3" >
-                    <h2>L’Actualité ENSR</h2>
-                </div>
-                <div class="col-sm-3 col-sm-pull-6">
-                    <a href="#" class="button">Toute l'actualité </a>
-                </div>
-
-                <div class="col-sm-3">
-                    <a href="#" class="button">Calendrier</a>
-                </div>
-            </div>
-
-            <ul>
-                <li class="ensr_event">
-                    <a href="#">
-                        <div class="date_container">
-                            <div class="day">mercredi</div>
-                            <div class="date">23</div>
-                            <div class="month">septembre</div>
                         </div>
 
-                        <div class="event_content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec volutpat massa, et cursus est... </p>
-                        </div>
-
-                    </a>
-
-                </li>
-                <li class="ensr_event event_with_picture" style="background-image:url('images/schoolwork_1.jpg')">
-                    <a href="#">
-                        <div class="date_container">
-                            <div class="day">mercredi</div>
-                            <div class="date">27</div>
-                            <div class="month">septembre</div>
-                        </div>
-
-                        <div class="event_content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec volutpat massa, et cursus est... </p>
-                        </div>
-                    </a>
-                </li>
-                <li class="ensr_event">
-                    <a href="#">
-                        <div class="date_container">
-                            <div class="day">mercredi</div>
-                            <div class="date">30</div>
-                            <div class="month">septembre</div>
-                        </div>
-
-                        <div class="event_content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec volutpat massa, et cursus est... </p>
-                        </div>
-
-                    </a>
-
-                </li>
-                <li class="ensr_event event_with_picture" style="background-image:url('images/classroom_1.jpg')">
-                    <a href="#">
-                        <div class="date_container">
-                            <div class="day">mercredi</div>
-                            <div class="date">02</div>
-                            <div class="month">octobre</div>
-                        </div>
-
-                        <div class="event_content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec volutpat massa, et cursus est... </p>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="ensr_event event_with_picture hide_on_mobile" style="background-image:url('images/students_1.jpg')">
-                    <a href="#">
-                        <div class="date_container">
-                            <div class="day">mercredi</div>
-                            <div class="date">12</div>
-                            <div class="month">octobre</div>
-                        </div>
-
-                        <div class="event_content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec volutpat massa, et cursus est... </p>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="ensr_event hide_on_mobile">
-                    <a href="#">
-                        <div class="date_container">
-                            <div class="day">mercredi</div>
-                            <div class="date">13</div>
-                            <div class="month">octobre</div>
-                        </div>
-
-                        <div class="event_content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec volutpat massa, et cursus est... </p>
-                        </div>
-
-                    </a>
-
-                </li>
-                <li class="ensr_event event_with_picture hide_on_mobile" style="background-image:url('images/skiing_1.jpg')">
-                    <a href="#">
-                        <div class="date_container">
-                            <div class="day">mercredi</div>
-                            <div class="date">21</div>
-                            <div class="month">octobre</div>
-                        </div>
-
-                        <div class="event_content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec volutpat massa, et cursus est... </p>
-                        </div>
-                    </a>
-                </li>
-                <li class="ensr_event hide_on_mobile">
-                    <a href="#">
-                        <div class="date_container">
-                            <div class="day">mercredi</div>
-                            <div class="date">23</div>
-                            <div class="month">septembre</div>
-                        </div>
-
-                        <div class="event_content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec volutpat massa, et cursus est... </p>
-                        </div>
-
-                    </a>
-
-                </li>
-
-            </ul>
-        </div><!--  END OF .container -->
-        <div class="shield_background"></div>
-    </section>
-
-
-    <section class="section section_text_with_image">
-
-        <div class="container" id="section_s_inscrire">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="section_text">
-                        <h2>Un enseignement de qualité</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec volutpat massa, et cursus est. Nulla facilisi. Mauris ut nulla tempor, vulputate ligula ac, maximus nisi. Vivamus blandit finibus nisl, ut rhoncus est Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec volutpat massa, et cursus est. Nulla facilisi. Mauris ut nulla tempor, vulputate ligula ac, maximus nisi. Vivamus blandit finibus nisl, ut rhoncus est Lorem ipsum.</p>
-                        <a href="#" class="button">Plus d’informations</a>
                     </div>
-                </div>
-
-
-                <div class="col-sm-6">
-                    <div class="white_gradients">
-                        <div class="white_gradient_img" style="background-image:url(images/building_1.jpg)">
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div><!--  END OF .container -->
-    </section>
+                </div><!--  END OF .container -->
+            </section>
 
 
 
-    <?php include('section-loop.php'); ?>
+            <?php include('section-loop.php'); ?>
 
 
-</article>
-<!-- /article -->
+        </article>
+        <!-- /article -->
 
 
 
 
-<?php endwhile; ?>
+    <?php endwhile; ?>
 
 <?php else: ?>
 

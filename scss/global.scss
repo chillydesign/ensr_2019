@@ -373,8 +373,10 @@ section.section_events {
 
         li.ensr_event {
             flex: 1 auto;
-            max-width: 48%;
-            max-width: calc(50% - 20px);
+            min-width: 48%;
+            width: 48%;
+            min-width: calc(50% - 20px);
+            width: calc(50% - 20px);
             margin: 0 10px 20px;
             padding: 0;
             font-size: 1em;
@@ -385,8 +387,10 @@ section.section_events {
             transition: all 0.3s;
 
             @media (min-width: $mobile_width) {
-                max-width: 24%;
-                max-width: calc(25% - 20px);
+                min-width: 24%;
+                width: 24%;
+                min-width: calc(25% - 20px);
+                width: calc(25% - 20px);
 
             }
 

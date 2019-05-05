@@ -592,6 +592,15 @@ function add_scheme_to_url($url, $scheme = 'http://'){
 }
 
 
+add_filter( 'excerpt_length', 'short_excerpt_length', 999 );
+function short_excerpt_length( $length ) {
+    return 15; // ONLY 15 WORDS FOR EXCERPT
+}
+
+add_filter( 'excerpt_more', 'auto_excerpt_more' );
+function auto_excerpt_more( $more ) {
+    return '&hellip;'; // REMOVE LINK AT END OF EXCERPT
+}
 
 
 ?>
