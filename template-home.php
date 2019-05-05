@@ -1,7 +1,6 @@
 <?php /* Template Name: Home Page */ get_header(); ?>
-
 <?php $home_url =  home_url(); ?>
-
+<?php $tdu = get_template_directory_uri(); ?>
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 
@@ -15,12 +14,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-sm-push-6">
-
-                        <div class="welcome_text_inner">
-                            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in lacus hendrerit nunc elementum blandit. </h2>
-                            <a href="<?php echo $home_url; ?>" class="button">Nous contacter</a>
-                        </div>
-
+                        <?php $welcome_text = get_field('welcome_text'); ?>
+                        <?php if ($welcome_text): ?>
+                            <div class="welcome_text_inner">
+                                <?php echo $welcome_text; ?>
+                            </div>
+                        <?php endif;  // end if $welcome_text ?>
                     </div>
                 </div>
 
@@ -36,7 +35,7 @@
             </div>
 
 
-            <div class="background_image" style="background-image:url('images/buildings_1.jpg')"></div>
+            <div class="background_image" style="background-image:url('<?php echo $tdu;  ?>/images/buildings_1.jpg')"></div>
         </section>
 
 
@@ -46,8 +45,10 @@
             <div class="container" id="section_l_ensr">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2 class="dropcap">L’Ecole Nouvelle de Suisse Romande dolor sit amet, consectetur adipiscing elit. Praesent in lacus hendrerit nunc elementum blandit.  dolor sit amet, consectetur adipiscing elit. Praesent in lacus hendrerit nunc elementum </h2>
-
+                        <?php $school_text = get_field('school_text'); ?>
+                        <?php if ($school_text): ?>
+                            <?php echo $school_text; ?>
+                        <?php endif;  // end if $school_text  ?>
 
                     </div>
                     <div class="col-sm-6">
@@ -92,23 +93,23 @@
             <div class="container" id="section_nos_services">
                 <ul>
                     <li class="ramassage_scolaire">
-                        <a href="<?php echo $home_url; ?>"><img src="images/icon_bus.png" alt="" /><span>Ramassage scolaire</span></a>
+                        <a href="<?php echo $home_url; ?>"><img src="<?php echo $tdu; ?>/images/icon_bus.png" alt="" /><span>Ramassage scolaire</span></a>
                     </li>
                     <li class="restauration_de_qualite">
-                        <a href="<?php echo $home_url; ?>"><img src="images/icon_restauration.png" alt="" /><span>Restauration de qualité</span>
+                        <a href="<?php echo $home_url; ?>"><img src="<?php echo $tdu; ?>/images/icon_restauration.png" alt="" /><span>Restauration de qualité</span>
                         </a>
                     </li>
                     <li class="etude_surveillee">
-                        <a href="<?php echo $home_url; ?>"><img src="images/icon_etude.png" alt="" /><span>Étude surveillée</span></a>
+                        <a href="<?php echo $home_url; ?>"><img src="<?php echo $tdu; ?>/images/icon_etude.png" alt="" /><span>Étude surveillée</span></a>
                     </li>
                     <li class="internat">
-                        <a href="<?php echo $home_url; ?>"><img src="images/icon_internat.png" alt="" /><span>Internat</span></a>
+                        <a href="<?php echo $home_url; ?>"><img src="<?php echo $tdu; ?>/images/icon_internat.png" alt="" /><span>Internat</span></a>
                     </li>
                     <li class="activites_et_camps">
-                        <a href="<?php echo $home_url; ?>"><img src="images/icon_activities.png" alt="" /><span>Activités et camps</span></a>
+                        <a href="<?php echo $home_url; ?>"><img src="<?php echo $tdu; ?>/images/icon_activities.png" alt="" /><span>Activités et camps</span></a>
                     </li>
                     <li class="accent_surles_langues">
-                        <a href="<?php echo $home_url; ?>"><img src="images/icon_langues.png" alt="" /><span>Accent sur les langues</span></a>
+                        <a href="<?php echo $home_url; ?>"><img src="<?php echo $tdu; ?>/images/icon_langues.png" alt="" /><span>Accent sur les langues</span></a>
                     </li>
                 </ul>
             </div>
@@ -174,19 +175,24 @@
 
                     <ul>
                         <?php $p = 0; while($news_loop->have_posts()) : $news_loop->the_post(); ?>
-                            <?php $image = ''; ?>
+                            <?php $date = get_field('date'); ?>
                             <?php $post_classes = array(); ?>
                             <?php $has_pic = (($p + floor($p / 4)) % 2);   // 4 is number of cols  same as in_array( $p, array(1,3,4,6)   ?>
                             <?php if ( $has_pic ) array_push($post_classes, 'event_with_picture'); ?>
                             <?php if ( $p >= 4 )  array_push($post_classes, 'hide_on_mobile'); ?>
-                            <li class="ensr_event <?php echo implode($post_classes, ' ');  ?>"
-                                style="background-image:url('<?php echo $image; ?>')">
+                            <?php $style = ($has_pic) ? 'style="background-image:url(' . thumbnail_of_post_url(get_the_ID(), 'medium' ) . ')"' : ''; ?>
+                            <li class="ensr_event <?php echo implode($post_classes, ' ');  ?>"  <?php echo $style; ?>>
                                 <a href="<?php echo get_the_permalink(); ?>">
-                                    <div class="date_container">
-                                        <div class="day">mercredi</div>
-                                        <div class="date">23</div>
-                                        <div class="month">septembre</div>
-                                    </div>
+
+                                    <?php if ($date) : ?>
+                                        <div class="date_container">
+                                            <?php $event_date  = new DateTime($date); ?>
+                                            <div class="day"><?php echo $event_date->format('l'); ?></div>
+                                            <div class="date"><?php echo $event_date->format('d'); ?></div>
+                                            <div class="month"><?php echo $event_date->format('F'); ?></div>
+                                        </div>
+                                    <?php endif; ?>
+
                                     <div class="event_content">
                                         <p><?php echo get_the_excerpt(); ?> </p>
                                     </div>
@@ -211,17 +217,22 @@
                 <div class="container" id="section_s_inscrire">
                     <div class="row">
                         <div class="col-sm-6">
-                            <div class="section_text">
-                                <h2>Un enseignement de qualité</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec volutpat massa, et cursus est. Nulla facilisi. Mauris ut nulla tempor, vulputate ligula ac, maximus nisi. Vivamus blandit finibus nisl, ut rhoncus est Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec volutpat massa, et cursus est. Nulla facilisi. Mauris ut nulla tempor, vulputate ligula ac, maximus nisi. Vivamus blandit finibus nisl, ut rhoncus est Lorem ipsum.</p>
-                                <a href="#" class="button">Plus d’informations</a>
-                            </div>
+
+                            <?php $inscription_text = get_field('inscription_text'); ?>
+                            <?php if ($inscription_text): ?>
+                                <div class="section_text">
+                                    <?php echo $inscription_text; ?>
+                                </div>
+                            <?php endif;  // end if $inscription_text ?>
                         </div>
 
 
                         <div class="col-sm-6">
                             <div class="white_gradients">
-                                <div class="white_gradient_img" style="background-image:url(images/building_1.jpg)">
+                                <?php $inscription_image = get_field('inscription_image'); ?>
+                                <?php if ($inscription_image) : ?>
+                                <div class="white_gradient_img" style="background-image:url(<?php echo $inscription_image['sizes']['medium']; ?>)">
+                                <?php endif;  // end if $inscription_image ?>
                                 </div>
                             </div>
 

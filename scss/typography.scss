@@ -106,6 +106,7 @@ a.button, h6 a, a h6 {
     font-weight: bold;
     font-size: $font_size;
     text-transform: uppercase;
+    font-family: $font_stack;
 
     &:link, &:visited, &:active, &:hover {
         color: white;

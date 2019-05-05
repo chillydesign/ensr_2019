@@ -128,6 +128,11 @@ section.section_school_sections {
 
         }
 
+        &:first-letter {
+            font-size: 175%;
+            display: inline-block;
+        }
+
     }
     .school_areas_container {
         position: relative;
@@ -380,7 +385,7 @@ section.section_events {
             margin: 0 10px 20px;
             padding: 0;
             font-size: 1em;
-            background: white no-repeat   url('../images/diamonds_1.png') ;
+            background: white no-repeat  url('../images/diamonds_1.png') ;
             background-position: bottom right;
             background-size: 180px;
 
