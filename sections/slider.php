@@ -1,17 +1,20 @@
-<?php $title = get_sub_field('title'); ?>
-<?php $images = get_sub_field('images'); ?>
-<?php if ($title): ?>
-<h2><?php echo $title; ?></h2>
-<?php endif; ?>
 
-<ul class="slickslider_img">
-    <?php foreach ($images as $image): ?>
-        <li>
-            <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['title']; ?>" />
+<ul class="bxslider">
+
+
+<?php while ( have_rows('slides') ) : the_row() ; ?>
+
+
+        <?php $image =  get_sub_field('image'); ?>
+        <?php $slide_content =  get_sub_field('slide_content'); ?>
+        <?php if (!$slide_content || $slide_content == ''  )  $slide_content = get_the_title();  ?>
+
+        <li  class="slide_photo_background" style="background-image: url(<?php echo $image['sizes']['large']; ?>);" >
+            <div class="slide_content"><?php echo $slide_content; ?></div>
         </li>
-    <?php endforeach; ?>
-</ul>
+<?php endwhile; ?>
 
 
-<?php if ( false) : ?><div class="slide_image" style="background-image: url(<?php echo $image['url']; ?>);" ></div>
-<p><?php echo $image['title']; ?></p> <?php endif; ?>
+</ul>   
+
+
