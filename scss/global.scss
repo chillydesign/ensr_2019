@@ -295,9 +295,15 @@ section.section_text_with_image {
   height: 300px;
   width: 100%;
   display: block;
+  position: relative;
 }
 .slide_content {
-  padding: 20px;
+  padding: 10px;
+  background: transparentize(white, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 section.section_events {
