@@ -288,6 +288,12 @@ section.section_text_with_image {
   }
 }
 
+section.section_slider {
+  .slick-dots {
+    bottom: 5px;
+  }
+}
+
 .slide_photo_background {
   background-repeat: no-repeat;
   background-position: center center;
@@ -496,4 +502,27 @@ section.section_events {
     top: 0;
     left: 0;
   }
+}
+
+.imgmax {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+}
+
+.alignnone {
+  margin: 0px auto 20px;
+  width: auto;
+  height: auto;
+  max-width: 400px;
+  @media (min-width: $mobile_width) {
+    margin: 0px 10% 20px;
+    width: 80%;
+    max-width: 100%;
+  }
+}
+img,
+img.alignone {
+  max-width: 100% !important;
+  margin: 0 0 20px;
 }
