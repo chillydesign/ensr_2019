@@ -1,4 +1,6 @@
 
+
+<div class="container">
 <div class="slick_slider">
 
 
@@ -19,3 +21,4 @@
 </div>   
 
 
+</div>
