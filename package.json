@@ -31,5 +31,8 @@
     "gulp-watch": "^5.0.1",
     "lodash": "^4.17.11"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "browserslist": [
+    "last 3 versions"
+  ]
 }
