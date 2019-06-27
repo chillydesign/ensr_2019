@@ -10,13 +10,13 @@
 
             <?php include('section-loop.php'); ?>
 
-            <!-- <section>
+           <section>
                 <div class="container">
                     <?php the_content(); ?>
                     <?php // comments_template( '', true ); // Remove if you don't want comments ?>
                     <?php // edit_post_link(); ?>
                 </div>
-            </section> -->
+            </section>
 
 
         </article>
