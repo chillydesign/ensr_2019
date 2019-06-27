@@ -299,11 +299,15 @@ section.section_text_with_image {
 }
 .slide_content {
   padding: 10px;
-  background: transparentize(white, 0.5);
+  background: transparentize(white, 0.3);
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
+  p {
+    padding: 0;
+    font-weight: bold;
+  }
 }
 
 section.section_events {

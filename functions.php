@@ -63,7 +63,7 @@ Functions
 \*------------------------------------*/
 
 function wf_version(){
-    return '0.0.1';
+    return '0.0.2';
 }
 
 // Load HTML5 Blank scripts (header.php)
