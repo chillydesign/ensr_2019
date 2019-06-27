@@ -289,6 +289,8 @@ section.section_text_with_image {
 }
 
 section.section_slider {
+  padding-top: 0;
+  padding-bottom: 30px;
   .slick-dots {
     bottom: 5px;
   }
