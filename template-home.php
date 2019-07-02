@@ -54,28 +54,29 @@
                     <div class="col-sm-6">
 
 
+
                         <div class="school_areas_container">
                             <ul class="school_areas">
                                 <li class="school_maternelle">
-                                    <a href="#">
+                                    <a href="<?php echo get_link_by_slug('maternelle-montessori'); ?>">
                                         <strong>Maternelle</strong>
                                         <span>de 3 à 6 ans</span>
                                     </a>
                                 </li>
                                 <li class="school_primaire">
-                                    <a href="#">
+                                    <a href="<?php echo get_link_by_slug('primaire'); ?>">
                                         <strong>Primaire</strong>
                                         <span>de 7 à 10 ans</span>
                                     </a>
                                 </li>
                                 <li class="school_college">
-                                    <a href="#">
+                                    <a href="<?php echo get_link_by_slug('college'; ?>">
                                         <strong>Collège</strong>
                                         <span>de 11 à 14 ans</span>
                                     </a>
                                 </li>
                                 <li class="school_gymnase">
-                                    <a href="#">
+                                    <a href="<?php echo get_link_by_slug('gymnase'); ?>">
                                         <strong>Gymnase</strong>
                                         <span>de 15 à 18 ans</span>
                                     </a>

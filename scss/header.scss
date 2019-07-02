@@ -1,229 +1,227 @@
-
-
 $logo_height: 50px;
 $top_nav_height: 35px;
 
 @media (min-width: $mobile_width) {
 }
 
-
 header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background: white;
-    left: 0;
-    z-index: 100;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: white;
+  left: 0;
+  z-index: 100;
 
-    @media (min-width: $mobile_width) {
+  @media (min-width: $mobile_width) {
     //    position: static;
+  }
+
+  nav {
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: nowrap;
+
+    #branding {
+      background: url("../images/logo.svg") no-repeat left center;
+      background-size: contain;
+      display: block;
+      text-indent: -9999px;
+      height: $logo_height;
+      width: 100%;
+      flex: 1 auto;
+
+      @media (min-width: $mobile_width) {
+        width: 250px;
+      }
     }
-
-
-    nav {
-        padding: 10px 0;
-        display: flex;
-        flex-wrap: nowrap;
-
-
-
-        #branding {
-            background: url('../images/logo.svg') no-repeat left center;
-            background-size: contain;
-            display: block;
-            text-indent: -9999px;
-            height: $logo_height;
-            width:  100%;
-            flex: 1 auto;
-
-            @media (min-width: $mobile_width) {
-                width: 250px;
-
-            }
-
-        }
-
-        ul {
-            flex: 1 auto;
-            position: absolute;
-            top:0;
-            left: 0;
-            width: 300px;
-            height: 100%;
-            height: 100vh;
-            bottom: 0;
-            background: $black;
-            margin: 0;
-            padding: 0;
-            z-index: 100;
-            transition: all 0.3s;
-            transform: translateX(-300px);
-
-            &.menu_visible {
-                transform: translateX(0px);
-            }
-
-
-            @media (min-width: $mobile_width) {
-                display: block;
-                text-align: right;
-                position: static;
-                width: auto;
-                background: none;
-                height: auto;
-                transform: translateX(0);
-            }
-
-
-
-            li {
-
-                display: block;
-                padding: 0;
-                margin: 0;
-                background: $black;
-                font-size: #{$font_size * 0.9};
-
-                @media (min-width: $mobile_width) {
-                    display: inline-block;
-                    background: none;
-                }
-
-                a {
-                    display: block;
-                    color: white;
-                    font-weight: bold;
-                    text-transform: uppercase;
-                    padding: 0 10px;
-                    line-height: $logo_height;
-                    border-top: 1px solid lighten($black, 5);
-                    border-bottom:  1px solid darken($black, 10);
-
-                    &:visited, &:active, &:link, &:hover {
-                        color: white;
-                    }
-
-                    &:hover {
-                        background: $blue;
-                    }
-
-
-                    @media (min-width: $mobile_width) {
-                        display: inline-block;
-                        color: $blue;
-                        border-top: 0;
-                        border-bottom: 2px solid transparent;
-
-                        &:visited, &:active, &:link {
-                            color: $blue;
-                        }
-
-                        &:hover {
-                            background: none;
-                            border-color: $blue;
-                        }
-                    }
-
-
-                }
-            }
-        }
-    } // nav
-
-
-}
-
-
-
-#top_nav {
-    background: $blue;
-    margin: 0;
-    padding: 0;
-    height: $top_nav_height;
-    overflow: hidden;
 
     ul {
+      flex: 1 auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100%;
+      height: 100vh;
+      bottom: 0;
+      background: $black;
+      margin: 0;
+      padding: 0;
+      z-index: 100;
+      transition: all 0.3s;
+      transform: translateX(-300px);
+
+      &.menu_visible {
+        transform: translateX(0px);
+      }
+
+      @media (min-width: $mobile_width) {
+        display: block;
         text-align: right;
-        margin: 0;
+        position: static;
+        width: auto;
+        background: none;
+        height: auto;
+        transform: translateX(0);
+      }
+
+      li {
+        display: block;
         padding: 0;
-        li {
-            display: inline-block;
-            margin: 0 -2px 0 -2px;
-            padding: 0;
-            position: relative;
+        margin: 0;
+        background: $black;
+        font-size: #{$font_size * 0.9};
 
-
-            a {
-                padding: 0 20px;
-                line-height: $top_nav_height;
-                margin: 0;
-                color: white;
-                display: inline-block;
-                background: $light_blue;
-
-
-            }
-
-            &:first-child, &:last-child {
-
-                &:after {
-                    // outline: 1px solid red;
-                    content:'';
-                    width: $top_nav_height;
-                    height: $top_nav_height;
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    transform: rotate(45deg);
-                    z-index: 2;
-                }
-            }
-
-            &:first-child {
-
-                a {
-                    padding-left: $top_nav_height;
-                }
-
-                &:after {
-
-                    left: #{ ($top_nav_height   / -1.4) };
-                    background: $blue;
-                }
-            }
-
-            &:last-child {
-                a {
-                    padding-right: $top_nav_height;
-                }
-                &:after {
-
-                    right: #{ ($top_nav_height   / -1.4) };
-                    background-color: $light_blue;
-                }
-            }
+        @media (min-width: $mobile_width) {
+          display: inline-block;
+          background: none;
         }
+
+        a {
+          display: block;
+          color: white;
+          font-weight: bold;
+          text-transform: uppercase;
+          padding: 0 10px;
+          line-height: $logo_height;
+          border-top: 1px solid lighten($black, 5);
+          border-bottom: 1px solid darken($black, 10);
+
+          &:visited,
+          &:active,
+          &:link,
+          &:hover {
+            color: white;
+          }
+
+          &:hover {
+            background: $blue;
+          }
+
+          @media (min-width: $mobile_width) {
+            display: inline-block;
+            color: $blue;
+            border-top: 0;
+            border-bottom: 2px solid transparent;
+
+            &:visited,
+            &:active,
+            &:link {
+              color: $blue;
+            }
+
+            &:hover {
+              background: none;
+              border-color: $blue;
+            }
+          }
+        } //a
+
+        ul.sub-menu {
+          position: absolute;
+          left: 0;
+          display: none;
+          width: 200px;
+          li {
+            font-size: 0.9em;
+            display: block;
+            a {
+              display: block;
+              padding: 10px;
+              line-height: auto;
+            }
+          }
+        } //.sub-menu
+
+        &:hover {
+          ul.sub-menu {
+            display: block;
+          }
+        } // li:hover
+      } // li
     }
+  } // nav
+}
+
+#top_nav {
+  background: $blue;
+  margin: 0;
+  padding: 0;
+  height: $top_nav_height;
+  overflow: hidden;
+
+  ul {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      margin: 0 -2px 0 -2px;
+      padding: 0;
+      position: relative;
+
+      a {
+        padding: 0 20px;
+        line-height: $top_nav_height;
+        margin: 0;
+        color: white;
+        display: inline-block;
+        background: $light_blue;
+      }
+
+      &:first-child,
+      &:last-child {
+        &:after {
+          // outline: 1px solid red;
+          content: "";
+          width: $top_nav_height;
+          height: $top_nav_height;
+          display: block;
+          position: absolute;
+          top: 0;
+          transform: rotate(45deg);
+          z-index: 2;
+        }
+      }
+
+      &:first-child {
+        a {
+          padding-left: $top_nav_height;
+        }
+
+        &:after {
+          left: #{($top_nav_height / -1.4)};
+          background: $blue;
+        }
+      }
+
+      &:last-child {
+        a {
+          padding-right: $top_nav_height;
+        }
+        &:after {
+          right: #{($top_nav_height / -1.4)};
+          background-color: $light_blue;
+        }
+      }
+    }
+  }
 } // #top_nav
 
-
 #menu_button {
-    display: inline-block;
-    height: 34px;
-    width: 42px;
-    position: absolute;
-    z-index: 1000;
-    top:  19px;
-    right: 11px;
-    background: url('../images/menu.svg') no-repeat center;
-    background-size: 30px;
-    text-indent: -9999px;
-    cursor: pointer;
+  display: inline-block;
+  height: 34px;
+  width: 42px;
+  position: absolute;
+  z-index: 1000;
+  top: 19px;
+  right: 11px;
+  background: url("../images/menu.svg") no-repeat center;
+  background-size: 30px;
+  text-indent: -9999px;
+  cursor: pointer;
 
-
-
-    @media (min-width: $mobile_width) {
-        display: none;
-    }
-
+  @media (min-width: $mobile_width) {
+    display: none;
+  }
 }

@@ -63,7 +63,7 @@ Functions
 \*------------------------------------*/
 
 function wf_version(){
-    return '0.0.4';
+    return '0.0.5';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -605,6 +605,12 @@ function short_excerpt_length( $length ) {
 add_filter( 'excerpt_more', 'auto_excerpt_more' );
 function auto_excerpt_more( $more ) {
     return '&hellip;'; // REMOVE LINK AT END OF EXCERPT
+}
+
+
+function get_link_by_slug($slug, $type = 'page'){
+  $post = get_page_by_path($slug, OBJECT, $type);
+  return esc_url(get_permalink($post->ID));
 }
 
 
