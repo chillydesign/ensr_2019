@@ -52,6 +52,38 @@
     ////////////////////////////
     // animate sliding down page
 
+    // ANIMATE SECTIONS AS SLIDE DOWN PAGE
+    // ANIMATE SECTIONS AS SLIDE DOWN PAGE
+
+    var $window = $(window);
+    var $windowHeight = $window.height();
+    var $docHeight = $(document).height();
+
+    var $sections = $("section.section");
+
+    if ($sections.length > 0) {
+      $window.on("scroll", function() {
+        var $scrollTop = $window.scrollTop();
+
+        $sections.each(function(index) {
+          var $section = $(this);
+          var $sectionHeight = $section.outerHeight();
+          $distanceFromTop = $this.offset().top;
+
+          console.log($$sectionHeight, $$distanceFromTop);
+
+          if ($scrollTop > $$distanceFromTop + $$sectionHeight) {
+            $secction.addClass("visible");
+          } else {
+            $section.removeClass("visible");
+          }
+        });
+      });
+    }
+
+    // ANIMATE SECTIONS AS SLIDE DOWN PAGE
+    // ANIMATE SECTIONS AS SLIDE DOWN PAGE
+
     // SLIDER
     // SLIDER
 
