@@ -70,9 +70,9 @@
           var $sectionHeight = $section.outerHeight();
           var $distanceFromTop = $section.offset().top;
 
-          console.log($$sectionHeight, $$distanceFromTop);
+          console.log($sectionHeight, $$distanceFromTop);
 
-          if ($scrollTop > $$distanceFromTop + $$sectionHeight) {
+          if ($scrollTop > $distanceFromTop + $sectionHeight) {
             $secction.addClass("visible");
           } else {
             $section.removeClass("visible");
