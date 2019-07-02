@@ -119,23 +119,36 @@ header {
         } //a
 
         ul.sub-menu {
-          position: absolute;
-          left: 5px;
-          text-align: left;
-          top: 40px;
-          display: none;
-          width: 200px;
+          margin: 0 0 0 10px;
+
+          @media (min-width: $mobile_width) {
+            position: absolute;
+            left: 0px;
+            text-align: left;
+            top: 40px;
+            display: none;
+            width: 200px;
+          }
           li {
-            font-size: 0.9em;
-            display: block;
-            a {
+            @media (min-width: $mobile_width) {
+              font-size: 0.9em;
               display: block;
-              padding: 10px;
-              line-height: initial;
-              background: $black;
-              border: 0;
-              border-bottom: 1px solid lighten($black, 10);
             }
+            a {
+              @media (min-width: $mobile_width) {
+                display: block;
+                padding: 10px 15px;
+                line-height: initial;
+                background: $black;
+                color: white;
+                border: 0;
+                border-bottom: 1px solid lighten($black, 10);
+                &:hover {
+                  background: $blue;
+                  color: white;
+                }
+              }
+            } // a
           }
         } //.sub-menu
 
