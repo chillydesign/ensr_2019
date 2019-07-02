@@ -67,6 +67,7 @@ header {
 
       li {
         display: block;
+        position: relative;
         padding: 0;
         margin: 0;
         background: $black;
@@ -119,7 +120,9 @@ header {
 
         ul.sub-menu {
           position: absolute;
-          left: 0;
+          left: 5px;
+          text-align: left;
+          top: 40px;
           display: none;
           width: 200px;
           li {
@@ -128,7 +131,10 @@ header {
             a {
               display: block;
               padding: 10px;
-              line-height: auto;
+              line-height: initial;
+              background: $black;
+              border: 0;
+              border-bottom: 1px solid lighten($black, 10);
             }
           }
         } //.sub-menu
