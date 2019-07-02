@@ -70,7 +70,7 @@
                                     </a>
                                 </li>
                                 <li class="school_college">
-                                    <a href="<?php echo get_link_by_slug('college'; ?>">
+                                    <a href="<?php echo get_link_by_slug('college'); ?>">
                                         <strong>Collège</strong>
                                         <span>de 11 à 14 ans</span>
                                     </a>
