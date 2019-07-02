@@ -66,7 +66,7 @@
         $sections.each(function(index) {
           var $section = $(this);
           var $distanceFromTop = $section.offset().top;
-          if ($scrollTop > $distanceFromTop - $windowHeight + 100) {
+          if ($scrollTop > $distanceFromTop - $windowHeight + 200) {
             if ($section.hasClass("visible") == false) {
               $section.addClass("visible");
             }
