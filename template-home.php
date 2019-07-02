@@ -17,20 +17,23 @@
               <?php if ($welcome_slider) : ?>
                 <div class="slick_slider_no_dots">
                   <?php foreach($welcome_slider as $slide) : ?>
+
+                    <?php var_dump($slide); ?>
                   <?php $image = ($slide['images']['sizes']['large']); ?>
-                  <div class="slide" style="background-image:url('<?php echo $image;  ?>')">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6 col-sm-push-6">
-                                <?php $welcome_text = $slide['text']; ?>
-                                <?php if ($welcome_text): ?>
-                                    <div class="welcome_text_inner">
-                                        <?php echo $welcome_text; ?>
-                                    </div>
-                                <?php endif;  // end if $welcome_text ?>
-                            </div>
-                        </div>
-                  </div>
+                  <div class="slide">
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-sm-6 col-sm-push-6">
+                                  <?php $welcome_text = $slide['text']; ?>
+                                  <?php if ($welcome_text): ?>
+                                      <div class="welcome_text_inner">
+                                          <?php echo $welcome_text; ?>
+                                      </div>
+                                  <?php endif;  // end if $welcome_text ?>
+                              </div>
+                          </div>
+                    </div>
+<div class="background_image"  style="background-image:url('<?php echo $image;  ?>')">></div>
 
                   </div>
 
@@ -39,6 +42,8 @@
               <?php else :?>
                 <div class="background_image" style="background-image:url('<?php echo $tdu;  ?>/images/buildings_1.jpg')"></div>
               <?php endif; ?>
+
+              
                 <ul class="quick_links">
                     <li><a class="scroll_link" href="#section_l_ensr">L'Ensr</a></li>
                     <li><a class="scroll_link" href="#section_nos_services">Nos Services</a></li>
