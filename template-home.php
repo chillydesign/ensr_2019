@@ -18,8 +18,7 @@
                 <div class="slick_slider_no_dots">
                   <?php foreach($welcome_slider as $slide) : ?>
 
-                    <?php var_dump($slide); ?>
-                  <?php $image = ($slide['images']['sizes']['large']); ?>
+                  <?php $image = ($slide['image']['sizes']['large']); ?>
                   <div class="slide">
                       <div class="container">
                           <div class="row">
@@ -43,7 +42,7 @@
                 <div class="background_image" style="background-image:url('<?php echo $tdu;  ?>/images/buildings_1.jpg')"></div>
               <?php endif; ?>
 
-              
+
                 <ul class="quick_links">
                     <li><a class="scroll_link" href="#section_l_ensr">L'Ensr</a></li>
                     <li><a class="scroll_link" href="#section_nos_services">Nos Services</a></li>
