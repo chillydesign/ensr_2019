@@ -59,6 +59,20 @@ section.section_welcome {
     background-size: cover;
   }
 
+  .slick_slider_no_dots {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .slick-list {
+      height: 100%;
+      z-index: -1;
+    }
+    .slick-track {
+      height: 100%;
+    }
+  }
+
   ul.quick_links {
     position: absolute;
     bottom: 0px;
