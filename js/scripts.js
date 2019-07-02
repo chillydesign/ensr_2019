@@ -68,7 +68,7 @@
         $sections.each(function(index) {
           var $section = $(this);
           var $sectionHeight = $section.outerHeight();
-          $distanceFromTop = $this.offset().top;
+          var $distanceFromTop = $section.offset().top;
 
           console.log($$sectionHeight, $$distanceFromTop);
 
