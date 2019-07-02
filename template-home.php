@@ -37,12 +37,13 @@
 
     <?php $welcome_slider = get_field('welcome_slider'); ?>
     <?php if ($welcome_slider) : ?>
-      <div class="slick_slider">
+      <div class="slick_slider_no_dots">
         <?php foreach($welcome_slider as $slide) : ?>
-          <?php var_dump($slide); ?>
-  <div class="slide">
-  </div>
-<?php endforeach; ?>
+        <?php $image = ($slide['sizes']['large']); ?>
+        <div class="slide">
+            <div class="background_image" style="background-image:url('<?php echo $image;  ?>')"></div>
+        </div>
+        <?php endforeach; ?>
   </div>
     <?php else :?>
       <div class="background_image" style="background-image:url('<?php echo $tdu;  ?>/images/buildings_1.jpg')"></div>
