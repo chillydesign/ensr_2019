@@ -56,6 +56,7 @@
     // ANIMATE SECTIONS AS SLIDE DOWN PAGE
 
     var $sections = $("section.section");
+    var $windowHeight = $window.height();
     if ($sections.length > 0) {
       // make first section visible by defualt
       $sections.first().addClass("visible");
@@ -65,7 +66,7 @@
         $sections.each(function(index) {
           var $section = $(this);
           var $distanceFromTop = $section.offset().top;
-          if ($scrollTop > $distanceFromTop - 200) {
+          if ($scrollTop > $distanceFromTop - $$windowHeight + 100) {
             if ($section.hasClass("visible") == false) {
               $section.addClass("visible");
             }
