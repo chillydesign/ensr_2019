@@ -39,7 +39,7 @@ section.section_welcome {
   }
 
   .welcome_text_inner {
-    padding: 80px 0 130px;
+    padding: 105px 0 155px;
   }
 
   h2 {
@@ -95,7 +95,28 @@ section.section_welcome {
           background: $dark_blue;
         }
       }
-    }
+
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: all 0.3s;
+      animation: fadeInAndSlide 1s;
+
+      &:nth-child(1) {
+        animation-delay: 0.5s;
+      }
+      &:nth-child(2) {
+        animation-delay: 1s;
+      }
+      &:nth-child(3) {
+        animation-delay: 1.5s;
+      }
+      &:nth-child(4) {
+        animation-delay: 2s;
+      }
+      &:nth-child(5) {
+        animation-delay: 2.5s;
+      }
+    } //li
   }
 } // send section_school_sections
 
