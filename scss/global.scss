@@ -39,7 +39,7 @@ section.section_welcome {
   }
 
   .welcome_text_inner {
-    padding: 105px 0 155px;
+    padding: 155px 0 175px;
   }
 
   h2 {
@@ -60,12 +60,6 @@ section.section_welcome {
   }
 
   .slick_slider_no_dots {
-    // height: 100%;
-    // position: absolute;
-    // z-index: -1;
-    // top: 0;
-    // left: 0;
-    // width: 100%;
     .slick-list {
       height: 100%;
       z-index: -1;
@@ -92,6 +86,7 @@ section.section_welcome {
 
     @media (min-width: $mobile_width) {
       display: block;
+      bottom: 40px;
     }
 
     li {
