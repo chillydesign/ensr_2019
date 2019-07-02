@@ -62,6 +62,13 @@
     var $sections = $("section.section");
 
     if ($sections.length > 0) {
+      //   var $section_info = [];
+      // $sections.each(function(index) {
+      //   var $this = $(this);
+      //   $si = {  section: $this, height: $this.outerHeight(); offset: $this.offset().top };
+      //   $section_info.push($si);
+      // });
+
       $window.on("scroll", function() {
         var $scrollTop = $window.scrollTop();
 
@@ -70,12 +77,11 @@
           var $sectionHeight = $section.outerHeight();
           var $distanceFromTop = $section.offset().top;
 
-          console.log($sectionHeight, $distanceFromTop);
-
-          if ($scrollTop > $distanceFromTop) {
-            $section.addClass("visible");
+          if ($scrollTop > $distanceFromTop - 200) {
+            if ($section.hasClass("visible") == false) {
+              $section.addClass("visible");
+            }
           } else {
-            $section.removeClass("visible");
           }
         });
       });
