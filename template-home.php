@@ -35,7 +35,19 @@
             </div>
 
 
-            <div class="background_image" style="background-image:url('<?php echo $tdu;  ?>/images/buildings_1.jpg')"></div>
+    <?php $welcome_slider = get_field('welcome_slider'); ?>
+    <?php if ($welcome_slider) : ?>
+      <div class="slick_slider">
+        <?php foreach($welcome_slider as $slide) : ?>
+          <?php var_dump($slide); ?>
+  <div class="slide">
+  </div>
+<?php endforeach; ?>
+  </div>
+    <?php else :?>
+      <div class="background_image" style="background-image:url('<?php echo $tdu;  ?>/images/buildings_1.jpg')"></div>
+    <?php endif; ?>
+
         </section>
 
 
