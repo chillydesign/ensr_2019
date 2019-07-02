@@ -55,33 +55,20 @@
     // ANIMATE SECTIONS AS SLIDE DOWN PAGE
     // ANIMATE SECTIONS AS SLIDE DOWN PAGE
 
-    var $window = $(window);
-    var $windowHeight = $window.height();
-    var $docHeight = $(document).height();
-
     var $sections = $("section.section");
-
     if ($sections.length > 0) {
-      //   var $section_info = [];
-      // $sections.each(function(index) {
-      //   var $this = $(this);
-      //   $si = {  section: $this, height: $this.outerHeight(); offset: $this.offset().top };
-      //   $section_info.push($si);
-      // });
+      // make first section visible by defualt
+      $sections[0].addClass("visible");
 
       $window.on("scroll", function() {
         var $scrollTop = $window.scrollTop();
-
         $sections.each(function(index) {
           var $section = $(this);
-          var $sectionHeight = $section.outerHeight();
           var $distanceFromTop = $section.offset().top;
-
           if ($scrollTop > $distanceFromTop - 200) {
             if ($section.hasClass("visible") == false) {
               $section.addClass("visible");
             }
-          } else {
           }
         });
       });
