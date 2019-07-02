@@ -119,7 +119,12 @@ header {
         } //a
 
         ul.sub-menu {
-          margin: 0 0 0 10px;
+          margin: 0;
+          position: static;
+          transform: none;
+          width: 100%;
+          flex: unset;
+          height: auto;
 
           @media (min-width: $mobile_width) {
             position: absolute;
@@ -130,9 +135,11 @@ header {
             width: 200px;
           }
           li {
+            font-size: 0.9em;
+            padding-left: 10px;
             @media (min-width: $mobile_width) {
-              font-size: 0.9em;
               display: block;
+              padding-left: 0;
             }
             a {
               @media (min-width: $mobile_width) {
