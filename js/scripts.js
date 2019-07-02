@@ -58,7 +58,7 @@
     var $sections = $("section.section");
     if ($sections.length > 0) {
       // make first section visible by defualt
-      $sections[0].addClass("visible");
+      $sections.first().addClass("visible");
 
       $window.on("scroll", function() {
         var $scrollTop = $window.scrollTop();
