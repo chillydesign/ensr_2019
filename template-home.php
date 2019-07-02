@@ -40,9 +40,8 @@
       <div class="slick_slider_no_dots">
         <?php foreach($welcome_slider as $slide) : ?>
         <?php $image = ($slide['sizes']['large']); ?>
-        <div class="slide">
-            <div class="background_image" style="background-image:url('<?php echo $image;  ?>')"></div>
-        </div>
+        <div class="slide" style="background-image:url('<?php echo $image;  ?>')"></div>
+
         <?php endforeach; ?>
   </div>
     <?php else :?>
