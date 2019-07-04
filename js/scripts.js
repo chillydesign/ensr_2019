@@ -179,8 +179,9 @@ function generate_chilly_map($options) {
     navigationControlOptions: {
       style: google.maps.NavigationControlStyle.SMALL
     },
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    styles: map_theme
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+    // ,
+    // styles: map_theme
   };
 
   var location_map_container = jQuery($options.element);
