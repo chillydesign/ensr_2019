@@ -29,48 +29,50 @@ section.section {
   padding: $section_padding 0;
 }
 
+.background_image {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 
-  .background_image {
+.slick_slider_no_dots {
+  .slick-list {
     height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
     z-index: -1;
-    position: absolute;
+  }
+  .slick-track {
+    height: 100%;
+  }
+  .slide {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
   }
+}
 
-  .slick_slider_no_dots {
-    .slick-list {
-      height: 100%;
-      z-index: -1;
-    }
-    .slick-track {
-      height: 100%;
-    }
-    .slide {
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-    }
+.welcome_text_inner {
+  color: white;
+  padding: 120px 0;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.5), 0 5px 5px rgba(0, 0, 0, 0.5);
+
+  h1 {
+    font-weight: bold;
   }
-
-    .welcome_text_inner {
-      color: white;
-      padding: 120px 0;
-      text-shadow: 0 0 30px transparentize(black, 0.5);
-
-        h2 , p, h1 {
-          color: white;
-        }
-        @media (min-width: $mobile_width) {
-          padding: 200px 0;
-        }
-
-
-    }
+  h2,
+  p,
+  h1 {
+    color: white;
+  }
+  @media (min-width: $mobile_width) {
+    padding: 200px 0;
+  }
+}
 
 section.section_welcome {
   position: relative;
@@ -81,9 +83,6 @@ section.section_welcome {
   @media (min-width: $mobile_width) {
     text-align: left;
   }
-
-
-
 
   ul.quick_links {
     position: absolute;
@@ -634,24 +633,16 @@ img.alignone {
   margin: 0 0 20px;
 }
 
-
-
-#wpcf7-f1052-p1051-o1  {
-
-
+#wpcf7-f1052-p1051-o1 {
   form {
     padding: 30px;
     position: relative;
     top: -210px;
-      background: rgba(255,255,255,0.92);
+    background: rgba(255, 255, 255, 0.92);
 
     @media (min-width: $mobile_width) {
-
       top: -290px;
-      box-shadow: 0 20px 30px rgba(100,100,100,0.1);
+      box-shadow: 0 20px 30px rgba(100, 100, 100, 0.1);
     }
-
-
   }
-
 }
