@@ -32,12 +32,12 @@
                               </div>
                           </div>
                     </div>
-<div class="background_image"  style="background-image:url('<?php echo $image;  ?>')"></div>
+                    <div class="background_image" style="background-image:url('<?php echo $image;  ?>')"></div>
 
                   </div>
 
                   <?php endforeach; ?>
-            </div>
+            </div> <!-- end slick_slider_no_dots -->
               <?php else :?>
                 <div class="background_image" style="background-image:url('<?php echo $tdu;  ?>/images/buildings_1.jpg')"></div>
               <?php endif; ?>
