@@ -32,7 +32,7 @@
                               </div>
                           </div>
                     </div>
-<div class="background_image"  style="background-image:url('<?php echo $image;  ?>')">></div>
+<div class="background_image"  style="background-image:url('<?php echo $image;  ?>')"></div>
 
                   </div>
 
