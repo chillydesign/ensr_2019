@@ -57,6 +57,10 @@ section.section {
     }
   }
 
+    .welcome_text_inner {
+      padding: 200px 0;
+    }
+    
 section.section_welcome {
   position: relative;
   padding-top: 0;
@@ -67,9 +71,6 @@ section.section_welcome {
     text-align: left;
   }
 
-  .welcome_text_inner {
-    padding: 200px 0;
-  }
 
   h2 {
     color: white;
