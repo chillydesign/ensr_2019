@@ -58,13 +58,18 @@ section.section {
   }
 
     .welcome_text_inner {
-      padding: 200px 0;
       color: white;
-      text-shadow: 0 0 30px transparentize(black, 0.4);
+      padding: 120px 0;
+      text-shadow: 0 0 30px transparentize(black, 0.5);
 
-        h2 , p{
+        h2 , p, h1 {
           color: white;
         }
+        @media (min-width: $mobile_width) {
+          padding: 200px 0;
+        }
+
+
     }
 
 section.section_welcome {
@@ -632,11 +637,16 @@ img.alignone {
 
 
 #wpcf7-f1052-p1051-o1  {
+
+
   form {
-    @media (min-width: $mobile_width) {
+    padding: 30px;
+    position: relative;
+    top: -210px;
       background: rgba(255,255,255,0.92);
-      padding: 30px;
-      position: relative;
+
+    @media (min-width: $mobile_width) {
+
       top: -290px;
       box-shadow: 0 20px 30px rgba(100,100,100,0.1);
     }
