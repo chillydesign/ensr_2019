@@ -10,10 +10,11 @@
       <div class="container">
           <div class="row">
               <div class="col-sm-6 ">
-                  <?php if ($slide_content): ?>
+
                       <div class="welcome_text_inner">
                           <?php echo $slide_content; ?>
-                      </div>
+                          &nbsp;
+
                   <?php endif;  // end if $welcome_text ?>
               </div>
           </div>
