@@ -50,13 +50,10 @@ header {
       z-index: 100;
       transition: all 0.3s;
       transform: translateX(-300px);
+      overflow-y: scroll;
 
       &.menu_visible {
         transform: translateX(0px);
-        overflow-y: scroll;
-        @media (min-width: $mobile_width) {
-          overflow-y: auto;
-        }
       }
 
       @media (min-width: $mobile_width) {
@@ -67,6 +64,7 @@ header {
         background: none;
         height: auto;
         transform: translateX(0);
+        overflow-y: auto;
       }
 
       li {
