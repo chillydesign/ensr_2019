@@ -80,8 +80,10 @@ function webfactor_header_scripts()
         wp_register_script('modernizr', $tdu . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        // wp_register_script('maps', '//maps.google.com/maps/api/js?key=AIzaSyD3NSiWVnHd8HcFKfOs5fHcWNwW3-lAEzY', array(), 1, true );
-        // wp_enqueue_script('maps'); // Enqueue it!
+
+        $gkey = 'AIzaSyAxQfqRqtPLAW4BolFMCxTiv9y--R8CXdU';
+        wp_register_script('maps', '//maps.google.com/maps/api/js?'. $gkey , array(), 1, true );
+        wp_enqueue_script('maps'); // Enqueue it!
 
         wp_register_script('slick', $tdu . '/js/min/slick.min.js', array(),  wf_version(), true );
         wp_enqueue_script('slick'); // Enqueue it!
