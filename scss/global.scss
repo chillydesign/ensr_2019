@@ -628,3 +628,20 @@ img.alignone {
   max-width: 100% !important;
   margin: 0 0 20px;
 }
+
+
+
+#wpcf7-f1052-p1051-o1  {
+  form {
+    @media (min-width: $mobile_width) {
+      background: rgba(255,255,255,0.92);
+      padding: 30px;
+      position: relative;
+      top: -290px;
+      box-shadow: 0 20px 30px rgba(100,100,100,0.1);
+    }
+
+
+  }
+
+}

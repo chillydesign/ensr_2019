@@ -150,18 +150,25 @@ form {
   select,
   button {
     padding: 10px;
-    border: 0;
-    border-radius: 0;
+    border-radius: 2px;
     font-family: $font_stack;
     font-size: $font_size;
     margin: 0 0 10px;
     width: 100%;
+    background: white;
+    border: 1px solid #ddd;
     box-shadow: 0 3px 0 0 transparent inset;
     transition: all 0.3s;
     &:focus {
     }
   }
 
+
+  p {
+    label {
+      font-size: 1em;
+    }
+  }
   label {
     display: block;
     font-size: $font-size;
@@ -181,6 +188,9 @@ form {
     letter-spacing: 1px;
     background: $blue;
     color: white;
+    width: auto;
+    padding-left: 30px;
+    padding-right: 30px;
     &:hover {
       background-color: darken($blue, 10);
     }
