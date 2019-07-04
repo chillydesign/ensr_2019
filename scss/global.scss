@@ -59,8 +59,14 @@ section.section {
 
     .welcome_text_inner {
       padding: 200px 0;
+      color: white;
+      text-shadow: 0 0 30px transparentize(black, 0.4);
+
+        h2 , p{
+          color: white;
+        }
     }
-    
+
 section.section_welcome {
   position: relative;
   padding-top: 0;
@@ -72,10 +78,6 @@ section.section_welcome {
   }
 
 
-  h2 {
-    color: white;
-    text-shadow: 0 0 30px transparentize(black, 0.4);
-  }
 
 
   ul.quick_links {
