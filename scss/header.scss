@@ -73,6 +73,10 @@ header {
         background: $black;
         font-size: #{$font_size * 0.9};
 
+        &.menu-item-language-current {
+          display: none;
+        }
+
         @media (min-width: $mobile_width) {
           display: inline-block;
           background: none;
