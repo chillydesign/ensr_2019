@@ -82,7 +82,7 @@ function webfactor_header_scripts()
 
 
         $gkey = 'AIzaSyAxQfqRqtPLAW4BolFMCxTiv9y--R8CXdU';
-        wp_register_script('maps', '//maps.google.com/maps/api/js?'. $gkey , array(), 1, true );
+        wp_register_script('maps', '//maps.google.com/maps/api/js?key='. $gkey , array(), 1, true );
         wp_enqueue_script('maps'); // Enqueue it!
 
         wp_register_script('slick', $tdu . '/js/min/slick.min.js', array(),  wf_version(), true );
