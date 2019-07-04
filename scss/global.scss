@@ -29,24 +29,6 @@ section.section {
   padding: $section_padding 0;
 }
 
-section.section_welcome {
-  position: relative;
-  padding-top: 0;
-
-  color: white;
-  text-align: center;
-  @media (min-width: $mobile_width) {
-    text-align: left;
-  }
-
-  .welcome_text_inner {
-    padding: 200px 0;
-  }
-
-  h2 {
-    color: white;
-    text-shadow: 0 0 30px transparentize(black, 0.4);
-  }
 
   .background_image {
     height: 100%;
@@ -74,6 +56,26 @@ section.section_welcome {
       background-size: cover;
     }
   }
+
+section.section_welcome {
+  position: relative;
+  padding-top: 0;
+
+  color: white;
+  text-align: center;
+  @media (min-width: $mobile_width) {
+    text-align: left;
+  }
+
+  .welcome_text_inner {
+    padding: 200px 0;
+  }
+
+  h2 {
+    color: white;
+    text-shadow: 0 0 30px transparentize(black, 0.4);
+  }
+
 
   ul.quick_links {
     position: absolute;
