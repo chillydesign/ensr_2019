@@ -14,8 +14,8 @@
                       <div class="welcome_text_inner">
                           <?php echo $slide_content; ?>
                           &nbsp;
+                      </div>
 
-                  <?php endif;  // end if $welcome_text ?>
               </div>
           </div>
     </div>
