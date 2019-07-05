@@ -624,6 +624,8 @@ function translateString($string){
           return 'Find us';
         } else if ($string == 'Nous contacter') {
           return 'Contact us';
+        } else if ($string == 'Liens utiles') {
+          return 'Links';
         }
         return $string;
     }

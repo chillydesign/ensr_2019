@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
-                <h3>Liens utiles</h3>
+                <h3>><?php echo translateString('Liens utiles'); ?>s</h3>
                 <ul>
                     <?php chilly_nav('footer-navigation'); ?>
                 </ul>
