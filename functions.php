@@ -629,7 +629,7 @@ function translateString($string){
     }
     return $string;
   }
-  return $string:
+  return $string;
 }
 
 
