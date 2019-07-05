@@ -616,7 +616,7 @@ function get_link_by_slug($slug, $type = 'page'){
 }
 
 
-function translateString(string){
+function translateString($string){
 
   if (defined('ICL_LANGUAGE_CODE')) {
     if (ICL_LANGUAGE_CODE == 'en') {
