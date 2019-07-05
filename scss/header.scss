@@ -257,3 +257,13 @@ header {
     display: none;
   }
 }
+
+body.lang_en {
+  header {
+    nav {
+      #branding {
+        background-image: url("../images/logo_en.svg");
+      }
+    }
+  }
+}

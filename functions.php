@@ -616,4 +616,23 @@ function get_link_by_slug($slug, $type = 'page'){
 }
 
 
+
+
+if (defined('ICL_LANGUAGE_CODE')) {
+    // Add specific CSS class by filter
+    add_filter('body_class','my_class_names');
+    function my_class_names($classes) {
+        // add 'class-name' to the $classes array
+        if(ICL_LANGUAGE_CODE == 'en'){
+            $classes[] = 'lang_en';
+        } elseif(ICL_LANGUAGE_CODE == 'fr'){
+            $classes[] = 'lang_fr';
+        }
+        // return the $classes array
+        return $classes;
+    }
+
+}
+
+
 ?>
