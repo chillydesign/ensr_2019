@@ -616,6 +616,23 @@ function get_link_by_slug($slug, $type = 'page'){
 }
 
 
+function translateString(string){
+
+  if (defined('ICL_LANGUAGE_CODE')) {
+    if (ICL_LANGUAGE_CODE == 'en') {
+        if ($string == 'Nous trouver') {
+          return 'Find us';
+        } else if ($string == 'Nous contacter') {
+          return 'Contact us';
+        }
+        return $string;
+    }
+    return $string;
+  }
+  return $string:
+}
+
+
 
 
 if (defined('ICL_LANGUAGE_CODE')) {

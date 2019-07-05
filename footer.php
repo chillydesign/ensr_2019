@@ -13,7 +13,7 @@
                 </ul>
             </div>
             <div class="col-sm-4">
-                <h3>Nous trouver</h3>
+                <h3><?php echo translateString('Nous trouver'); ?></h3>
                 <p>
                     Ecole Nouvelle de la Suisse Romande <br>
                     Ch. de Rovéréaz 20  <br>
@@ -22,7 +22,7 @@
                 </p>
             </div>
             <div class="col-sm-4">
-                <h3>Nous contacter</h3>
+                <h3><?php echo translateString('Nous contacter'); ?></h3>
                 <p>
                     <strong>Tel :</strong> +41 21 654 65 00 <br>
                     <strong>Fax :</strong> +41 21 654 65 05 <br>
