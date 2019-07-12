@@ -683,12 +683,13 @@ img.alignone {
   text-align: center;
   left: 10%;
   right: 10%;
-
+  border-radius: 13px;
   padding: 20px;
   background: $dark_blue;
-  border: 1px solid darken($dark_blue, 10);
-  color: lighten($dark_blue, 20);
-  box-shadow: 0 0 10px rgba(100,100,100,0.1);
+  color: white;
+  box-shadow: 0 3px 5px rgba(100,100,100, 0.3);
+  z-index: 1000;
+
 
   p {
     padding: 0;
@@ -696,8 +697,8 @@ img.alignone {
   }
   &.message_success {
     background:  $green;
-    border: 1px solid darken($green, 10);
-    color: lighten($green, 20);
+
+
 
   }
   &.closable {
