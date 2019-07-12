@@ -653,9 +653,11 @@ img.alignone {
           padding: 13px 30px;
           font-size: 1em;
           display: block;
+          width: 100%;
 
             @media (min-width: $mobile_width) {
               display: inline-block;
+              width: auto;
             }
         }
     }
