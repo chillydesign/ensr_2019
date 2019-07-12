@@ -267,3 +267,17 @@ body.lang_en {
     }
   }
 }
+
+
+body.landing_page {
+  #top_nav {
+    ul {
+      display: none !important;
+    }
+  }
+  nav {
+    ul {
+      display: none !important;
+    }
+  }
+}
