@@ -1,6 +1,18 @@
 <?php /* Template Name: Home Page */ get_header(); ?>
 <?php $home_url =  home_url(); ?>
 <?php $tdu = get_template_directory_uri(); ?>
+
+
+<?php if (isset($_GET['your-email'])) : ?>
+  <div class="message message_success closable">
+    <p>
+<?php echo translateString("Merci pour votre message. Nous revenons vers vous rapidement avec plus d'information sur notre école."); ?>
+</p>
+</div>
+<?php endif; ?>
+
+
+
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 
@@ -16,7 +28,7 @@
               <?php $welcome_slider = get_field('welcome_slider'); ?>
               <?php if ($welcome_slider) : ?>
                 <div class="slick_slider_no_dots">
-                  <?php foreach($welcome_slider as $slide) : ?>
+                  <?php foreach ($welcome_slider as $slide) : ?>
 
                   <?php $image = ($slide['image']['sizes']['large']); ?>
                   <div class="slide">
@@ -28,7 +40,7 @@
                                       <div class="welcome_text_inner">
                                           <?php echo $welcome_text; ?>
                                       </div>
-                                  <?php endif;  // end if $welcome_text ?>
+                                  <?php endif;  // end if $welcome_text?>
                               </div>
                           </div>
                     </div>
@@ -67,7 +79,7 @@
                         <?php $school_text = get_field('school_text'); ?>
                         <?php if ($school_text): ?>
                             <?php echo $school_text; ?>
-                        <?php endif;  // end if $school_text  ?>
+                        <?php endif;  // end if $school_text?>
 
                     </div>
                     <div class="col-sm-6">
@@ -141,7 +153,7 @@
                 <div class="container" id="section_nos_atouts">
                     <div class="slick_slider">
 
-                        <?php while ( have_rows('nos_atouts') ) : the_row(); ?>
+                        <?php while (have_rows('nos_atouts')) : the_row(); ?>
 
                             <?php $texte = get_sub_field('texte'); ?>
                             <?php $image = get_sub_field('image'); ?>
@@ -168,15 +180,15 @@
                 </div><!-- END OF .container -->
             </section>
 
-        <?php endif; // end if have_rows $nos_atouts ?>
+        <?php endif; // end if have_rows $nos_atouts?>
 
 
 
 
 
 
-        <?php  $news_loop = new WP_Query( array('post_type' => 'post', 'posts_per_page' => 8 ) ); ?>
-        <?php if ($news_loop->have_posts() ) : ?>
+        <?php  $news_loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 8 )); ?>
+        <?php if ($news_loop->have_posts()) : ?>
 
             <section class="section section_events">
                 <div class="container" id="section_actualites">
@@ -194,13 +206,17 @@
                     </div><!--  END OF ROW -->
 
                     <ul>
-                        <?php $p = 0; while($news_loop->have_posts()) : $news_loop->the_post(); ?>
+                        <?php $p = 0; while ($news_loop->have_posts()) : $news_loop->the_post(); ?>
                             <?php $date = get_field('date'); ?>
                             <?php $post_classes = array(); ?>
-                            <?php $has_pic = (($p + floor($p / 4)) % 2);   // 4 is number of cols  same as in_array( $p, array(1,3,4,6)   ?>
-                            <?php if ( $has_pic ) array_push($post_classes, 'event_with_picture'); ?>
-                            <?php if ( $p >= 4 )  array_push($post_classes, 'hide_on_mobile'); ?>
-                            <?php $style = ($has_pic) ? 'style="background-image:url(' . thumbnail_of_post_url(get_the_ID(), 'medium' ) . ')"' : ''; ?>
+                            <?php $has_pic = (($p + floor($p / 4)) % 2);   // 4 is number of cols  same as in_array( $p, array(1,3,4,6)?>
+                            <?php if ($has_pic) {
+    array_push($post_classes, 'event_with_picture');
+} ?>
+                            <?php if ($p >= 4) {
+    array_push($post_classes, 'hide_on_mobile');
+} ?>
+                            <?php $style = ($has_pic) ? 'style="background-image:url(' . thumbnail_of_post_url(get_the_ID(), 'medium') . ')"' : ''; ?>
                             <li class="ensr_event <?php echo implode($post_classes, ' ');  ?>"  <?php echo $style; ?>>
                                 <a href="<?php echo get_the_permalink(); ?>">
 
@@ -218,14 +234,14 @@
                                     </div>
                                 </a>
                             </li>
-                            <?php $p++; endwhile; // end while of news loop ?>
+                            <?php $p++; endwhile; // end while of news loop?>
 
                         </ul>
                     </div><!--  END OF .container -->
                     <div class="shield_background"></div>
                 </section>
 
-            <?php endif;  // end if have news ?>
+            <?php endif;  // end if have news?>
             <?php wp_reset_query(); ?>
 
 
@@ -243,7 +259,7 @@
                                 <div class="section_text">
                                     <?php echo $inscription_text; ?>
                                 </div>
-                            <?php endif;  // end if $inscription_text ?>
+                            <?php endif;  // end if $inscription_text?>
                         </div>
 
 
@@ -252,7 +268,7 @@
                                 <?php $inscription_image = get_field('inscription_image'); ?>
                                 <?php if ($inscription_image) : ?>
                                 <div class="white_gradient_img" style="background-image:url(<?php echo $inscription_image['sizes']['medium']; ?>)">
-                                <?php endif;  // end if $inscription_image ?>
+                                <?php endif;  // end if $inscription_image?>
                                 </div>
                             </div>
 
@@ -280,7 +296,7 @@
     <!-- article -->
     <article class="container">
 
-        <h2><?php _e( 'Sorry, nothing to display.', 'webfactor' ); ?></h2>
+        <h2><?php _e('Sorry, nothing to display.', 'webfactor'); ?></h2>
 
     </article>
     <!-- /article -->

@@ -25,6 +25,11 @@
       $nav.removeClass("menu_visible");
     });
 
+
+    $('.closable').on("click", function() {
+      $(this).hide();
+    });
+
     ////////////////////////////
     // animate sliding down page
     $(".scroll_link").on("click", function(e) {
