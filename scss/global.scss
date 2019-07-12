@@ -650,8 +650,13 @@ img.alignone {
 
 
         &[type="submit"] {
-          padding: 8px 30px;
+          padding: 13px 30px;
           font-size: 1em;
+          display: block;
+
+            @media (min-width: $mobile_width) {
+              display: inline-block;
+            }
         }
     }
     p {
