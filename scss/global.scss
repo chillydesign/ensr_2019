@@ -643,6 +643,16 @@ img.alignone {
     background: rgba(255, 255, 255, 0.92);
     margin-bottom: -200px;
 
+    input {
+      padding: 8px;
+      margin: 0 0 1px;
+      font-size:1.3em;
+
+    }
+    p {
+      padding: 0 0 5px;
+    }
+
     @media (min-width: $mobile_width) {
       top: -290px;
       margin-bottom: -50px;

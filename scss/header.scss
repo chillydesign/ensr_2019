@@ -268,16 +268,9 @@ body.lang_en {
   }
 }
 
-
+ // DONT SHOW HEADER NAVIGATION ON THE LANDING PAGE
 body.landing-page {
-  #top_nav {
-    ul {
+  #top_nav, header {
       display: none !important;
-    }
-  }
-  nav {
-    ul {
-      display: none !important;
-    }
   }
 }
