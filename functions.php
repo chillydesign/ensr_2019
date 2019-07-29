@@ -109,7 +109,7 @@ function webfactor_styles()
     // remove gutenberg css
     wp_dequeue_style('wp-block-library');
 
-    wp_register_style('google_fonts', 'https://fonts.googleapis.com/css?family=Spectral:700,700i|Work+Sans:300&display=swap&subset=latin-ext', array(), '', 'all');
+    wp_register_style('google_fonts', 'https://fonts.googleapis.com/css?family=Spectral:700,700i|Work+Sans:400&display=swap&subset=latin-ext', array(), '', 'all');
 
 
 
