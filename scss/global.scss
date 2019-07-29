@@ -646,20 +646,19 @@ img.alignone {
     input {
       padding: 8px;
       margin: 0 0 1px;
-      font-size:1.3em;
+      font-size: 1.3em;
 
+      &[type="submit"] {
+        padding: 13px 30px;
+        font-size: 1em;
+        display: block;
+        width: 100%;
 
-        &[type="submit"] {
-          padding: 13px 30px;
-          font-size: 1em;
-          display: block;
-          width: 100%;
-
-            @media (min-width: $mobile_width) {
-              display: inline-block;
-              width: auto;
-            }
+        @media (min-width: $mobile_width) {
+          display: inline-block;
+          width: auto;
         }
+      }
     }
     p {
       padding: 0 0 5px;
@@ -673,11 +672,9 @@ img.alignone {
   }
 }
 
-
-
 .message {
   position: absolute;
-  top: 100px ;
+  top: 100px;
   display: block;
   width: 80%;
   text-align: center;
@@ -687,19 +684,15 @@ img.alignone {
   padding: 20px;
   background: $dark_blue;
   color: white;
-  box-shadow: 0 3px 5px rgba(100,100,100, 0.3);
+  box-shadow: 0 3px 5px rgba(100, 100, 100, 0.3);
   z-index: 1000;
-
 
   p {
     padding: 0;
     margin: 0;
   }
   &.message_success {
-    background:  $green;
-
-
-
+    background: $green;
   }
   &.closable {
     cursor: pointer;
