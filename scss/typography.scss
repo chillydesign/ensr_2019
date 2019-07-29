@@ -19,6 +19,7 @@ h1 {
   font-size: #{$font_size * 2.3};
   padding: 0 0 30px;
 }
+
 h2 {
   font-size: #{$font_size * 1.8};
   padding: 0 0 20px;
@@ -57,10 +58,11 @@ li {
   padding: 0 0 5px;
 }
 
-strong,
-b {
+b,
+strong {
   font-weight: bold;
 }
+
 em,
 i {
   font-style: italic;
@@ -69,15 +71,15 @@ i {
 a {
   transition: all 0.3s;
 
-  &:link,
-  &:visited,
   &:active,
-  &:hover {
+  &:hover,
+  &:link,
+  &:visited {
     color: $blue;
     text-decoration: none;
   }
-  &:hover {
-  }
+
+  &:hover {}
 
   &:focus {
     box-shadow: 0 0 5px $blue;
@@ -85,16 +87,25 @@ a {
 }
 
 table {
-  /*width: 100%;*/
-
+  width: 100%;
   margin: 0 0 40px;
 }
 
-th,
-td {
+td,
+th {
   font-size: 1.3em;
-  padding: 10px;
-  border: 0px;
+  padding: 14px 10px;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 0;
+  background: $blue;
+  color: white;
 }
 
 sup {
@@ -110,13 +121,14 @@ blockquote {
   font-style: italic;
   max-width: 700px;
 }
+
 blockquote p:last-child {
   padding-bottom: 0;
 }
 
+a h6,
 a.button,
-h6 a,
-a h6 {
+h6 a {
   display: inline-block;
   padding: 10px 30px;
   background: $blue;
@@ -126,29 +138,32 @@ a h6 {
   text-transform: uppercase;
   font-family: $font_stack;
 
-  &:link,
-  &:visited,
   &:active,
-  &:hover {
+  &:hover,
+  &:link,
+  &:visited {
     color: white;
   }
+
   &:hover {
     transform: scale(1.05);
     background-color: $dark_blue;
   }
+
   &.margin_top {
     margin-top: 20px;
   }
+
   &.margin_bottom {
     margin-bottom: 20px;
   }
 }
 
 form {
+  button,
   input,
-  textarea,
   select,
-  button {
+  textarea {
     padding: 10px;
     border-radius: 2px;
     font-family: $font_stack;
@@ -159,8 +174,8 @@ form {
     border: 1px solid #ddd;
     box-shadow: 0 3px 0 0 transparent inset;
     transition: all 0.3s;
-    &:focus {
-    }
+
+    &:focus {}
   }
 
   p {
@@ -168,6 +183,7 @@ form {
       font-size: 1em;
     }
   }
+
   label {
     display: block;
     font-size: $font-size;
@@ -190,6 +206,7 @@ form {
     width: auto;
     padding-left: 30px;
     padding-right: 30px;
+
     &:hover {
       background-color: darken($blue, 10);
     }
@@ -202,6 +219,7 @@ form {
       label {
         color: $red;
       }
+
       input,
       select,
       textarea {
