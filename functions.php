@@ -62,7 +62,7 @@ Functions
 
 function wf_version()
 {
-    return '0.0.7';
+    return '0.0.8';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -109,7 +109,7 @@ function webfactor_styles()
     // remove gutenberg css
     wp_dequeue_style('wp-block-library');
 
-    wp_register_style('google_fonts', 'https://fonts.googleapis.com/css?family=Spectral:700,700i|Work+Sans:300&display=swap&subset=latin-ext', array(), '', 'all');
+    wp_register_style('google_fonts', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro|Spectral:700,700i&display=swap&subset=latin-ext', array(), '', 'all');
 
 
 
