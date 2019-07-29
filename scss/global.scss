@@ -5,13 +5,9 @@
 @import "slick";
 @import "header";
 @import "footer";
-
-@media (min-width: $mobile_width) {
-}
-@media (min-width: $tablet_width) {
-}
-@media (min-width: $browser_width) {
-}
+@media (min-width: $mobile_width) {}
+@media (min-width: $tablet_width) {}
+@media (min-width: $browser_width) {}
 
 body {
   font: normal 62.5% $font_stack;
@@ -22,7 +18,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 $section_padding: 50px;
 
 section.section {
@@ -46,9 +41,11 @@ section.section {
     height: 100%;
     z-index: -1;
   }
+
   .slick-track {
     height: 100%;
   }
+
   .slide {
     background-repeat: no-repeat;
     background-position: center center;
@@ -65,9 +62,10 @@ section.section {
     font-weight: bold;
     font-style: italic;
   }
+
+  h1,
   h2,
-  p,
-  h1 {
+  p {
     color: white;
   }
   @media (min-width: $mobile_width) {
@@ -78,7 +76,6 @@ section.section {
 section.section_welcome {
   position: relative;
   padding-top: 0;
-
   color: white;
   text-align: center;
   @media (min-width: $mobile_width) {
@@ -87,14 +84,13 @@ section.section_welcome {
 
   ul.quick_links {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
     width: 100%;
     margin: 0 0 20px;
     padding: 0;
     text-align: center;
     display: none;
-
     @media (min-width: $mobile_width) {
       display: block;
       bottom: 40px;
@@ -105,7 +101,6 @@ section.section_welcome {
       margin: 0 3px 6px;
       padding: 0;
       font-size: #{$font_size * 0.8};
-
       @media (min-width: $mobile_width) {
         font-size: $font_size;
       }
@@ -122,7 +117,6 @@ section.section_welcome {
           background: $dark_blue;
         }
       }
-
       opacity: 0;
       transform: translateY(-20px);
       transition: all 0.3s;
@@ -131,26 +125,31 @@ section.section_welcome {
       &:nth-child(1) {
         animation-delay: 0.5s;
       }
+
       &:nth-child(2) {
         animation-delay: 1.5s;
       }
+
       &:nth-child(3) {
         animation-delay: 2.5s;
       }
+
       &:nth-child(4) {
         animation-delay: 3.5s;
       }
+
       &:nth-child(5) {
         animation-delay: 4.5s;
       }
-    } //li
+    }
+    //li
   }
-} // send section_school_sections
+}
+// send section_school_sections
 
 section.section_school_sections {
   h2 {
     text-align: center;
-
     @media (min-width: $mobile_width) {
       text-align: left;
       max-width: 400px;
@@ -161,6 +160,7 @@ section.section_school_sections {
       display: inline-block;
     }
   }
+
   .school_areas_container {
     position: relative;
     padding: 20px 0 40px;
@@ -174,18 +174,22 @@ section.section_school_sections {
         &:nth-child(1) {
           animation-delay: 0.5s;
         }
+
         &:nth-child(2) {
           animation-delay: 1.5s;
         }
+
         &:nth-child(3) {
           animation-delay: 2s;
         }
+
         &:nth-child(4) {
           animation-delay: 3s;
         }
       }
     }
-  } // section.visible
+  }
+  // section.visible
 
   ul.school_areas {
     display: flex;
@@ -197,15 +201,14 @@ section.section_school_sections {
     li {
       opacity: 0;
       transform: translateY(-20px);
-
       flex: 1 auto;
       display: inline-block;
       width: 50%;
       max-width: 50%;
       margin: 0;
       padding: 0 0 50px;
-
       $diamond_size: 60px;
+
       a {
         display: block;
         font-style: italic;
@@ -215,7 +218,6 @@ section.section_school_sections {
         padding: #{$diamond_size + 20px} 0 0 0;
         min-height: $diamond_size;
         text-align: center;
-
         @media (min-width: $mobile_width) {
           background-position: center left;
           padding: 0 0 0 #{$diamond_size + 20px};
@@ -225,10 +227,12 @@ section.section_school_sections {
         &:hover {
           transform: scale(1.06);
         }
+
         strong {
           display: block;
           font-size: 1.6em;
         }
+
         span {
           color: $medium_grey;
           display: block;
@@ -239,17 +243,21 @@ section.section_school_sections {
       &.school_maternelle a {
         background-image: url("../images/diamond_1.svg");
       }
+
       &.school_primaire a {
         background-image: url("../images/diamond_2.svg");
       }
+
       &.school_college a {
         background-image: url("../images/diamond_3.svg");
       }
+
       &.school_gymnase a {
         background-image: url("../images/diamond_4.svg");
       }
     }
-  } // .school_areas
+  }
+  // .school_areas
 
   .shield_background {
     position: absolute;
@@ -261,14 +269,26 @@ section.section_school_sections {
     width: 100%;
     background: url("../images/shield.svg") no-repeat center center;
     background-size: 200px;
-
     @media (min-width: $mobile_width) {
       background-size: contain;
       background-position: 100% bottom;
       opacity: 0.09;
     }
-  } // .shield_background
-} // end section_school_sections
+  }
+  // .shield_background
+}
+// end section_school_sections
+
+section.section_equal_columns {
+  ul {
+    margin: 0 0 30px 40px;
+
+    li {
+      list-style: disc;
+      padding-bottom: 10px;
+    }
+  }
+}
 
 section.section_icons {
   background: $blue;
@@ -283,29 +303,34 @@ section.section_icons {
         &:nth-child(1) {
           animation-delay: 0.5s;
         }
+
         &:nth-child(2) {
           animation-delay: 1s;
         }
+
         &:nth-child(3) {
           animation-delay: 1.5s;
         }
+
         &:nth-child(4) {
           animation-delay: 2s;
         }
+
         &:nth-child(5) {
           animation-delay: 2.5s;
         }
+
         &:nth-child(6) {
           animation-delay: 3s;
         }
       }
     }
-  } // section.visible
+  }
+  // section.visible
 
   ul {
     display: flex;
     flex-wrap: wrap;
-
     @media (min-width: $mobile_width) {
       // flex-wrap: nowrap;
     }
@@ -313,22 +338,20 @@ section.section_icons {
     justify-content: center;
     padding: 0 20px;
     margin: 0;
+
     li {
       flex: 1 auto;
       width: #{(100% / 2)};
       max-width: #{(100% / 2)};
       margin: 0 0 -21px;
       padding: 0;
-
       opacity: 0;
       transform: translateY(-20px);
       transition: all 0.3s;
-
       @media (min-width: $small_mobile_width) {
         width: #{(100% / 3)};
         max-width: #{(100% / 3)};
       }
-
       @media (min-width: $mobile_width) {
         width: #{(100% / 3)};
         max-width: #{(100% / 3)};
@@ -352,7 +375,6 @@ section.section_icons {
           width: 100%;
           height: auto;
         }
-
         display: block;
 
         &:hover {
@@ -361,7 +383,8 @@ section.section_icons {
       }
     }
   }
-} // .section_icons
+}
+// .section_icons
 
 section.section_slider_with_image,
 section.section_text_with_image {
@@ -371,6 +394,7 @@ section.section_text_with_image {
   h2 {
     padding-bottom: 50px;
     position: relative;
+
     &:after {
       content: "";
       height: 0;
@@ -396,6 +420,7 @@ section.section_text_with_image {
 section.section_slider {
   padding-top: 0;
   padding-bottom: 30px;
+
   .slick-dots {
     bottom: 5px;
   }
@@ -410,6 +435,7 @@ section.section_slider {
   display: block;
   position: relative;
 }
+
 .slide_content {
   padding: 10px;
   background: transparentize(white, 0.3);
@@ -417,6 +443,7 @@ section.section_slider {
   bottom: 0;
   left: 0;
   width: 100%;
+
   p {
     padding: 0;
     font-weight: bold;
@@ -432,8 +459,7 @@ section.section_events {
     z-index: 10;
     margin-bottom: 50px;
     text-align: center;
-    @media (min-width: $mobile_width) {
-    }
+    @media (min-width: $mobile_width) {}
   }
 
   h2 {
@@ -471,9 +497,7 @@ section.section_events {
       background: white no-repeat url("../images/diamonds_1.png");
       background-position: bottom right;
       background-size: 180px;
-
       transition: all 0.3s;
-
       @media (min-width: $mobile_width) {
         min-width: 24%;
         width: 24%;
@@ -496,16 +520,20 @@ section.section_events {
         color: white;
         background-size: cover;
         background-position: center center;
+
         a {
           color: white;
           background-color: transparentize(black, 0.72);
         }
+
         .date_container {
           color: white;
+
           &:after {
             border-color: white;
           }
         }
+
         .event_content {
           color: white;
         }
@@ -515,7 +543,6 @@ section.section_events {
         display: block;
         padding: 10px;
         min-height: 300px;
-
         @media (min-width: $mobile_width) {
           padding: 20px;
         }
@@ -524,9 +551,11 @@ section.section_events {
       .date_container {
         color: $blue;
       }
+
       .event_content {
         color: $font_color;
         text-align: center;
+
         p {
           font-size: 1.3em;
         }
@@ -544,14 +573,17 @@ section.section_events {
     width: 100%;
     background: url("../images/shield_rotated.svg") no-repeat bottom right;
     background-size: 80%;
-  } // .shield_background
-} // .section_events
+  }
+  // .shield_background
+}
+// .section_events
 
 .date_container {
   text-align: center;
   padding: 0 0 50px;
   position: relative;
   font-size: 1.2em;
+
   &:after {
     content: "";
     height: 0;
@@ -561,13 +593,16 @@ section.section_events {
     right: 30%;
     bottom: 30px;
   }
+
   .day {
     text-transform: lowercase;
   }
+
   .date {
     font-size: 5em;
     padding: 10px 0;
   }
+
   .month {
     text-transform: lowercase;
   }
@@ -577,7 +612,6 @@ section.section_events {
   position: relative;
   min-height: 300px;
   width: 100%;
-
   @media (min-width: $mobile_width) {
     min-height: 500px;
   }
@@ -618,16 +652,17 @@ section.section_events {
 }
 
 .alignnone {
-  margin: 0px auto 20px;
+  margin: 0 auto 20px;
   width: 100%;
   height: auto;
   max-width: 400px;
   @media (min-width: $mobile_width) {
-    margin: 0px 10% 20px;
+    margin: 0 10% 20px;
     width: 80%;
     max-width: 100%;
   }
 }
+
 img,
 img.alignone {
   max-width: 100% !important;
@@ -653,17 +688,16 @@ img.alignone {
         font-size: 1em;
         display: block;
         width: 100%;
-
         @media (min-width: $mobile_width) {
           display: inline-block;
           width: auto;
         }
       }
     }
+
     p {
       padding: 0 0 5px;
     }
-
     @media (min-width: $mobile_width) {
       top: -290px;
       margin-bottom: -50px;
@@ -691,9 +725,11 @@ img.alignone {
     padding: 0;
     margin: 0;
   }
+
   &.message_success {
     background: $green;
   }
+
   &.closable {
     cursor: pointer;
   }

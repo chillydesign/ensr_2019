@@ -57,6 +57,7 @@ p {
 li {
   font-size: $font_size;
   padding: 0 0 5px;
+  line-height: 160%;
 }
 
 b,
@@ -94,7 +95,7 @@ table {
 
 td,
 th {
-  font-size: 1.3em;
+  font-size: $font_size;
   padding: 14px 10px;
   border: 0;
   border-bottom: 1px solid #eee;
