@@ -9,7 +9,7 @@
   <div class="slide">
       <div class="container">
           <div class="row">
-              <div class="col-sm-6 col-sm-push-6">
+              <div class="col-sm-6 col-sm-push-3" style="text-align: center">
 
                       <div class="welcome_text_inner">
                           <?php echo $slide_content; ?>
