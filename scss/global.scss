@@ -147,6 +147,24 @@ section.section_welcome {
 }
 // send section_school_sections
 
+ul.gallery_images {
+  margin: -40px -10px 0 !important;
+}
+
+.gallery_image {
+  display: inline-block;
+  margin: 10px;
+}
+
+a.gallery {
+  display: inline-block;
+}
+
+a.gallery img {
+  width: 110px;
+  height: 110px;
+}
+
 section.section_school_sections {
   h2 {
     text-align: center;

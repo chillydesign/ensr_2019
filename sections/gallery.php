@@ -1,6 +1,6 @@
 <?php $images =  get_sub_field('images'); ?>
 
-
+<div class="container">
 
 <ul class="gallery_images clearfix"   data-featherlight-gallery data-featherlight-filter="a">
 	<?php  foreach ($images as $image) : ?>
@@ -9,3 +9,7 @@
 	</li>
 	<?php endforeach; ?>
 </ul>
+
+
+
+</div>
