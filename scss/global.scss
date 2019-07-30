@@ -303,12 +303,19 @@ section.section_equal_columns {
 
   .color_white {}
 
+  ol,
   ul {
     margin: 0 0 30px 40px;
 
     li {
       list-style: disc;
       padding-bottom: 10px;
+    }
+  }
+
+  ol {
+    li {
+      list-style: decimal;
     }
   }
 }
