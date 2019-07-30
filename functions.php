@@ -110,9 +110,6 @@ function webfactor_styles()
     wp_dequeue_style('wp-block-library');
 
     wp_register_style('google_fonts', 'https://fonts.googleapis.com/css?family=Spectral:700,700i|Work+Sans:400&display=swap&subset=latin-ext', array(), '', 'all');
-
-
-
     wp_enqueue_style('google_fonts'); // Enqueue it!
 
     wp_register_style('wf_style', get_template_directory_uri() . '/css/global.css', array(), wf_version(), 'all');
@@ -251,6 +248,7 @@ function html5_blank_view_article($more)
 }
 
 // Remove Admin bar
+//  add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 function remove_admin_bar()
 {
     return false;
@@ -373,7 +371,7 @@ add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove 
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
 add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
-add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
+
 add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
