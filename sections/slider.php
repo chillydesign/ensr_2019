@@ -12,7 +12,7 @@
               <div class="col-sm-6 col-sm-push-3" style="text-align: center">
 
                       <div class="welcome_text_inner">
-                          <?php echo $slide_content; ?>
+                        <h2>  <?php echo $slide_content; ?></h2>
                           &nbsp;
                       </div>
 
