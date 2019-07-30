@@ -647,5 +647,16 @@ if (defined('ICL_LANGUAGE_CODE')) {
     }
 }
 
+function isHTML($string)
+{
+    if ($string != strip_tags($string)) {
+        // is HTML
+        return true;
+    } else {
+        // not HTML
+        return false;
+    }
+}
+
 
 ?>
