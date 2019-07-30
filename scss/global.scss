@@ -311,6 +311,14 @@ section.section_two_thirds_one_third {
     li {
       list-style: disc;
       padding-bottom: 10px;
+
+      p {
+        font-size: inherit;
+      }
+
+      h3 {
+        font-size: 1.8em;
+      }
     }
   }
 
