@@ -726,39 +726,40 @@ img.alignone {
   height: auto;
 }
 
-#wpcf7-f1052-p1051-o1,
-#wpcf7-f1066-p1065-o1 {
-  form {
-    padding: 30px;
-    position: relative;
-    top: -210px;
-    background: rgba(255, 255, 255, 0.92);
-    margin-bottom: -200px;
+.col-sm-6 {
+  div.wpcf7 {
+    form {
+      padding: 30px;
+      position: relative;
+      top: -210px;
+      background: rgba(255, 255, 255, 0.92);
+      margin-bottom: -200px;
 
-    input {
-      padding: 8px;
-      margin: 0 0 1px;
-      font-size: 1.3em;
+      input {
+        padding: 8px;
+        margin: 0 0 1px;
+        font-size: 1.3em;
 
-      &[type="submit"] {
-        padding: 13px 30px;
-        font-size: 1em;
-        display: block;
-        width: 100%;
-        @media (min-width: $mobile_width) {
-          display: inline-block;
-          width: auto;
+        &[type="submit"] {
+          padding: 13px 30px;
+          font-size: 1em;
+          display: block;
+          width: 100%;
+          @media (min-width: $mobile_width) {
+            display: inline-block;
+            width: auto;
+          }
         }
       }
-    }
 
-    p {
-      padding: 0 0 5px;
-    }
-    @media (min-width: $mobile_width) {
-      top: -290px;
-      margin-bottom: -50px;
-      box-shadow: 0 20px 30px rgba(100, 100, 100, 0.1);
+      p {
+        padding: 0 0 5px;
+      }
+      @media (min-width: $mobile_width) {
+        top: -290px;
+        margin-bottom: -50px;
+        box-shadow: 0 20px 30px rgba(100, 100, 100, 0.1);
+      }
     }
   }
 }
