@@ -121,7 +121,6 @@ header {
           }
         }
         //a
-
         ul.sub-menu {
           margin: 0;
           position: static;
@@ -166,7 +165,6 @@ header {
           }
         }
         //.sub-menu
-
         &:hover {
           ul.sub-menu {
             display: block;
@@ -275,6 +273,7 @@ body.lang_en {
   }
 }
 // DONT SHOW HEADER NAVIGATION ON THE LANDING PAGE
+
 body.landing-page {
   #top_nav,
   header {

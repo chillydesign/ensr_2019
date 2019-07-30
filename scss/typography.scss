@@ -85,6 +85,7 @@ a {
 
   &:focus {
     box-shadow: 0 0 5px transparentize($blue,0.5);
+    outline: 0;
   }
 }
 
