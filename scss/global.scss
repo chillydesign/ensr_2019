@@ -190,7 +190,6 @@ section.section_school_sections {
     }
   }
   // section.visible
-
   ul.school_areas {
     display: flex;
     flex-wrap: wrap;
@@ -258,7 +257,6 @@ section.section_school_sections {
     }
   }
   // .school_areas
-
   .shield_background {
     position: absolute;
     z-index: 1;
@@ -280,6 +278,13 @@ section.section_school_sections {
 // end section_school_sections
 
 section.section_equal_columns {
+  .color_blue {
+    background: $blue;
+    color: white;
+  }
+
+  .color_white {}
+
   ul {
     margin: 0 0 30px 40px;
 
@@ -327,7 +332,6 @@ section.section_icons {
     }
   }
   // section.visible
-
   ul {
     display: flex;
     flex-wrap: wrap;
