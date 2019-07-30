@@ -11,7 +11,7 @@
       <div class="row">
 
         <?php if ($content_is_html): ?>
-        <div class="col-sm-6 col-sm-push-3">
+        <div class="col-sm-6 ">
 
           <div class="welcome_text_inner">
             <?php echo $slide_content; ?>
