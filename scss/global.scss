@@ -281,6 +281,24 @@ section.section_equal_columns {
   .color_blue {
     background: $blue;
     color: white;
+    padding: 50px 0;
+    margin: -30px 0;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: white;
+    }
+
+    a,
+    a:active,
+    a:hover,
+    a:link,
+    a:visited {
+      color: white;
+      text-decoration: underline;
+    }
   }
 
   .color_white {}
