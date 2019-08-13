@@ -338,7 +338,7 @@ section.section_two_thirds_one_third {
       padding-left: 40px;
       background-image: url('../images/ensr-bullet-blue.png');
       background-repeat: no-repeat;
-      background-position: top left 10px;
+      background-position: top 3px left 10px;
       background-size: 25px;
       padding-bottom: 10px;
 
@@ -739,7 +739,7 @@ img.alignone {
 }
 
 .landing-page   div.wpcf7 form {
-  top: -210px;
+  top: -470px;
   margin-bottom: -200px;
   @media (min-width: $mobile_width) {
     top: -290px;
