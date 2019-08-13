@@ -726,14 +726,16 @@ img.alignone {
   height: auto;
 }
 
+.landing-page   div.wpcf7 form {
+  top: -210px;
+  margin-bottom: -200px;
+}
 .col-sm-6 {
   div.wpcf7 {
     form {
       padding: 30px;
       position: relative;
-      top: -210px;
       background: rgba(255, 255, 255, 0.92);
-      margin-bottom: -200px;
 
       input {
         padding: 8px;
