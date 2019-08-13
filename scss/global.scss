@@ -729,6 +729,11 @@ img.alignone {
 .landing-page   div.wpcf7 form {
   top: -210px;
   margin-bottom: -200px;
+  @media (min-width: $mobile_width) {
+    top: -290px;
+    margin-bottom: -50px;
+    box-shadow: 0 20px 30px rgba(100, 100, 100, 0.1);
+  }
 }
 .col-sm-6 {
   div.wpcf7 {
@@ -757,11 +762,7 @@ img.alignone {
       p {
         padding: 0 0 5px;
       }
-      @media (min-width: $mobile_width) {
-        top: -290px;
-        margin-bottom: -50px;
-        box-shadow: 0 20px 30px rgba(100, 100, 100, 0.1);
-      }
+
     }
   }
 }
