@@ -274,7 +274,7 @@ body.lang_en {
 }
 // DONT SHOW HEADER NAVIGATION ON THE LANDING PAGE
 
-body.landing-page {
+body.landing-page, body.landing-page-2 {
   #top_nav,
   header {
     display: none !important;
