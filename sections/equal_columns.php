@@ -12,7 +12,7 @@ if ($reverse_on_mobile) :
 
 <div class="colonnes_padding <?php if ($color) {
     echo 'color_' . $color;
-} ?>   " <?php if($color AND $color == 'image') ?> style="background-image:url(<?php echo get_sub_field('background-image')['url']; ?>); background-size:cover; background-repeat:no-repeat"<?php endif;?>>
+} ?>   " <?php if($color AND $color == 'image') : ?> style="background-image:url(<?php echo get_sub_field('background-image')['url']; ?>); background-size:cover; background-repeat:no-repeat;"<?php endif;?> >
 	<div class="container">
 		<div class="row">
 			<?php $i = 0; while (have_rows('column')) : the_row(); ?>
