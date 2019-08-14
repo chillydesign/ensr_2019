@@ -85,13 +85,13 @@ section.section {
   }
 
   .landingform {
-    position: absolute; top: 30px; width: 100%;
 
+    position: relative;
+    top: -310px;
+    width: 100%;
+    margin-bottom: -430px;
     @media (min-width: $mobile_width) {
-      position: relative;
-      top: -310px;
-      width: 100%;
-      margin-bottom: -430px;
+      position: absolute; top: 30px; width: 100%; margin-bottom: 0;
     }
   }
 }
