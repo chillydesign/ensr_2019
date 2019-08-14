@@ -73,6 +73,17 @@ section.section {
   }
 }
 
+.landing-page-3{
+  .slide.slick-slide {
+    height: 600px;
+}
+.welcome_text_inner  {
+  @media (min-width: $mobile_width) {
+    padding: 200px 0 0;
+  }
+}
+}
+
 section.section_welcome {
   position: relative;
   padding-top: 0;
