@@ -43,10 +43,12 @@
                 <div class="background_image" style="background-image:url('<?php echo $tdu;  ?>/images/buildings_1.jpg')"></div>
               <?php endif; ?>
 
-              <div class="container" style="position: absolute; top: 100px; width: 100%;">
+              <div style="position: absolute; top: 100px; width: 100%;">
+                <div class="container">
                 <div class="row">
                 <div class="col-sm-6 col-sm-push-6">
                   <div class="landingform"><?php the_field('form'); ?></div>
+                </div>
                 </div>
                 </div>
 
