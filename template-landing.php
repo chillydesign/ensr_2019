@@ -1,4 +1,4 @@
-<?php /* Template Name: Home Page */ get_header(); ?>
+<?php /* Template Name: Landing Page */ get_header(); ?>
 <?php $home_url =  home_url(); ?>
 <?php $tdu = get_template_directory_uri(); ?>
 
