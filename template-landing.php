@@ -10,7 +10,7 @@
 
 
 
-        <section class="section section_welcome section_landing_welcome">
+        <section class="section section_welcome section_landing_welcome" style="position:relative;">
 
 
 
@@ -22,7 +22,7 @@
                   <?php $image = ($slide['image']['sizes']['large']); ?>
                   <div class="slide">
                       <div class="container">
-                          <div class="row">
+                          <div class="row" style="position: absolute; top: 100px; width: 100%;">
                               <div class="col-sm-6">
                                   <?php $welcome_text = $slide['text']; ?>
                                   <?php if ($welcome_text): ?>
