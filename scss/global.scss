@@ -103,8 +103,8 @@ section.section {
     height: 600px;
   }
   .welcome_text_inner  {
-    padding: 30px 30px 200px;
-    font-size: 0.6em;
+    padding: 50px 30px;
+    font-size: 1em;
     @media (min-width: $mobile_width) {
       padding: 200px 0 0;
       font-size: inherit;
