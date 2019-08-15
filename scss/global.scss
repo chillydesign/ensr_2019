@@ -73,6 +73,19 @@ section.section {
   }
 }
 
+.home {
+  .welcome_text_inner {
+    padding: 90px 0;
+    @media (min-width: $mobile_width) {
+      padding: 200px 0;
+    }
+  }
+  .slide.slick-slide {
+    height: 600px;
+    max-height: 80vh;
+  }
+}
+
 .landing-page-3{
   .slide.slick-slide {
     height: 600px;
