@@ -159,7 +159,7 @@
                             <?php $image = get_sub_field('image'); ?>
 
                             <div class="slide">
-                                <div class="row">
+                                <div class="row flex_row">
                                     <div class="col-sm-6 col-sm-push-6">
                                         <div class="section_text">
                                             <?php echo $texte; ?>
