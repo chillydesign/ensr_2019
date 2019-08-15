@@ -125,23 +125,23 @@
             <div class="container" id="section_nos_services">
                 <ul>
                     <li class="ramassage_scolaire">
-                        <a href="<?php echo $home_url; ?>"><img src="<?php echo $tdu; ?>/images/icon_bus.png" alt="" /><span>Ramassage scolaire</span></a>
+                        <a href="<?php echo $home_url; ?>/infos-pratiques/le-bus-scolaire"><img src="<?php echo $tdu; ?>/images/icon_bus.png" alt="" /><span>Ramassage scolaire</span></a>
                     </li>
                     <li class="restauration_de_qualite">
                         <a href="<?php echo get_link_by_slug('restaurant'); ?>"><img src="<?php echo $tdu; ?>/images/icon_restauration.png" alt="" /><span>Restauration de qualité</span>
                         </a>
                     </li>
                     <li class="etude_surveillee">
-                        <a href="<?php echo $home_url; ?>"><img src="<?php echo $tdu; ?>/images/icon_etude.png" alt="" /><span>Étude surveillée</span></a>
+                        <a href="<?php echo $home_url; ?>/journee-continue"><img src="<?php echo $tdu; ?>/images/icon_etude.png" alt="" /><span>Étude surveillée</span></a>
                     </li>
                     <li class="internat">
-                        <a href="<?php echo get_link_by_slug('internat'); ?>"><img src="<?php echo $tdu; ?>/images/icon_internat.png" alt="" /><span>Internat</span></a>
+                        <a href="<?php echo get_link_by_slug('internat'); ?>/presentation"><img src="<?php echo $tdu; ?>/images/icon_internat.png" alt="" /><span>Internat</span></a>
                     </li>
                     <li class="activites_et_camps">
-                        <a href="<?php echo $home_url; ?>"><img src="<?php echo $tdu; ?>/images/icon_activities.png" alt="" /><span>Activités et camps</span></a>
+                        <a href="<?php echo $home_url; ?>/le-sport-au-sein-de-lensr"><img src="<?php echo $tdu; ?>/images/icon_activities.png" alt="" /><span>Activités et camps</span></a>
                     </li>
                     <li class="accent_surles_langues">
-                        <a href="<?php echo $home_url; ?>"><img src="<?php echo $tdu; ?>/images/icon_langues.png" alt="" /><span>Accent sur les langues</span></a>
+                        <a href="<?php echo $home_url; ?>/baccalaureat-international"><img src="<?php echo $tdu; ?>/images/icon_langues.png" alt="" /><span>Accent sur les langues</span></a>
                     </li>
                 </ul>
             </div>
