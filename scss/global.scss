@@ -96,7 +96,7 @@ section.section {
 
 }
 
-.landing-page-3{
+.landing-page-3, .page-template-template-landing{
   .slide.slick-slide {
     height: 600px;
   }
@@ -110,6 +110,7 @@ section.section {
   }
 
   .landingform {
+    z-index: 9;
     color:$blue;
     position: relative;
     top: -340px;
