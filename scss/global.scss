@@ -149,8 +149,17 @@ section.section_welcome {
     text-align: left;
   }
 
+
+  .slick_slider_no_dots {
+    .slick-list {
+z-index: 1;
+
+    }
+  }
+
   ul.quick_links {
     position: absolute;
+    z-index: 1;
     bottom: 0;
     left: 0;
     width: 100%;
