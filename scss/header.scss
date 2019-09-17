@@ -25,6 +25,7 @@ header {
       text-indent: -9999px;
       height: $logo_height;
       width: 100%;
+      max-width: 250px;
       flex: 1 auto;
 
       &:focus {
