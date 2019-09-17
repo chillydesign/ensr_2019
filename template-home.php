@@ -87,32 +87,7 @@
 
 
                         <div class="school_areas_container">
-                            <ul class="school_areas">
-                                <li class="school_maternelle">
-                                    <a href="<?php echo get_link_by_slug('maternelle-montessori'); ?>">
-                                        <strong>Maternelle</strong>
-                                        <span>de 3 à 6 ans</span>
-                                    </a>
-                                </li>
-                                <li class="school_primaire">
-                                    <a href="<?php echo get_link_by_slug('primaire'); ?>">
-                                        <strong>Primaire</strong>
-                                        <span>de 7 à 10 ans</span>
-                                    </a>
-                                </li>
-                                <li class="school_college">
-                                    <a href="<?php echo get_link_by_slug('college'); ?>">
-                                        <strong>Collège</strong>
-                                        <span>de 11 à 14 ans</span>
-                                    </a>
-                                </li>
-                                <li class="school_gymnase">
-                                    <a href="<?php echo get_link_by_slug('gymnase'); ?>">
-                                        <strong>Gymnase</strong>
-                                        <span>de 15 à 18 ans</span>
-                                    </a>
-                                </li>
-                            </ul>
+                          <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/60137322?autoplay=1&loop=1&color=000000&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
                             <div class="shield_background"></div>
                         </div>
