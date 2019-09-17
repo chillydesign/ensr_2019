@@ -78,9 +78,9 @@ section.section {
   @media (min-width: $mobile_width) {
     padding: 200px 0;
   }
-  @media (max-height: 700px) {
-    padding: 60px 0;
-  }
+  // @media (max-height: 700px) {
+  //   padding: 60px 0;
+  // }
 }
 
 .home {
