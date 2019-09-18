@@ -188,6 +188,7 @@ z-index: 1;
     padding: 0;
     text-align: center;
     display: none;
+    font-family: $heading_font_stack;
     @media (min-width: $mobile_width) {
       display: block;
       bottom: 40px;
@@ -203,7 +204,6 @@ z-index: 1;
       }
 
       a {
-        font-weight: bold;
         text-transform: uppercase;
         display: inline-block;
         padding: 15px 20px;
