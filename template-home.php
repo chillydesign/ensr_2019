@@ -34,7 +34,7 @@
                   <div class="slide">
                       <div class="container">
                           <div class="row">
-                              <div class="col-sm-6 col-sm-push-6">
+                              <div class="col-sm-6 col-sm-push-6 homebottomalign">
                                   <?php $welcome_text = $slide['text']; ?>
                                   <?php if ($welcome_text): ?>
                                       <div class="welcome_text_inner">

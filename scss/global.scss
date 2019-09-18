@@ -60,6 +60,12 @@ section.section {
   }
 }
 
+@media (min-width: 768px){
+.col-sm-push-6.homebottomalign {
+    position: absolute;
+    bottom: 0;
+}
+}
 .welcome_text_inner {
   color: white;
   padding: 120px 0;
