@@ -68,7 +68,7 @@ section.section {
 }
 .welcome_text_inner {
   color: white;
-  padding: 120px 0;
+  padding: 150px 0;
   text-shadow: 0 0 30px rgba(0, 0, 0, 0.5), 0 5px 5px rgba(0, 0, 0, 0.5);
 
   h1 {
@@ -82,7 +82,7 @@ section.section {
     color: white;
   }
   @media (min-width: $mobile_width) {
-    padding: 100px 0;
+    padding: 150px 0;
   }
   // @media (max-height: 700px) {
   //   padding: 60px 0;
@@ -94,7 +94,7 @@ section.section {
     .welcome_text_inner {
       padding: 90px 0;
       @media (min-width: $mobile_width) {
-        padding: 100px 0;
+        padding: 150px 0;
       }
     }
     .slide.slick-slide {
@@ -113,7 +113,7 @@ section.section {
     padding: 30px;
     font-size: 0.8em;
     @media (min-width: $mobile_width) {
-      padding: 100px 0 0;
+      padding: 150px 0 0;
       font-size: inherit;
     }
   }
