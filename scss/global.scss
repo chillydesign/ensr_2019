@@ -271,6 +271,9 @@ a.gallery img {
 section.section_school_sections {
   h2 {
     text-align: center;
+    font-size: 2.2em;
+    line-height: 160%;
+
     @media (min-width: $mobile_width) {
       text-align: left;
       max-width: 400px;
@@ -792,23 +795,23 @@ section.section_events {
     min-height: 500px;
   }
 
-  &:after,
-  &:before {
-    content: "";
-    width: 25%;
-    left: 0;
-    height: 100%;
-    top: 0;
-    background: linear-gradient(90deg, white, transparentize(white, 1));
-    position: absolute;
-    z-index: 10;
-  }
+  // &:after,
+  // &:before {
+  //   content: "";
+  //   width: 25%;
+  //   left: 0;
+  //   height: 100%;
+  //   top: 0;
+  //   background: linear-gradient(90deg, white, transparentize(white, 1));
+  //   position: absolute;
+  //   z-index: 10;
+  // }
 
-  &:before {
-    left: auto;
-    right: 0;
-    background: linear-gradient(270deg, white, transparentize(white, 1));
-  }
+  // &:before {
+  //   left: auto;
+  //   right: 0;
+  //   background: linear-gradient(270deg, white, transparentize(white, 1));
+  // }
 
   .white_gradient_img {
     background: no-repeat center center;
