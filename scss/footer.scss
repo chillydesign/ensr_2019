@@ -106,7 +106,7 @@ footer {
 }
 
 .popup_content {
-    background: rgba(255,255,255,0.8);
+    // background: rgba(255,255,255,0.8);
     padding: 30px;
     margin: auto;
     z-index: 9;
@@ -137,14 +137,14 @@ footer {
 .popup_content h6 a {
     font-size: 1.4em;
     margin-top: 10px;
-    display: block;
+    // display: block;
     font-weight: bold;
     text-transform: uppercase;
     background: rgba(255,255,255,0.4);
 }
 
 .cancel_message {
-    background: #0095C5;
+    background: $blue;
     position: absolute;
     top: -34px;
     right: -35px;
