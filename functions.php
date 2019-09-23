@@ -16,12 +16,12 @@ Theme Support
 \*------------------------------------*/
 if (defined('ICL_LANGUAGE_CODE')) {
     if (ICL_LANGUAGE_CODE == 'en') {
-        setlocale(LC_TIME, "en_GB"); 
+        setlocale(LC_TIME, "en_GB");
     } elseif (ICL_LANGUAGE_CODE == 'fr') {
-        setlocale(LC_TIME, "fr_FR"); 
+        setlocale(LC_TIME, "fr_FR");
     }
 } else {
-    setlocale(LC_TIME, "fr_FR"); 
+    setlocale(LC_TIME, "fr_FR");
 }
 
 if (!isset($content_width)) {
@@ -665,6 +665,16 @@ function isHTML($string)
         // not HTML
         return false;
     }
+}
+
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page(array(
+		'page_title' 	=> 'Popup',
+		'menu_title'	=> 'Popup',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
 }
 
 
