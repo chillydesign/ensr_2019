@@ -206,22 +206,30 @@ frameborder="0" allowfullscreen> </iframe> </div>
                             <?php $date = get_field('date'); ?>
                             <?php $post_classes = array(); ?>
                             <?php $has_pic = (($p + floor($p / 4)) % 2);   // 4 is number of cols  same as in_array( $p, array(1,3,4,6)?>
-                            <?php if ($has_pic) {
-    array_push($post_classes, 'event_with_picture');
-} ?>
-                            <?php if ($p >= 4) {
-    array_push($post_classes, 'hide_on_mobile');
-} ?>
+                            <?php 
+                            if ($has_pic) {
+                                array_push($post_classes, 'event_with_picture');
+                            }
+                            if ($p >= 4) {
+                                array_push($post_classes, 'hide_on_mobile');
+                            }
+                            ?>
                             <?php $style = ($has_pic) ? 'style="background-image:url(' . thumbnail_of_post_url(get_the_ID(), 'medium') . ')"' : ''; ?>
                             <li class="ensr_event <?php echo implode($post_classes, ' ');  ?>"  <?php echo $style; ?>>
                                 <a href="<?php echo get_the_permalink(); ?>">
 
                                     <?php if ($date) : ?>
                                         <div class="date_container">
-                                            <?php $event_date  = new DateTime($date); ?>
-                                            <div class="day"><?php echo $event_date->format('l'); ?></div>
-                                            <div class="date"><?php echo $event_date->format('d'); ?></div>
-                                            <div class="month"><?php echo $event_date->format('F'); ?></div>
+                                            <?php 
+                                            $event_date  = new DateTime($date);
+                                            // $event_date->format('l')
+                                            $day =  strftime("%l", $event_date->getTimestamp());
+                                            $date =  strftime("%d", $event_date->getTimestamp());
+                                            $month =  strftime("%F", $event_date->getTimestamp());
+                                            ?>
+                                            <div class="day"><?php echo $day ; ?></div>
+                                            <div class="date"><?php echo $date; ?></div>
+                                            <div class="month"><?php echo $month; ?></div>
                                         </div>
                                     <?php endif; ?>
 
