@@ -223,9 +223,9 @@ frameborder="0" allowfullscreen> </iframe> </div>
                                             <?php 
                                             $event_date  = new DateTime($date);
                                             // $event_date->format('l')
-                                            $day =  strftime("%l", $event_date->getTimestamp());
+                                            $day =  strftime("%A", $event_date->getTimestamp());
                                             $date =  strftime("%d", $event_date->getTimestamp());
-                                            $month =  strftime("%F", $event_date->getTimestamp());
+                                            $month =  strftime("%B", $event_date->getTimestamp());
                                             ?>
                                             <div class="day"><?php echo $day ; ?></div>
                                             <div class="date"><?php echo $date; ?></div>
