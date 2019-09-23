@@ -14,9 +14,15 @@ External Modules/Files
 /*------------------------------------*\
 Theme Support
 \*------------------------------------*/
-
-setlocale(LC_TIME, "fr_FR"); //only necessary if the locale isn't already set
-
+if (defined('ICL_LANGUAGE_CODE')) {
+    if (ICL_LANGUAGE_CODE == 'en') {
+        setlocale(LC_TIME, "en_GB"); 
+    } elseif (ICL_LANGUAGE_CODE == 'fr') {
+        setlocale(LC_TIME, "fr_FR"); 
+    }
+} else {
+    setlocale(LC_TIME, "fr_FR"); 
+}
 
 if (!isset($content_width)) {
     $content_width = 900;
