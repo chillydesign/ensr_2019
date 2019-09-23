@@ -15,7 +15,7 @@ External Modules/Files
 Theme Support
 \*------------------------------------*/
 
-// setlocale(LC_TIME, "fr_FR"); //only necessary if the locale isn't already set
+setlocale(LC_TIME, "fr_FR"); //only necessary if the locale isn't already set
 
 
 if (!isset($content_width)) {
