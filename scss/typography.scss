@@ -145,7 +145,8 @@ a h6,
 a.button,
 h6 a {
   display: inline-block;
-  padding:15px 30px;
+  padding:15px 30px 10px;
+  line-height:130%;
   background: $blue;
   color: white;
   font-weight: bold;
