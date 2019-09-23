@@ -57,9 +57,9 @@
 </div>
 
 <style>
-.popup_message:after {
+/* .popup_message:after {
 background-image:url('<?php echo get_field('image', 'option')['sizes']['large']; ?>');
-}
+} */
 </style>
 <?php endif; ?>
 

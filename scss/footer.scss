@@ -72,7 +72,11 @@ footer {
     padding: 30px 30px 30px;
     position: fixed;
     z-index: 284798;
-    background: white;
+    background-color: $blue;
+    background: url("../images/shield_rotated.svg");
+    background-repeat: no-repeat;
+    background-position:bottom right;
+    background-size: 80%;
     box-shadow: 0 0 50px rgba(0,0,0,0.5), -37px 0 53px 1374px rgba(0,0,0,0.5);
     border: 1px solid #999;
     line-height: 150%;
@@ -117,7 +121,6 @@ footer {
     }
 
 .popup_content h2 {
-    color: #0095c5;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 120%;
@@ -130,8 +133,6 @@ footer {
 }
 
 .popup_content h6 a {
-    background: #0095c5;
-    color: white;
     padding: 11px 17px;
     font-size: 1.4em;
     margin-top: 10px;
