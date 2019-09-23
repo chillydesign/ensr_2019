@@ -72,11 +72,6 @@ footer {
     padding: 30px 30px 30px;
     position: fixed;
     z-index: 284798;
-    background-color: $blue;
-    background: url("../images/shield_rotated.svg");
-    background-repeat: no-repeat;
-    background-position:bottom right;
-    background-size: 80%;
     box-shadow: 0 0 50px rgba(0,0,0,0.5), -37px 0 53px 1374px rgba(0,0,0,0.5);
     border: 1px solid #999;
     line-height: 150%;
@@ -101,6 +96,11 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: $blue;
+    background: url("../images/shield_rotated.svg");
+    background-repeat: no-repeat;
+    background-position:bottom right;
+    background-size: 80%;
 	opacity:0.8;
 }
 
