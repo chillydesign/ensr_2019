@@ -151,6 +151,7 @@ h6 a {
   font-size: $font_size;
   text-transform: uppercase;
   font-family: $heading_font_stack;
+  text-decoration: none;
 
   &:active,
   &:hover,

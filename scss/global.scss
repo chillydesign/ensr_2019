@@ -415,6 +415,10 @@ section.section_two_thirds_one_third {
 
     li {background-image: url('../images/ensr-bullet.png');}
 
+    h6 a, a h6 {
+    background: rgba(255,255,255,0.3);
+    }
+
     h1,
     h2,
     h3,
