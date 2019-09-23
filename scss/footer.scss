@@ -82,26 +82,27 @@ footer {
     min-height: 70vh;
     display: flex;
     align-items: center;
-    border: double 9px #0095c5;
     outline: solid 10px white;
+    background: $blue;
+    color: white;
 }
 
 .popup_message:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: $blue;
-    background: url("../images/shield_rotated.svg");
-    background-repeat: no-repeat;
-    background-position:bottom right;
-    background-size: 80%;
-	opacity:0.8;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  background-color: rgba(255,255,255,0.3);
+  background-image: url(../images/shield_rotated.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 80%;
+  opacity: 0.2;
 }
 
 .popup_content {
@@ -124,6 +125,7 @@ footer {
     font-weight: bold;
     text-transform: uppercase;
     line-height: 120%;
+    color: white;
 }
 
 .popup_content hr {
@@ -133,12 +135,12 @@ footer {
 }
 
 .popup_content h6 a {
-    padding: 11px 17px;
     font-size: 1.4em;
     margin-top: 10px;
     display: block;
     font-weight: bold;
     text-transform: uppercase;
+    background: rgba(255,255,255,0.4);
 }
 
 .cancel_message {
