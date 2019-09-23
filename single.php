@@ -48,7 +48,7 @@
                     </div> -->
                     <div class="col-sm-6">
 
-                        <h2 class=""> <?php echo get_the_date(); ?></p>
+                        <h2 class=""> <?php echo get_the_date(); ?></h2>
 
                         <?php the_content(); // Dynamic Content?>
                         <?php if (get_field('attachment')) : ?>
