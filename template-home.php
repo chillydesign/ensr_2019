@@ -87,7 +87,11 @@
 
 
                         <div class="school_areas_container">
-                          <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/60137322?color=000000&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                          <!-- <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/60137322?color=000000&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script> -->
+                          <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe id="ytplayer" type="text/html"
+src="https://www.youtube.com/embed/M7lc1UVf-VE?loop=1&modestbranding=1"
+frameborder="0" allowfullscreen>  </div>
+
 
                             <!-- <div class="shield_background"></div> -->
                         </div>
@@ -188,11 +192,11 @@
                             <h2>L’Actualité ENSR</h2>
                         </div>
                         <div class="col-sm-3 col-sm-pull-6">
-                            <a href="#" class="button">Toute l'actualité </a>
+                            <!-- <a href="#" class="button">Toute l'actualité </a> -->
                         </div>
 
                         <div class="col-sm-3">
-                            <a href="#" class="button">Calendrier</a>
+                            <!-- <a href="#" class="button">Calendrier</a> -->
                         </div>
                     </div><!--  END OF ROW -->
 

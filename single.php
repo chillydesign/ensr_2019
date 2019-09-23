@@ -41,14 +41,14 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <img src="<?php echo thumbnail_of_post_url(get_the_ID(), 'small'); ?>" alt=""/>
-                        <?php endif; ?>
-                    </div>
+                    <!-- <div class="col-sm-3">
+                        <?php //if (has_post_thumbnail()) : ?>
+                            <img src="<?php //echo thumbnail_of_post_url(get_the_ID(), 'small'); ?>" alt=""/>
+                        <?php //endif; ?>
+                    </div> -->
                     <div class="col-sm-6">
 
-                        <p class="">Le <?php echo get_the_date(); ?></p>
+                        <h2 class=""> <?php echo get_the_date(); ?></p>
 
                         <?php the_content(); // Dynamic Content?>
                         <?php if (get_field('attachment')) : ?>
