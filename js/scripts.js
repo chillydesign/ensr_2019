@@ -112,6 +112,30 @@
   });
 })(jQuery, this);
 
+
+// POP UP MESSAGE ON HOME PAGE
+var $home_page_message = $('#home_page_message');
+
+$('.cancel_message').on('click', function(e){
+    e.preventDefault();
+    $home_page_message.hide();
+
+  var d = new Date();
+  d.setTime(d.getTime() + (60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = "home_page_message_hide=true;"+ expires +"; path=/";
+
+
+});
+var home_page_message_cookie = getCookie("home_page_message_hide");
+if (home_page_message_cookie != "") {
+
+} else {
+  $home_page_message.show();
+}
+
+
+
 // NOTE CHARLES ADD CHILLY MAPS
 function generate_chilly_map($options) {
   var map_theme = [
