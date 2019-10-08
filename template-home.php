@@ -141,7 +141,7 @@ frameborder="0" allowfullscreen> </iframe> </div>
                         </a>
                     </li>
                     <li class="etude_surveillee">
-                        <a href="<?php echo $home_url; ?>/journee-continue"><img src="<?php echo $tdu; ?>/images/icon_etude.png" alt="" /><span>Étude surveillée</span></a>
+                        <a href="<?php echo $home_url; ?>/journee-continue"><img src="<?php echo $tdu; ?>/images/icon_etude.png" alt="" /><span>Étude surveillée</span></a> 
                     </li>
                     <li class="internat">
                         <a href="<?php echo get_link_by_slug('internat'); ?>/presentation"><img src="<?php echo $tdu; ?>/images/icon_internat.png" alt="" /><span>Internat</span></a>
