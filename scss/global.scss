@@ -951,6 +951,9 @@ ul.social_icons {
     &.icon_instagram {
       background-image: url('../images/social/instagram.svg');
     }
+    &.icon_map {
+      background-image: url('../images/social/map.svg');
+    }
 
     &:hover {
       transform: scale(1.1);
