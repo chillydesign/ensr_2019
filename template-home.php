@@ -115,7 +115,7 @@ frameborder="0" allowfullscreen> </iframe> </div>
             <div class="container" id="section_nos_services">
               <ul>
                   <li class="ramassage_scolaire">
-                      <a href="<?php echo $home_url; ?>/infos-pratiques/le-bus-scolaire"><img src="<?php echo $tdu; ?>/images/icon_busW.png" alt="" /><span><?php echo translateString('Ramassage scolaire'); ?></span></a>
+                      <a href="<?php echo $home_url; ?>/infos-pratiques/le-bus-scolaire"><img src="<?php echo $tdu; ?>/images/icon_bus.png" alt="" /><span><?php echo translateString('Ramassage scolaire'); ?></span></a>
                   </li>
                   <li class="restauration_de_qualite">
                       <a href="<?php echo get_link_by_slug('restaurant'); ?>"><img src="<?php echo $tdu; ?>/images/icon_restauration.png" alt="" /><span><?php echo translateString('Restauration de qualité'); ?></span>
