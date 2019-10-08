@@ -186,7 +186,18 @@ header {
   height: $top_nav_height;
   overflow: hidden;
 
-  ul {
+
+  .container {
+    position: relative;
+  }
+
+  ul.social_icons {
+    position: absolute;
+    left:0;
+    top:0;
+  }
+
+  ul.top_nav_ul {
     text-align: right;
     margin: 0;
     padding: 0;

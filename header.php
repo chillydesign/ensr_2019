@@ -17,9 +17,9 @@
 
     <div id="top_nav">
         <div class="container">
-            <ul>
-                    <?php chilly_nav('top-navigation'); ?>
-
+             <?php get_template_part('social_links'); ?>
+        <ul class="top_nav_ul">
+                  <?php chilly_nav('top-navigation'); ?>
             </ul>
         </div>
     </div>
