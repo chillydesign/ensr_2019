@@ -8,15 +8,11 @@
     <div class="column" style="margin: 0 0 30px">
         <div class="news_item_content">
             <div class="row">
-                <div class="col-sm-3">
-                    <?php if (has_post_thumbnail() ) : ?>
-                        <img src="<?php echo thumbnail_of_post_url( get_the_ID(), 'small'); ?>" alt=""/>
-                    <?php endif; ?>
-                </div>
+         
                 <div class="col-sm-9">
 
                     <h2><a  href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-                    <p class="news_date"><em><?php echo get_the_date(); ?></em></p>
+                  
                     <div class="news_excerpt"><?php echo html5wp_excerpt(); ?></div>
 
                 </div>

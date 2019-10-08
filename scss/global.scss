@@ -960,3 +960,23 @@ ul.social_icons {
 
   }
 }
+
+
+
+.pagination {
+
+  margin: 20px 0;
+
+  .page-numbers {
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid $light_grey;
+    margin: 0 5px 5px 0;
+
+    &:hover, &.current {
+      background: $light_grey;
+    }
+
+  }
+}

@@ -17,7 +17,10 @@
 
     <div id="top_nav">
         <div class="container">
+        <div class="social_search">
+            <?php get_template_part('searchform'); ?>
              <?php get_template_part('social_links'); ?>
+             </div>
         <ul class="top_nav_ul">
                   <?php chilly_nav('top-navigation'); ?>
             </ul>

@@ -191,10 +191,32 @@ header {
     position: relative;
   }
 
-  ul.social_icons {
+  .social_search {
     position: absolute;
     left:0;
     top:0;
+    width: 250px;
+  }
+  form {
+    width: 150px;
+    display: inline-block;
+
+  }
+  input { 
+    width:100%;
+    padding: 5px;
+    border-radius: 1px;
+    height: #{$top_nav_height - 7px};
+    background: transparentize(white , 0.85);
+    border: 0;
+    margin: 3px 0 0 ;
+    color: darken($blue, 30);
+  }
+
+  ul.social_icons {
+  display: inline-block;
+  position: relative;
+  top: -3px;
   }
 
   ul.top_nav_ul {
