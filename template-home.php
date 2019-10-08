@@ -111,27 +111,27 @@ frameborder="0" allowfullscreen> </iframe> </div>
 
         <section class="section section_icons">
             <div class="container" id="section_nos_services">
-                <ul>
-                    <li class="ramassage_scolaire">
-                        <a href="<?php echo $home_url; ?>/infos-pratiques/le-bus-scolaire"><img src="<?php echo $tdu; ?>/images/icon_bus.png" alt="" /><span>Ramassage scolaire</span></a>
-                    </li>
-                    <li class="restauration_de_qualite">
-                        <a href="<?php echo get_link_by_slug('restaurant'); ?>"><img src="<?php echo $tdu; ?>/images/icon_restauration.png" alt="" /><span>Restauration de qualité</span>
-                        </a>
-                    </li>
-                    <li class="etude_surveillee">
-                        <a href="<?php echo $home_url; ?>/journee-continue"><img src="<?php echo $tdu; ?>/images/icon_etude.png" alt="" /><span>Étude surveillée</span></a>
-                    </li>
-                    <li class="internat">
-                        <a href="<?php echo get_link_by_slug('internat'); ?>/presentation"><img src="<?php echo $tdu; ?>/images/icon_internat.png" alt="" /><span>Internat</span></a>
-                    </li>
-                    <li class="activites_et_camps">
-                        <a href="<?php echo $home_url; ?>/le-sport-au-sein-de-lensr"><img src="<?php echo $tdu; ?>/images/icon_activities.png" alt="" /><span>Activités et camps</span></a>
-                    </li>
-                    <li class="accent_surles_langues">
-                        <a href="<?php echo $home_url; ?>/baccalaureat-international"><img src="<?php echo $tdu; ?>/images/icon_langues.png" alt="" /><span>Accent sur les langues</span></a>
-                    </li>
-                </ul>
+              <ul>
+                  <li class="ramassage_scolaire">
+                      <a href="<?php echo $home_url; ?>/infos-pratiques/le-bus-scolaire"><img src="<?php echo $tdu; ?>/images/icon_bus.png" alt="" /><span><?php _e('Ramassage scolaire', 'webfactor'); ?></span></a>
+                  </li>
+                  <li class="restauration_de_qualite">
+                      <a href="<?php echo get_link_by_slug('restaurant'); ?>"><img src="<?php echo $tdu; ?>/images/icon_restauration.png" alt="" /><span><?php _e('Restauration de qualité', 'webfactor'); ?></span>
+                      </a>
+                  </li>
+                  <li class="etude_surveillee">
+                      <a href="<?php echo $home_url; ?>/journee-continue"><img src="<?php echo $tdu; ?>/images/icon_etude.png" alt="" /><span><?php _e('Étude surveillée', 'webfactor'); ?></span></a>
+                  </li>
+                  <li class="internat">
+                      <a href="<?php echo get_link_by_slug('internat'); ?>/presentation"><img src="<?php echo $tdu; ?>/images/icon_internat.png" alt="" /><span><?php _e('Internat', 'webfactor'); ?></span></a>
+                  </li>
+                  <li class="activites_et_camps">
+                      <a href="<?php echo $home_url; ?>/le-sport-au-sein-de-lensr"><img src="<?php echo $tdu; ?>/images/icon_activities.png" alt="" /><span><?php _e('Activités et camps', 'webfactor'); ?></span></a>
+                  </li>
+                  <li class="accent_surles_langues">
+                      <a href="<?php echo $home_url; ?>/baccalaureat-international"><img src="<?php echo $tdu; ?>/images/icon_langues.png" alt="" /><span><?php _e('Accent sur les langues', 'webfactor'); ?></span></a>
+                  </li>
+              </ul>
             </div>
         </section>
 
@@ -218,7 +218,7 @@ frameborder="0" allowfullscreen> </iframe> </div>
                             <?php $date = get_field('date'); ?>
                             <?php $post_classes = array(); ?>
                             <?php $has_pic = (($p + floor($p / 4)) % 2);   // 4 is number of cols  same as in_array( $p, array(1,3,4,6)?>
-                            <?php 
+                            <?php
                             if ($has_pic) {
                                 array_push($post_classes, 'event_with_picture');
                             }
@@ -232,7 +232,7 @@ frameborder="0" allowfullscreen> </iframe> </div>
 
                                     <?php if ($date) : ?>
                                         <div class="date_container">
-                                            <?php 
+                                            <?php
                                             $event_date  = new DateTime($date);
                                             // $event_date->format('l')
                                             $day =  strftime("%A", $event_date->getTimestamp());
