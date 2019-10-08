@@ -6,7 +6,15 @@
 
     <div class="container">
         <div class="row">
+            <div class="col-sm-4">
+                <h3><?php echo translateString('Liens utiles'); ?></h3>
+                <ul>
+                    <?php chilly_nav('footer-navigation'); ?>
+                </ul>
 
+                <?php get_template_part('social_links'); ?>
+
+            </div>
             <div class="col-sm-4">
                 <h3><?php echo translateString('Nous trouver'); ?></h3>
                 <p>
@@ -40,7 +48,6 @@
 
 
             </div>
-            
         </div>
     </div><!--  END OF .container -->
 
