@@ -199,7 +199,7 @@ frameborder="0" allowfullscreen> </iframe> </div>
                     <div class="row title_row">
                         <div class="col-sm-6 col-sm-push-3" >
                         <?php if (site_language() == 'en') : ?>
-                            <h2> ENSR News</h2>
+                            <h2>ENSR News</h2>
                             <?php else : ?>
                             <h2>L’Actualité ENSR</h2>
                             <?php endif; ?>

@@ -49,17 +49,20 @@
 <?php if ($show_popup): ?>
 <div class="popup"  id="home_page_message">
     <div class="popup_message">
-<div class="popup_content">
-  <?php if (ICL_LANGUAGE_CODE == 'fr') { echo get_field('texte_fr', 'option');} else { echo get_field('texte_en', 'option');} ?>
-       <a href="#" class="cancel_message">X</a>
+        <div class="popup_content">
+        <?php if (site_language() == 'en') { 
+            echo get_field('texte_en', 'option');
+            } else {
+            echo get_field('texte_fr', 'option');
+            } ?>
+            <a href="#" class="cancel_message">X</a>
+        </div>
+    </div>
 </div>
-   </div>
-</div>
-
 <style>
-/* .popup_message:after {
-background-image:url('<?php echo get_field('image', 'option')['sizes']['large']; ?>');
-} */
+.popup_message:after {
+background-image:url('<?php // echo get_field('image', 'option')['sizes']['large']; ?>');
+} 
 </style>
 <?php endif; ?>
 

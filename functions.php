@@ -28,19 +28,6 @@ if (!isset($content_width)) {
     $content_width = 900;
 }
 
-function site_language() {
-    if (defined('ICL_LANGUAGE_CODE')) {
-        if (ICL_LANGUAGE_CODE == 'en') {
-            $lang = 'en';
-        } elseif (ICL_LANGUAGE_CODE == 'fr') {
-            $lang = 'fr';
-        }
-    } else {
-        $lang = 'fr';
-    }
-    return $lang;
-}
-
 
 
 
@@ -633,10 +620,25 @@ function get_link_by_slug($slug, $type = 'page')
 }
 
 
-function translateString($string)
-{
+
+function site_language() {
     if (defined('ICL_LANGUAGE_CODE')) {
         if (ICL_LANGUAGE_CODE == 'en') {
+            $lang = 'en';
+        } elseif (ICL_LANGUAGE_CODE == 'fr') {
+            $lang = 'fr';
+        }
+    } else {
+        $lang = 'fr';
+    }
+    return $lang;
+}
+
+
+function translateString($string)
+{
+  
+        if (site_language() == 'en') {
             if ($string == 'Nous trouver') {
                 return 'Find us';
             } elseif ($string == 'Nous contacter') {
@@ -649,8 +651,8 @@ function translateString($string)
             return $string;
         }
         return $string;
-    }
-    return $string;
+   
+
 }
 
 

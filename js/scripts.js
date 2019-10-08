@@ -1,5 +1,5 @@
-(function($, root, undefined) {
-  $(function() {
+(function ($, root, undefined) {
+  $(function () {
     "use strict";
 
     var $window = $(window);
@@ -9,30 +9,30 @@
     // mobile menu button
     var $menu_button = $("#menu_button");
     var $nav = $("nav ul");
-    $menu_button.on("click", function(e) {
+    $menu_button.on("click", function (e) {
       e.preventDefault();
       $nav.toggleClass("menu_visible");
     });
 
     // if press escape key, hide menu
-    $(document).on("keydown", function(e) {
+    $(document).on("keydown", function (e) {
       if (e.keyCode == 27) {
         $nav.removeClass("menu_visible");
       }
     });
 
-    $("#main").on("click", function() {
+    $("#main").on("click", function () {
       $nav.removeClass("menu_visible");
     });
 
 
-    $('.closable').on("click", function() {
+    $('.closable').on("click", function () {
       $(this).hide();
     });
 
     ////////////////////////////
     // animate sliding down page
-    $(".scroll_link").on("click", function(e) {
+    $(".scroll_link").on("click", function (e) {
       e.preventDefault();
 
       var $this = $(this);
@@ -66,9 +66,9 @@
       // make first section visible by defualt
       $sections.first().addClass("visible");
 
-      $window.on("scroll", function() {
+      $window.on("scroll", function () {
         var $scrollTop = $window.scrollTop();
-        $sections.each(function(index) {
+        $sections.each(function (index) {
           var $section = $(this);
           var $distanceFromTop = $section.offset().top;
           if ($scrollTop > $distanceFromTop - $windowHeight + 200) {
@@ -114,14 +114,14 @@
     // POP UP MESSAGE ON HOME PAGE
     var $home_page_message = $('#home_page_message');
 
-    $('.cancel_message').on('click', function(e){
-        e.preventDefault();
-        $home_page_message.hide();
+    $('.cancel_message').on('click', function (e) {
+      e.preventDefault();
+      $home_page_message.hide();
 
       var d = new Date();
-      d.setTime(d.getTime() + (60*60*1000));
-      var expires = "expires="+ d.toUTCString();
-      document.cookie = "home_page_message_hide=true;"+ expires +"; path=/";
+      d.setTime(d.getTime() + (60 * 60 * 1000));
+      var expires = "expires=" + d.toUTCString();
+      document.cookie = "home_page_message_hide=true;" + expires + "; path=/";
 
 
     });
@@ -140,18 +140,18 @@
 })(jQuery, this);
 
 function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
     }
-    return "";
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
 
 
@@ -235,7 +235,7 @@ function generate_chilly_map($options) {
   var location_map_container = jQuery($options.element);
   location_map_container.css({
     width: "100%",
-    height: 300
+    height: 450
   });
 
   var location_map = new google.maps.Map(
@@ -250,7 +250,7 @@ function generate_chilly_map($options) {
     optimized: false
   });
 
-  marker.addListener("click", function() {
+  marker.addListener("click", function () {
     infowindow.setContent($options.title);
     infowindow.open(location_map, this);
   });
