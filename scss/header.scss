@@ -193,16 +193,20 @@ header {
 
   .social_search {
     position: absolute;
-    left:0;
+    right: 210px;
     top:0;
     width: 250px;
+    z-index: 9999;
   }
   form {
     width: 150px;
     display: inline-block;
+    ::placeholder {
+        color: white!important;
+      }
 
   }
-  input { 
+  input {
     width:100%;
     padding: 5px;
     border-radius: 1px;
