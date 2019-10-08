@@ -29,14 +29,20 @@
                 <p>
                     <strong>Tel :</strong> +41 21 654 65 00 <br>
                     <strong>Fax :</strong> +41 21 654 65 05 <br>
-                    <strong>Email :</strong>  info(at)ensr.ch
+                    <strong>Email :</strong><a href="mailto:info@ensr.ch" target="_blank">
+                      <?php if (site_language() == 'en') : ?>
+                        Click here
+                      <?php else : ?>
+                        Cliquez ici
+                      <?php endif; ?>
+                      </a>
                 </p>
 
 
-         
+
 
             </div>
-        </div>  
+        </div>
     </div><!--  END OF .container -->
 
 
@@ -57,7 +63,7 @@
 <div class="popup"  id="home_page_message">
     <div class="popup_message">
         <div class="popup_content">
-        <?php if (site_language() == 'en') { 
+        <?php if (site_language() == 'en') {
             echo get_field('texte_en', 'option');
             } else {
             echo get_field('texte_fr', 'option');
