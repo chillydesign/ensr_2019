@@ -31,11 +31,17 @@
                     <strong>Fax :</strong> +41 21 654 65 05 <br>
                     <strong>Email :</strong><a href="mailto:info@ensr.ch" target="_blank">
                       <?php if (site_language() == 'en') : ?>
-                        Click here
+                        General enquiries
                       <?php else : ?>
-                        Cliquez ici
+                        Demandes générales
                       <?php endif; ?>
-                      </a>
+                    </a> | <a href="mailto:admissions@ensr.ch" target="_blank">
+                      <?php if (site_language() == 'en') : ?>
+                        Admissions
+                      <?php else : ?>
+                        Admissions
+                      <?php endif; ?>
+                    </a>
                 </p>
 
 
