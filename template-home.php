@@ -56,11 +56,19 @@
 
 
                 <ul class="quick_links">
+                <?php if (site_language() == 'en') : ?>
+                    <li><a class="scroll_link" href="#section_l_ensr">ENSR</a></li>
+                    <li><a class="scroll_link" href="#section_nos_services">Our Services</a></li>
+                    <li><a class="scroll_link" href="#section_nos_atouts">Our Strengths</a></li>
+                    <li><a class="scroll_link" href="#section_actualites">News</a></li>
+                    <li><a class="scroll_link" href="#section_s_inscrire">Apply</a></li>
+                    <?php else : ?>
                     <li><a class="scroll_link" href="#section_l_ensr">L'Ensr</a></li>
                     <li><a class="scroll_link" href="#section_nos_services">Nos Services</a></li>
                     <li><a class="scroll_link" href="#section_nos_atouts">Nos Atouts</a></li>
                     <li><a class="scroll_link" href="#section_actualites">Actualités</a></li>
                     <li><a class="scroll_link" href="#section_s_inscrire">S'Inscrire</a></li>
+                    <?php endif; ?>
                 </ul>
 
 
@@ -190,7 +198,11 @@ frameborder="0" allowfullscreen> </iframe> </div>
                 <div class="container" id="section_actualites">
                     <div class="row title_row">
                         <div class="col-sm-6 col-sm-push-3" >
+                        <?php if (site_language() == 'en') : ?>
+                            <h2> ENSR News</h2>
+                            <?php else : ?>
                             <h2>L’Actualité ENSR</h2>
+                            <?php endif; ?>
                         </div>
                         <div class="col-sm-3 col-sm-pull-6">
                             <!-- <a href="#" class="button">Toute l'actualité </a> -->

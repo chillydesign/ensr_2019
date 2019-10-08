@@ -28,6 +28,22 @@ if (!isset($content_width)) {
     $content_width = 900;
 }
 
+function site_language() {
+    if (defined('ICL_LANGUAGE_CODE')) {
+        if (ICL_LANGUAGE_CODE == 'en') {
+            $lang = 'en';
+        } elseif (ICL_LANGUAGE_CODE == 'fr') {
+            $lang = 'fr';
+        }
+    } else {
+        $lang = 'fr';
+    }
+    return $lang;
+}
+
+
+
+
 if (function_exists('add_theme_support')) {
     // Add Menu Support
     add_theme_support('menus');
