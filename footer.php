@@ -11,6 +11,13 @@
                 <ul>
                     <?php chilly_nav('footer-navigation'); ?>
                 </ul>
+
+                <ul class="social_icons">
+                    <li class="social_icon icon_facebook"><a  target="_blank" href="https://www.facebook.com/EcoleNouvelleENSR/">Facebook</a></li>
+                    <li class="social_icon icon_instagram"><a  target="_blank" href="https://www.instagram.com/explore/locations/497566922/ensr/">Instagram</a></li>
+                    </ul>
+
+                    
             </div>
             <div class="col-sm-4">
                 <h3><?php echo translateString('Nous trouver'); ?></h3>
@@ -28,8 +35,12 @@
                     <strong>Fax :</strong> +41 21 654 65 05 <br>
                     <strong>Email :</strong>  info(at)ensr.ch
                 </p>
+
+
+         
+
             </div>
-        </div>
+        </div>  
     </div><!--  END OF .container -->
 
 

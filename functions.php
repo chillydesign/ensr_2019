@@ -661,11 +661,28 @@ function translateString($string)
                 return 'Links';
             } elseif ($string == "Merci pour votre message. Nous revenons vers vous rapidement avec plus d'information sur notre école.") {
                 return 'Thank you for your message. We will get back to you shortly with more information about our school.';
+            } elseif ($string == 'Ramassage scolaire') {
+                return 'School bus';
+            } elseif ($string == 'Restauration de qualité') {
+                return 'Quality restoration';
+            } elseif ($string == 'Étude surveillée') {
+                return 'Supervised study';
+            } elseif ($string == 'Internat') {
+                return 'Internships';
+            } elseif ($string == 'Activités et camps') {
+                return 'Activities and camps';
+            } elseif ($string == 'Accent sur les langues') {
+                return "Focus on language";
             }
+
             return $string;
         }
         return $string;
    
+
+
+    
+
 
 }
 

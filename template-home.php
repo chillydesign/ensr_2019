@@ -113,23 +113,23 @@ frameborder="0" allowfullscreen> </iframe> </div>
             <div class="container" id="section_nos_services">
               <ul>
                   <li class="ramassage_scolaire">
-                      <a href="<?php echo $home_url; ?>/infos-pratiques/le-bus-scolaire"><img src="<?php echo $tdu; ?>/images/icon_bus.png" alt="" /><span><?php _e('Ramassage scolaire', 'webfactor'); ?></span></a>
+                      <a href="<?php echo $home_url; ?>/infos-pratiques/le-bus-scolaire"><img src="<?php echo $tdu; ?>/images/icon_bus.png" alt="" /><span><?php echo translateString('Ramassage scolaire'); ?></span></a>
                   </li>
                   <li class="restauration_de_qualite">
-                      <a href="<?php echo get_link_by_slug('restaurant'); ?>"><img src="<?php echo $tdu; ?>/images/icon_restauration.png" alt="" /><span><?php _e('Restauration de qualité', 'webfactor'); ?></span>
+                      <a href="<?php echo get_link_by_slug('restaurant'); ?>"><img src="<?php echo $tdu; ?>/images/icon_restauration.png" alt="" /><span><?php echo translateString('Restauration de qualité'); ?></span>
                       </a>
                   </li>
                   <li class="etude_surveillee">
-                      <a href="<?php echo $home_url; ?>/journee-continue"><img src="<?php echo $tdu; ?>/images/icon_etude.png" alt="" /><span><?php _e('Étude surveillée', 'webfactor'); ?></span></a>
+                      <a href="<?php echo $home_url; ?>/journee-continue"><img src="<?php echo $tdu; ?>/images/icon_etude.png" alt="" /><span><?php echo translateString('Étude surveillée'); ?></span></a>
                   </li>
                   <li class="internat">
-                      <a href="<?php echo get_link_by_slug('internat'); ?>/presentation"><img src="<?php echo $tdu; ?>/images/icon_internat.png" alt="" /><span><?php _e('Internat', 'webfactor'); ?></span></a>
+                      <a href="<?php echo get_link_by_slug('internat'); ?>/presentation"><img src="<?php echo $tdu; ?>/images/icon_internat.png" alt="" /><span><?php echo translateString('Internat'); ?></span></a>
                   </li>
                   <li class="activites_et_camps">
-                      <a href="<?php echo $home_url; ?>/le-sport-au-sein-de-lensr"><img src="<?php echo $tdu; ?>/images/icon_activities.png" alt="" /><span><?php _e('Activités et camps', 'webfactor'); ?></span></a>
+                      <a href="<?php echo $home_url; ?>/le-sport-au-sein-de-lensr"><img src="<?php echo $tdu; ?>/images/icon_activities.png" alt="" /><span><?php echo translateString('Activités et camps'); ?></span></a>
                   </li>
                   <li class="accent_surles_langues">
-                      <a href="<?php echo $home_url; ?>/baccalaureat-international"><img src="<?php echo $tdu; ?>/images/icon_langues.png" alt="" /><span><?php _e('Accent sur les langues', 'webfactor'); ?></span></a>
+                      <a href="<?php echo $home_url; ?>/baccalaureat-international"><img src="<?php echo $tdu; ?>/images/icon_langues.png" alt="" /><span><?php echo translateString('Accent sur les langues'); ?></span></a>
                   </li>
               </ul>
             </div>
