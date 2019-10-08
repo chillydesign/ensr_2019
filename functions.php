@@ -673,6 +673,8 @@ function translateString($string)
                 return 'Activities and camps';
             } elseif ($string == 'Accent sur les langues') {
                 return "Focus on language";
+            } elseif ($string == 'chercher') {
+                return "search";
             }
 
             return $string;
