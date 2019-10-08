@@ -113,25 +113,26 @@ frameborder="0" allowfullscreen> </iframe> </div>
 
         <section class="section section_icons">
             <div class="container" id="section_nos_services">
+            <?php $suffix =  ( site_language == 'en' ) ? '_en' :  '' ;  ?>
               <ul>
                   <li class="ramassage_scolaire">
-                      <a href="<?php echo $home_url; ?>/infos-pratiques/le-bus-scolaire"><img src="<?php echo $tdu; ?>/images/icon_bus.png" alt="" /><span><?php echo translateString('Ramassage scolaire'); ?></span></a>
+                      <a href="<?php echo $home_url; ?>/infos-pratiques/le-bus-scolaire"><img src="<?php echo $tdu; ?>/images/icon_bus<?php echo $suffix; ?>.png" alt="" /><span><?php echo translateString('Ramassage scolaire'); ?></span></a>
                   </li>
                   <li class="restauration_de_qualite">
-                      <a href="<?php echo get_link_by_slug('restaurant'); ?>"><img src="<?php echo $tdu; ?>/images/icon_restauration.png" alt="" /><span><?php echo translateString('Restauration de qualité'); ?></span>
+                      <a href="<?php echo get_link_by_slug('restaurant'); ?>"><img src="<?php echo $tdu; ?>/images/icon_restauration<?php echo $suffix; ?>.png" alt="" /><span><?php echo translateString('Restauration de qualité'); ?></span>
                       </a>
                   </li>
                   <li class="etude_surveillee">
-                      <a href="<?php echo $home_url; ?>/journee-continue"><img src="<?php echo $tdu; ?>/images/icon_etude.png" alt="" /><span><?php echo translateString('Étude surveillée'); ?></span></a>
+                      <a href="<?php echo $home_url; ?>/journee-continue"><img src="<?php echo $tdu; ?>/images/icon_etude<?php echo $suffix; ?>.png" alt="" /><span><?php echo translateString('Étude surveillée'); ?></span></a>
                   </li>
                   <li class="internat">
-                      <a href="<?php echo get_link_by_slug('internat'); ?>/presentation"><img src="<?php echo $tdu; ?>/images/icon_internat.png" alt="" /><span><?php echo translateString('Internat'); ?></span></a>
+                      <a href="<?php echo get_link_by_slug('internat'); ?>/presentation"><img src="<?php echo $tdu; ?>/images/icon_internat<?php echo $suffix; ?>.png" alt="" /><span><?php echo translateString('Internat'); ?></span></a>
                   </li>
                   <li class="activites_et_camps">
-                      <a href="<?php echo $home_url; ?>/le-sport-au-sein-de-lensr"><img src="<?php echo $tdu; ?>/images/icon_activities.png" alt="" /><span><?php echo translateString('Activités et camps'); ?></span></a>
+                      <a href="<?php echo $home_url; ?>/le-sport-au-sein-de-lensr"><img src="<?php echo $tdu; ?>/images/icon_activities<?php echo $suffix; ?>.png" alt="" /><span><?php echo translateString('Activités et camps'); ?></span></a>
                   </li>
                   <li class="accent_surles_langues">
-                      <a href="<?php echo $home_url; ?>/baccalaureat-international"><img src="<?php echo $tdu; ?>/images/icon_langues.png" alt="" /><span><?php echo translateString('Accent sur les langues'); ?></span></a>
+                      <a href="<?php echo $home_url; ?>/baccalaureat-international"><img src="<?php echo $tdu; ?>/images/icon_langues<?php echo $suffix; ?>.png" alt="" /><span><?php echo translateString('Accent sur les langues'); ?></span></a>
                   </li>
               </ul>
             </div>
