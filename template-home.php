@@ -113,7 +113,7 @@ frameborder="0" allowfullscreen> </iframe> </div>
 
         <section class="section section_icons">
             <div class="container" id="section_nos_services">
-            <?php $suffix =  ( site_language == 'en' ) ? '_en' :  '' ;  ?>
+            <?php $suffix =  ( site_language() == 'en' ) ? '_en' :  '' ;  ?>
               <ul>
                   <li class="ramassage_scolaire">
                       <a href="<?php echo $home_url; ?>/infos-pratiques/le-bus-scolaire"><img src="<?php echo $tdu; ?>/images/icon_bus<?php echo $suffix; ?>.png" alt="" /><span><?php echo translateString('Ramassage scolaire'); ?></span></a>
