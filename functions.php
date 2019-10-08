@@ -664,11 +664,11 @@ function translateString($string)
             } elseif ($string == 'Ramassage scolaire') {
                 return 'School bus';
             } elseif ($string == 'Restauration de qualité') {
-                return 'Quality restoration';
+                return 'Quality cafeteria';
             } elseif ($string == 'Étude surveillée') {
                 return 'Supervised study';
             } elseif ($string == 'Internat') {
-                return 'Internships';
+                return 'Boarding school';
             } elseif ($string == 'Activités et camps') {
                 return 'Activities and camps';
             } elseif ($string == 'Accent sur les langues') {
