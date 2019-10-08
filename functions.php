@@ -74,7 +74,7 @@ Functions
 
 function wf_version()
 {
-    return '0.1.3';
+    return '0.1.4';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -651,7 +651,7 @@ function site_language() {
 
 function translateString($string)
 {
-  
+
         if (site_language() == 'en') {
             if ($string == 'Nous trouver') {
                 return 'Find us';
@@ -680,10 +680,10 @@ function translateString($string)
             return $string;
         }
         return $string;
-   
 
 
-    
+
+
 
 
 }

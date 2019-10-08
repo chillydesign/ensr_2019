@@ -75,6 +75,7 @@ section.section {
     font-weight: bold;
     font-style: italic;
   }
+  h4 {color: white!important}
 
   h1,
   h2,
@@ -951,6 +952,10 @@ ul.social_icons {
     &.icon_instagram {
       background-image: url('../images/social/instagram.svg');
     }
+    &.icon_map {
+      background-image: url('../images/social/map.svg');
+      background-size: 14px;
+    }
 
     &:hover {
       transform: scale(1.1);
@@ -979,4 +984,8 @@ ul.social_icons {
     }
 
   }
+}
+
+.map_container {
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }

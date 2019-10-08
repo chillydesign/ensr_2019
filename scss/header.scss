@@ -193,16 +193,20 @@ header {
 
   .social_search {
     position: absolute;
-    left:0;
+    right: 210px;
     top:0;
-    width: 250px;
+    width: 280px;
+    z-index: 9999;
   }
   form {
     width: 150px;
     display: inline-block;
+    ::placeholder {
+        color: white!important;
+      }
 
   }
-  input { 
+  input {
     width:100%;
     padding: 5px;
     border-radius: 1px;
@@ -313,4 +317,9 @@ body.landing-page, body.landing-page-2, body.landing-page-3 {
   header {
     display: none !important;
   }
+}
+
+
+.lang_fr #top_nav .social_search {
+right: 277px;
 }

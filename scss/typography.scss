@@ -99,6 +99,7 @@ a {
 table {
   width: 100%;
   margin: 0 0 40px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
 td,
@@ -107,6 +108,7 @@ th {
   padding: 14px 10px;
   border: 0;
   border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
   text-align: left;
 
   li,
@@ -246,4 +248,4 @@ form {
   }
 }
 
-img {width: 100%; height: auto;}
+img {width: 100%; height: auto;box-shadow: 0 0 30px rgba(0,0,0,0.5);}
