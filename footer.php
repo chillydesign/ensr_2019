@@ -6,15 +6,26 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
-                <h3><?php echo translateString('Liens utiles'); ?></h3>
-                <ul>
-                    <?php chilly_nav('footer-navigation'); ?>
-                </ul>
-
-                <?php get_template_part('social_links'); ?>
-
-            </div>
+          <div class="col-sm-4">
+              <h3><?php echo translateString('Nous contacter'); ?></h3>
+              <p>
+                  <strong>Tel :</strong> +41 21 654 65 00 <br>
+                  <strong>Fax :</strong> +41 21 654 65 05 <br>
+                  <strong>Email :</strong><a href="mailto:info@ensr.ch" target="_blank">
+                    <?php if (site_language() == 'en') : ?>
+                      General enquiries
+                    <?php else : ?>
+                      Demandes générales
+                    <?php endif; ?>
+                  </a> | <a href="mailto:admissions@ensr.ch" target="_blank">
+                    <?php if (site_language() == 'en') : ?>
+                      Admissions
+                    <?php else : ?>
+                      Admissions
+                    <?php endif; ?>
+                  </a>
+              </p>
+          </div>
             <div class="col-sm-4">
                 <h3><?php echo translateString('Nous trouver'); ?></h3>
                 <p>
@@ -24,28 +35,14 @@
                     Suisse
                 </p>
             </div>
+
             <div class="col-sm-4">
-                <h3><?php echo translateString('Nous contacter'); ?></h3>
-                <p>
-                    <strong>Tel :</strong> +41 21 654 65 00 <br>
-                    <strong>Fax :</strong> +41 21 654 65 05 <br>
-                    <strong>Email :</strong><a href="mailto:info@ensr.ch" target="_blank">
-                      <?php if (site_language() == 'en') : ?>
-                        General enquiries
-                      <?php else : ?>
-                        Demandes générales
-                      <?php endif; ?>
-                    </a> | <a href="mailto:admissions@ensr.ch" target="_blank">
-                      <?php if (site_language() == 'en') : ?>
-                        Admissions
-                      <?php else : ?>
-                        Admissions
-                      <?php endif; ?>
-                    </a>
-                </p>
+                <h3><?php echo translateString('Liens utiles'); ?></h3>
+                <ul>
+                    <?php chilly_nav('footer-navigation'); ?>
+                </ul>
 
-
-
+                <?php get_template_part('social_links'); ?>
 
             </div>
         </div>
