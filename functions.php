@@ -74,7 +74,7 @@ Functions
 
 function wf_version()
 {
-    return '0.1.2';
+    return '0.1.3';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -97,6 +97,12 @@ function webfactor_header_scripts()
         wp_register_script('slick', $tdu . '/js/min/slick.min.js', array(), wf_version(), true);
         wp_enqueue_script('slick'); // Enqueue it!
 
+
+        wp_register_script('featherlight', $tdu . '/js/min/featherlight.min.js', array(), wf_version(), true);
+        wp_enqueue_script('featherlight'); // Enqueue it!
+        wp_register_script('featherlightgallery', $tdu . '/js/min/featherlight.gallery.min.js', array(), wf_version(), true);
+        wp_enqueue_script('featherlightgallery'); // Enqueue it!
+
         // wp_register_script('matchHeight', $tdu . '/js/min/jquery.matchHeight.js', array('jquery'),  wf_version(), true );
         // wp_enqueue_script('matchHeight'); // Enqueue it!
 
@@ -118,13 +124,21 @@ function webfactor_conditional_scripts()
 function webfactor_styles()
 {
 
+    $tdu = get_template_directory_uri();
+
     // remove gutenberg css
     wp_dequeue_style('wp-block-library');
 
     wp_register_style('google_fonts', 'https://fonts.googleapis.com/css?family=Spectral:700,700i|Work+Sans:400&display=swap&subset=latin-ext', array(), '', 'all');
     wp_enqueue_style('google_fonts'); // Enqueue it!
 
-    wp_register_style('wf_style', get_template_directory_uri() . '/css/global.css', array(), wf_version(), 'all');
+
+    wp_register_style('featherlightcss', $tdu . '/js/min/featherlight.min.css', array(), wf_version(), 'all');
+    wp_enqueue_style('featherlightcss'); // Enqueue it!
+    wp_register_style('featherlightgalcss', $tdu . '/js/min/featherlight.gallery.min.css', array(), wf_version(), 'all');
+    wp_enqueue_style('featherlightgalcss'); // Enqueue it!
+
+    wp_register_style('wf_style', $tdu . '/css/global.css', array(), wf_version(), 'all');
     wp_enqueue_style('wf_style'); // Enqueue it!
 }
 
