@@ -677,6 +677,10 @@ function translateString($string)
                 return "search";
             } elseif ($string == "Pas encore d'évènements") {
                 return "No events yet";
+            } elseif ($string == "Découvrez notre Programme en anglais BI à partir de l'école primaire >>") {
+                return "Discover our IB English programme starting from primary school >>";
+            } elseif ($string == "Préférez-vous que la langue principale d'enseignement de votre enfant soit l'anglais?") {
+                return "Would you prefer your child to be taught primarily in English?";
             }
 
             return $string;

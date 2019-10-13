@@ -64,7 +64,6 @@
 </footer>
 
 <?php $show_popup = get_field('show_popup', 'option'); ?>
-
 <?php if ($show_popup): ?>
 <div class="popup"  id="home_page_message">
     <div class="popup_message">
@@ -84,6 +83,18 @@ background-image:url('<?php // echo get_field('image', 'option')['sizes']['large
 }  */
 </style>
 <?php endif; ?>
+
+
+
+<div id="ib_english_banner">
+<a href="<?php echo site_url('the-english-programme-at-ensr'); ?>">
+<img src="<?php echo $tdu; ?>/images/gb.png" alt="GB Flag" />
+<img src="<?php echo $tdu; ?>/images/ib-logo.png" alt="IB Logo" />
+<strong><?php echo translateString("Préférez-vous que la langue principale d'enseignement de votre enfant soit l'anglais?"); ?></strong>
+<?php echo translateString("Découvrez notre Programme en anglais BI à partir de l'école primaire >>"); ?>
+</a>
+<div class="shield_background"></div>
+</div>
 
 
 </main>
