@@ -197,7 +197,7 @@ frameborder="0" allowfullscreen> </iframe> </div>
 ); ?>
         <?php if ($news_loop->have_posts()) : ?>
 
-            <section class="section section_events">
+            <section class="section section_calendar">
                 <div class="container" id="section_actualites">
                     <div class="row title_row">
                         <div class="col-sm-6 col-sm-push-3" >
