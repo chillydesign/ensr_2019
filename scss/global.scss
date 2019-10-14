@@ -1133,7 +1133,13 @@ $sidecontact_width: 300px;
     transform: rotate(-90deg);
     display:block;
     position: absolute; 
-    top: 70px;
+     top: 73px;
     left: -20px;
-  }
+    strong {
+    font-size:30px;
+    position: absolute;
+    top:-8px;
+    right: -28px;
+    }
+}
 }

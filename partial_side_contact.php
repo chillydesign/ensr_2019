@@ -4,7 +4,7 @@
 
 <div id="sidecontact_conatiner">
 <div id="sidecontactbutton">
-<span>Contact</span>
+<span>Contact<strong>⬆</strong></span>
 </div>
 
 
