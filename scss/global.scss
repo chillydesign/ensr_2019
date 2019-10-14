@@ -1073,7 +1073,7 @@ $sidecontact_width: 300px;
   #sidecontact_conatiner {
     width: $sidecontact_width;
     position: fixed;
-    top: 40%;
+    top: 35%;
     right: 0;
     transform: translateX( $sidecontact_width);
     background: $blue;
@@ -1095,6 +1095,9 @@ $sidecontact_width: 300px;
     input {
       padding: 5px;
       font-size: 12px;
+    }
+    textarea {
+      height: 100px;
     }
     label {
       color: white;
