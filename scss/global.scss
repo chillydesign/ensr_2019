@@ -1111,35 +1111,20 @@ $sidecontact_width: 300px;
 
 #sidecontactbutton {
   cursor: pointer;
-  background: darken($blue, 5);
+  
+  background: url("../images/contact_text_arrow.svg") no-repeat center center  darken($blue, 5) ;
+  background-size: contain;
+  border-top: 15px solid   darken($blue, 5);
+  border-bottom: 15px solid   darken($blue, 5);
+  text-indent: -9999px;
   box-shadow:  0 0px 30px rgba(10, 10, 10, 0.2);
-  color:white;
-  font-size: 1.8em;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 15px 25px;
 
   position: absolute;
-  left:-50px;
-  width: 50px;
+  left:-40px;
+  width: 40px;
   display:block;
-  height: 150px;
+  height: 140px;
 
-  text-align: center;;
-  // position: fixed;
-  // right: -45px;
-  // top: 50%; 
-  span {
-    transform: rotate(-90deg);
-    display:block;
-    position: absolute; 
-     top: 73px;
-    left: -20px;
-    strong {
-    font-size:30px;
-    position: absolute;
-    top:-8px;
-    right: -28px;
-    }
-}
+
+
 }
