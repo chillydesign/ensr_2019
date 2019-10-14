@@ -110,7 +110,11 @@
     // SLIDER
     // SLIDER
 
+    $('#sidecontactbutton').on('click', function (e) {
+      e.preventDefault();
+      $('#sidecontact_conatiner').toggleClass('visible');
 
+    });
 
 
 

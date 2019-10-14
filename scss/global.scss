@@ -1005,7 +1005,7 @@ section.section {
         right: 0;
         width: 100%;
         z-index: 1000;
-        box-shadow: 0 -20px 30px rgba(10, 10, 10, 0.2);
+        box-shadow:  0 -20px 30px rgba(10, 10, 10, 0.2);
         
         a {
           font-weight: bold;
@@ -1067,3 +1067,55 @@ section.section {
 
 
       }
+
+
+$sidecontact_width: 300px;
+  #sidecontact_conatiner {
+    width: $sidecontact_width;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateX( $sidecontact_width);
+    background: $blue;
+    padding: 20px;
+    z-index: 1000;
+    transition: all 0.3s;
+
+    &.visible {
+      transform: translateX(0);
+    }
+
+    form {
+      min-height: 300px;
+    }
+
+  }
+
+#sidecontactbutton {
+  cursor: pointer;
+  background: darken($blue, 5);
+  box-shadow:  0 0px 30px rgba(10, 10, 10, 0.2);
+  color:white;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 15px 25px;
+
+  position: absolute;
+  left:-50px;
+  width: 50px;
+  display:block;
+  height: 150px;
+
+  text-align: center;;
+  // position: fixed;
+  // right: -45px;
+  // top: 50%; 
+  span {
+    transform: rotate(-90deg);
+    display:block;
+    position: absolute; 
+    top: 70px;
+    left: -20px;
+  }
+}
