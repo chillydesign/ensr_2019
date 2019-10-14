@@ -87,6 +87,7 @@ background-image:url('<?php // echo get_field('image', 'option')['sizes']['large
 
 
 <div id="ib_english_banner">
+<div class="container">
 <a href="<?php echo   esc_url(get_permalink(4974));; ?>">
 <img src="<?php echo $tdu; ?>/images/gb.png" alt="GB Flag" />
 <img src="<?php echo $tdu; ?>/images/ib-logo.png" alt="IB Logo" />
@@ -94,6 +95,7 @@ background-image:url('<?php // echo get_field('image', 'option')['sizes']['large
 <?php echo translateString("Découvrez notre Programme en anglais BI à partir de l'école primaire >>"); ?>
 </a>
 <div class="shield_background"></div>
+</div>
 </div>
 
 
