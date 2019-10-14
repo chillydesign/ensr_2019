@@ -1073,7 +1073,7 @@ $sidecontact_width: 300px;
   #sidecontact_conatiner {
     width: $sidecontact_width;
     position: fixed;
-    top: 50%;
+    top: 40%;
     right: 0;
     transform: translateX( $sidecontact_width);
     background: $blue;
@@ -1085,8 +1085,26 @@ $sidecontact_width: 300px;
       transform: translateX(0);
     }
 
-    form {
+    #formsid {
       min-height: 300px;
+    }
+    p {
+      margin: 0 0 3px;
+      padding: 0;
+    }
+    input {
+      padding: 5px;
+      font-size: 12px;
+    }
+    label {
+      color: white;
+      font-size: 12px;
+      padding:0;
+      margin:0
+    }
+    div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+      color: white;
+      background: transparentize(black, 0.5);
     }
 
   }

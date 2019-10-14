@@ -7,9 +7,15 @@
 <span>Contact</span>
 </div>
 
-<form action="">
-<input type="text" name="email" placeholder="email" />
 
-</form>
+<div id="formsid">
+<?php if (site_language() == 'en') : ?>
+<?php echo do_shortcode('[contact-form-7 id="1052" title="Landing Page Form EN"]'); ?>
+<?php else: ?>
+<?php echo do_shortcode('[contact-form-7 id="1052" title="Landing Page Form EN"]'); ?>
+<?php endif; ?>
+</div>
+
+
 </div>
 
