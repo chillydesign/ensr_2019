@@ -246,7 +246,7 @@ frameborder="0" allowfullscreen> </iframe> </div>
                   </div>
 
                     <div class="event_content">
-                        <p><?php echo get_the_excerpt(); ?> </p>
+                        <p><strong><?php echo get_the_title(); ?></strong> - <?php echo get_the_excerpt(); ?> </p>
                         <?php if ($read_more): ?>
                         <p class="button"> <?php echo translateString('Lire plus'); ?></p>
                  <?php endif; ?>
