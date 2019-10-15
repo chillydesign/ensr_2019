@@ -42,6 +42,7 @@
         <?php $p = 0; while ($news_loop->have_posts()) : $news_loop->the_post(); ?>
             <?php $date = get_field('date'); ?>
             <?php $end_date = get_field('end_date');  ?>
+            <?php $read_more = get_field('read_more');  ?>
             <?php $post_classes = array(); ?>
             <?php $has_pic = (($p + floor($p / 4)) % 2);   // 4 is number of cols  same as in_array( $p, array(1,3,4,6)?>
             <?php
@@ -54,43 +55,27 @@
             ?>
             <?php $style = ($has_pic) ? 'style="background-image:url(' . thumbnail_of_post_url(get_the_ID(), 'medium') . ')"' : ''; ?>
             <li class="ensr_event <?php echo implode($post_classes, ' ');  ?>"  <?php echo $style; ?>>
-                <a href="<?php echo get_the_permalink(); ?>">
-<div class="dates_container">
+            <div class="ensr_event_inner">
+        <?php if ($read_more): ?>  <a href="<?php echo get_the_permalink(); ?>"> <?php endif; ?>
+                <div class="dates_container">
                   <?php if ($date) : ?>
-                      <div class="date_container <?php if ($end_date) : ?>side_date_container<?php endif; ?>">
-                          <?php
-                          $event_date  = new DateTime($date);
-                          // $event_date->format('l')
-                          $day =  strftime("%A", $event_date->getTimestamp());
-                          $date =  strftime("%d", $event_date->getTimestamp());
-                          $month =  strftime("%B", $event_date->getTimestamp());
-                          ?>
-                          <div class="day"><?php echo $day ; ?></div>
-                          <div class="date"><?php echo $date; ?></div>
-                          <div class="month"><?php echo utf8_encode($month); ?></div>
-                      </div>
+                  <?php echo dateToEventDate($date, ''); ?>
                   <?php endif; ?>
 
                   <?php if ($end_date ) : ?>
-                      <div class="date_container end_date_container side_date_container">
-                          <?php
-                          $end_event_date  = new DateTime($end_date);
-                          // $event_date->format('l')
-                          $end_day =  strftime("%A", $end_event_date->getTimestamp());
-                          $end_date =  strftime("%d", $end_event_date->getTimestamp());
-                          $end_month =  strftime("%B", $end_event_date->getTimestamp());
-                          ?>
-                          <div class="day"><?php echo $end_day ; ?></div>
-                          <div class="date"><?php echo $end_date; ?></div>
-                          <div class="month"><?php echo utf8_encode($end_month); ?></div>
-                      </div>
+                  <?php echo dateToEventDate($end_date, 'end_date_container'); ?>
                   <?php endif; ?>
                   </div>
 
                     <div class="event_content">
                         <p><?php echo get_the_excerpt(); ?> </p>
-                    </div>
-                </a>
+                        <?php if ($read_more): ?>
+                        <p class="button"> <?php echo translateString('Lire plus'); ?></p>
+                 <?php endif; ?>
+              </div>
+        <?php if ($read_more): ?> </a> <?php endif; ?>
+            </div>
+               
             </li>
             <?php $p++; endwhile; // end while of news loop?>
 

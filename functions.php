@@ -681,6 +681,8 @@ function translateString($string)
                 return "Discover our IB English programme starting from primary school >>";
             } elseif ($string == "Préférez-vous que la langue principale d'enseignement de votre enfant soit l'anglais?") {
                 return "Would you prefer your child to be taught primarily in English?";
+            } elseif ($string == 'Lire plus') {
+                return 'Read more';
             }
 
             return $string;
@@ -688,10 +690,23 @@ function translateString($string)
         return $string;
 
 
+}
 
 
+function dateToEventDate($date, $class) {
 
-
+    if ($date) {
+        $datetime  = new DateTime($date);
+        $day =  strftime("%A", $datetime->getTimestamp());
+        $ddate =  strftime("%d", $datetime->getTimestamp());
+        $month =  strftime("%B", $datetime->getTimestamp());
+        $str = '<div class="date_container ' . $class . '">';
+        $str .= '<div class="day">' .  $day .'</div>';
+        $str .= '<div class="date">' . $ddate .'</div>';
+        $str .= '<div class="month">' . utf8_encode($month) .'</div>';
+        $str .= '</div>';
+        return $str;
+    }
 }
 
 

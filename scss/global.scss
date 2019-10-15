@@ -709,9 +709,13 @@ section.section {
           background-size: cover;
           background-position: center center;
 
+
+          .ensr_event_inner {
+            background-color: transparentize(black, 0.72);
+          }
           a {
             color: white;
-            background-color: transparentize(black, 0.72);
+            
           }
 
           .date_container {
@@ -727,13 +731,18 @@ section.section {
           }
         }
 
-        a {
-          display: block;
+
+        .ensr_event_inner {
+       
           padding: 10px;
           min-height: 300px;
           @media (min-width: $mobile_width) {
             padding: 20px;
           }
+        }
+        a {
+       display:block;
+       min-height: 300px;
         }
 
         .date_container {
@@ -748,6 +757,17 @@ section.section {
             font-size: 1.3em;
           }
         }
+
+        p.button {
+          display:inline-block;
+          text-align: center;
+          margin: 10px auto;
+          padding: 10px 30px;
+          font-size: 1.5em;
+          color: white;
+          background: $blue;
+        }
+
       }
     }
 
