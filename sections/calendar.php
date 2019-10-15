@@ -41,7 +41,7 @@
     <ul>
         <?php $p = 0; while ($news_loop->have_posts()) : $news_loop->the_post(); ?>
             <?php $date = get_field('date'); ?>
-            <?php $end_date = get_field('end_date'); var_dump($end_date); ?>
+            <?php $end_date = get_field('end_date');  ?>
             <?php $post_classes = array(); ?>
             <?php $has_pic = (($p + floor($p / 4)) % 2);   // 4 is number of cols  same as in_array( $p, array(1,3,4,6)?>
             <?php
