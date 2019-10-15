@@ -72,7 +72,7 @@
                   <?php endif; ?>
 
                   <?php if ($end_date ) : ?>
-                      <div class="date_container side_date_container">
+                      <div class="date_container end_date_container side_date_container">
                           <?php
                           $end_event_date  = new DateTime($end_date);
                           // $event_date->format('l')

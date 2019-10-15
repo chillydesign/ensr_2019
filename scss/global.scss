@@ -824,7 +824,13 @@ section.section {
     .month {
       text-transform: lowercase;
     }
+
+    &.end_date_container {
+      transform: scale(0.8) translateY(-15px);
+    }
   }
+
+  
 
   .white_gradients {
     position: relative;
