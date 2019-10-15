@@ -25,7 +25,7 @@
         <div class="col-sm-6 col-sm-push-3" >
             <h2><?php echo $titre; ?></h2>
         </div>
-          
+
         <div class="col-sm-3 col-sm-pull-6">
             <!-- <a href="#" class="button">Toute l'actualité </a> -->
         </div>
@@ -41,6 +41,7 @@
     <ul>
         <?php $p = 0; while ($news_loop->have_posts()) : $news_loop->the_post(); ?>
             <?php $date = get_field('date'); ?>
+            <?php $end_date = get_field('end_date'); ?>
             <?php $post_classes = array(); ?>
             <?php $has_pic = (($p + floor($p / 4)) % 2);   // 4 is number of cols  same as in_array( $p, array(1,3,4,6)?>
             <?php

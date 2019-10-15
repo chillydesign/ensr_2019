@@ -1135,3 +1135,8 @@ $sidecontact_width: 300px;
 
 
 }
+
+
+section.section_slider + section.section.section_calendar.visible {
+    margin-top: -25px;
+}
