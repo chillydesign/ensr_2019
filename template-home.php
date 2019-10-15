@@ -57,17 +57,17 @@
 
                 <ul class="quick_links">
                 <?php if (site_language() == 'en') : ?>
-                    <li><a class="scroll_link" href="#section_l_ensr">ENSR</a></li>
+                    <!-- <li><a class="scroll_link" href="#section_l_ensr">ENSR</a></li> -->
                     <li><a class="scroll_link" href="#section_nos_services">Our Services</a></li>
                     <li><a class="scroll_link" href="#section_nos_atouts">Our Strengths</a></li>
                     <li><a class="scroll_link" href="#section_actualites">News</a></li>
-                    <li><a class="scroll_link" href="#section_s_inscrire">Apply</a></li>
+                    <!-- <li><a class="scroll_link" href="#section_s_inscrire">Apply</a></li> -->
                     <?php else : ?>
-                    <li><a class="scroll_link" href="#section_l_ensr">L'Ensr</a></li>
+                    <!-- <li><a class="scroll_link" href="#section_l_ensr">L'Ensr</a></li> -->
                     <li><a class="scroll_link" href="#section_nos_services">Nos Services</a></li>
                     <li><a class="scroll_link" href="#section_nos_atouts">Nos Atouts</a></li>
                     <li><a class="scroll_link" href="#section_actualites">Actualités</a></li>
-                    <li><a class="scroll_link" href="#section_s_inscrire">S'Inscrire</a></li>
+                    <!-- <li><a class="scroll_link" href="#section_s_inscrire">S'Inscrire</a></li> -->
                     <?php endif; ?>
                 </ul>
 
@@ -108,11 +108,19 @@ frameborder="0" allowfullscreen> </iframe> </div>
                 </div>
             </div>
         </section>
-        
+
 
 
         <section class="section section_icons">
             <div class="container" id="section_nos_services">
+              <div class="top_title">
+                <?php if (site_language() == 'en') : ?>
+                  <div class="container"><h2>- Nos services -</h2></div>
+                <?php else: ?>
+                  <div class="container"><h2>- Our services -</h2></div>
+                <?php endif; ?>
+    </div>
+
             <?php $suffix =  ( site_language() == 'en' ) ? '_en' :  '' ;  ?>
               <ul>
                   <li class="ramassage_scolaire">
@@ -253,7 +261,7 @@ frameborder="0" allowfullscreen> </iframe> </div>
               </div>
         <?php if ($read_more): ?> </a> <?php endif; ?>
             </div>
-               
+
             </li>
                             <?php $p++; endwhile; // end while of news loop?>
 
