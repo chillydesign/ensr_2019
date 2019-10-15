@@ -74,7 +74,7 @@ Functions
 
 function wf_version()
 {
-    return '0.1.9';
+    return '0.2.0';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -678,7 +678,7 @@ function translateString($string)
             } elseif ($string == "Pas encore d'évènements") {
                 return "No events yet";
             } elseif ($string == "Découvrez notre Programme en anglais BI à partir de l'école primaire >>") {
-                return "Discover our IB English programme starting from primary school >>";
+                return "Discover our English programme starting from primary school >>";
             } elseif ($string == "Préférez-vous que la langue principale d'enseignement de votre enfant soit l'anglais?") {
                 return "Would you prefer your child to be taught primarily in English?";
             } elseif ($string == 'Lire plus') {
