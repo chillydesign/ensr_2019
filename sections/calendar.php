@@ -55,7 +55,7 @@
             <?php $style = ($has_pic) ? 'style="background-image:url(' . thumbnail_of_post_url(get_the_ID(), 'medium') . ')"' : ''; ?>
             <li class="ensr_event <?php echo implode($post_classes, ' ');  ?>"  <?php echo $style; ?>>
                 <a href="<?php echo get_the_permalink(); ?>">
-
+<div class="dates_container">
                   <?php if ($date) : ?>
                       <div class="date_container <?php if ($end_date) : ?>side_date_container<?php endif; ?>">
                           <?php
@@ -71,7 +71,7 @@
                       </div>
                   <?php endif; ?>
 
-                  <?php if ($end_date AND false) : ?>
+                  <?php if ($end_date ) : ?>
                       <div class="date_container side_date_container">
                           <?php
                           $end_event_date  = new DateTime($end_date);
@@ -85,6 +85,7 @@
                           <div class="month"><?php echo $end_month; ?></div>
                       </div>
                   <?php endif; ?>
+                  </div>
 
                     <div class="event_content">
                         <p><?php echo get_the_excerpt(); ?> </p>

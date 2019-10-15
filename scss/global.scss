@@ -766,6 +766,33 @@ section.section {
   }
   // .section_calendar
 
+
+  .dates_container {
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    .date_container {
+      width: 50%;
+      max-width: 50%;
+      flex: 1;
+
+      &:nth-child(2n)  {
+        &:before {
+          content: '→';
+          position: absolute;
+          left: -20px; 
+          top: 50px; 
+          font-size: 30px;
+          font-weight: bold;
+
+        }
+      }
+    }
+  }
+
+
+
   .date_container {
     text-align: center;
     padding: 0 0 50px;
@@ -787,8 +814,11 @@ section.section {
     }
 
     .date {
-      font-size: 5em;
+      font-size: 3.5em;
       padding: 26px 0 18px;
+      @media (min-width: $mobile_width) {
+        font-size: 5em;
+      }
     }
 
     .month {
