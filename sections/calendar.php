@@ -56,20 +56,35 @@
             <li class="ensr_event <?php echo implode($post_classes, ' ');  ?>"  <?php echo $style; ?>>
                 <a href="<?php echo get_the_permalink(); ?>">
 
-                    <?php if ($date) : ?>
-                        <div class="date_container">
-                            <?php
-                            $event_date  = new DateTime($date);
-                            // $event_date->format('l')
-                            $day =  strftime("%A", $event_date->getTimestamp());
-                            $date =  strftime("%d", $event_date->getTimestamp());
-                            $month =  strftime("%B", $event_date->getTimestamp());
-                            ?>
-                            <div class="day"><?php echo $day ; ?></div>
-                            <div class="date"><?php echo $date; ?></div>
-                            <div class="month"><?php echo $month; ?></div>
-                        </div>
-                    <?php endif; ?>
+                  <?php if ($date) : ?>
+                      <div class="date_container <?php if ($end_date) : ?>side_date_container<?php endif; ?>">
+                          <?php
+                          $event_date  = new DateTime($date);
+                          // $event_date->format('l')
+                          $day =  strftime("%A", $event_date->getTimestamp());
+                          $date =  strftime("%d", $event_date->getTimestamp());
+                          $month =  strftime("%B", $event_date->getTimestamp());
+                          ?>
+                          <div class="day"><?php echo $day ; ?></div>
+                          <div class="date"><?php echo $date; ?></div>
+                          <div class="month"><?php echo $month; ?></div>
+                      </div>
+                  <?php endif; ?>
+
+                  <?php if ($end_date) : ?>
+                      <div class="date_container side_date_container">
+                          <?php
+                          $end_event_date  = new DateTime($end_date);
+                          // $event_date->format('l')
+                          $end_day =  strftime("%A", $end_event_date->getTimestamp());
+                          $end_date =  strftime("%d", $end_event_date->getTimestamp());
+                          $end_month =  strftime("%B", $end_event_date->getTimestamp());
+                          ?>
+                          <div class="day"><?php echo $end_day ; ?></div>
+                          <div class="date"><?php echo $end_date; ?></div>
+                          <div class="month"><?php echo $end_month; ?></div>
+                      </div>
+                  <?php endif; ?>
 
                     <div class="event_content">
                         <p><?php echo get_the_excerpt(); ?> </p>
