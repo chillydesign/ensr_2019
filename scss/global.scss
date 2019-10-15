@@ -40,7 +40,7 @@ section.section {
   @media (min-width: $mobile_width) {
     display: flex;
   }
-  
+
 }
 
 .slick_slider_no_dots {
@@ -48,11 +48,11 @@ section.section {
     height: 100%;
     z-index: -1;
   }
-  
+
   .slick-track {
     height: 100%;
   }
-  
+
   .slide {
     background-repeat: no-repeat;
     background-position: center center;
@@ -70,13 +70,13 @@ section.section {
   color: white;
   padding: 150px 0;
   text-shadow: 0 0 30px rgba(0, 0, 0, 0.5), 0 5px 5px rgba(0, 0, 0, 0.5);
-  
+
   h1 {
     font-weight: bold;
     font-style: italic;
   }
   h4 {color: white!important}
-  
+
   h1,
   h2,
   p {
@@ -89,7 +89,7 @@ section.section {
     //   padding: 60px 0;
     // }
   }
-  
+
   .home {
     .section_welcome{
       .welcome_text_inner {
@@ -103,9 +103,9 @@ section.section {
         max-height: 80vh;
       }
     }
-    
+
   }
-  
+
   .landing-page-3, .page-template-template-landing{
     .slide.slick-slide {
       height: 600px;
@@ -118,7 +118,7 @@ section.section {
         font-size: 0.9em;
       }
     }
-    
+
     .landingform {
       z-index: 9;
       color:$blue;
@@ -129,8 +129,8 @@ section.section {
       @media (min-width: $mobile_width) {
         position: absolute; top: 30px; width: 100%; margin-bottom: 0;
       }
-      
-      
+
+
       span.wpcf7-form-control-wrap.message {
         border: 0;
         background: 0;
@@ -144,11 +144,11 @@ section.section {
           height: 140px;
         }
       }
-      
-      
+
+
     }
   }
-  
+
   .landing-page{
     .slide.slick-slide {
       height: 600px;
@@ -161,13 +161,13 @@ section.section {
         font-size: inherit;
       }
     }
-    
+
     .landing-page div.wpcf7 form  {
       top: -280px;
       margin-bottom: -460px;
     }
   }
-  
+
   section.section_welcome {
     position: relative;
     padding-top: 0;
@@ -176,15 +176,15 @@ section.section {
     @media (min-width: $mobile_width) {
       text-align: left;
     }
-    
-    
+
+
     .slick_slider_no_dots {
       .slick-list {
         z-index: 1;
-        
+
       }
     }
-    
+
     ul.quick_links {
       position: absolute;
       z-index: 1;
@@ -200,7 +200,7 @@ section.section {
         display: block;
         bottom: 40px;
       }
-      
+
       li {
         display: inline-block;
         margin: 0 3px 6px;
@@ -209,14 +209,14 @@ section.section {
         @media (min-width: $mobile_width) {
           font-size: $font_size;
         }
-        
+
         a {
           text-transform: uppercase;
           display: inline-block;
           padding: 15px 20px 10px;
           background: $blue;
           color: white;
-          
+
           &:hover {
             background: $dark_blue;
           }
@@ -225,23 +225,23 @@ section.section {
         transform: translateY(-20px);
         transition: all 0.3s;
         animation: fadeInAndSlide 2s forwards;
-        
+
         &:nth-child(1) {
           animation-delay: 0.5s;
         }
-        
+
         &:nth-child(2) {
           animation-delay: 1.5s;
         }
-        
+
         &:nth-child(3) {
           animation-delay: 2.5s;
         }
-        
+
         &:nth-child(4) {
           animation-delay: 3.5s;
         }
-        
+
         &:nth-child(5) {
           animation-delay: 4.5s;
         }
@@ -250,64 +250,64 @@ section.section {
     }
   }
   // send section_school_sections
-  
+
   ul.gallery_images {
     margin: -40px -10px 0 !important;
   }
-  
+
   .gallery_image {
     display: inline-block;
     margin: 10px;
   }
-  
+
   a.gallery {
     display: inline-block;
   }
-  
+
   a.gallery img {
     width: 110px;
     height: 110px;
   }
-  
+
   section.section_school_sections {
     h2 {
       text-align: center;
       font-size: 2.2em;
       line-height: 160%;
-      
+
       @media (min-width: $mobile_width) {
         text-align: left;
         max-width: 400px;
       }
-      
+
       &:first-letter {
         font-size: 175%;
         display: inline-block;
       }
     }
-    
+
     .school_areas_container {
       position: relative;
       padding: 0px 0 40px;
     }
-    
+
     &.visible {
       ul.school_areas {
         li {
           animation: fadeInAndSlide 1.5s forwards;
-          
+
           &:nth-child(1) {
             animation-delay: 0.5s;
           }
-          
+
           &:nth-child(2) {
             animation-delay: 1.5s;
           }
-          
+
           &:nth-child(3) {
             animation-delay: 2s;
           }
-          
+
           &:nth-child(4) {
             animation-delay: 3s;
           }
@@ -321,7 +321,7 @@ section.section {
       font-family: $heading_font_stack;
       position: relative;
       z-index: 10;
-      
+
       li {
         opacity: 0;
         transform: translateY(-20px);
@@ -332,7 +332,7 @@ section.section {
         margin: 0;
         padding: 0 0 50px;
         $diamond_size: 60px;
-        
+
         a {
           display: block;
           font-style: italic;
@@ -347,35 +347,35 @@ section.section {
             padding: 0 0 0 #{$diamond_size + 20px};
             text-align: left;
           }
-          
+
           &:hover {
             transform: scale(1.06);
           }
-          
+
           strong {
             display: block;
             font-size: 1.6em;
           }
-          
+
           span {
             color: $medium_grey;
             display: block;
             font-size: 1.2em;
           }
         }
-        
+
         &.school_maternelle a {
           background-image: url("../images/diamond_1.svg");
         }
-        
+
         &.school_primaire a {
           background-image: url("../images/diamond_2.svg");
         }
-        
+
         &.school_college a {
           background-image: url("../images/diamond_3.svg");
         }
-        
+
         &.school_gymnase a {
           background-image: url("../images/diamond_4.svg");
         }
@@ -401,7 +401,7 @@ section.section {
     // .shield_background
   }
   // end section_school_sections
-  
+
   section.section_equal_columns,
   section.section_two_thirds_one_third {
     .color_image {
@@ -413,21 +413,21 @@ section.section {
       padding: 50px 0;
       margin: -50px 0;
       border-bottom: solid 1px white;
-      
+
       li {background-image: url('../images/ensr-bullet.png');}
-      
+
       h6 a, a h6 {
         background: rgba(255,255,255,0.3);
         text-decoration: none!important;
       }
-      
+
       h1,
       h2,
       h3,
       h4 {
         color: white;
       }
-      
+
       a,
       a:active,
       a:hover,
@@ -438,13 +438,13 @@ section.section {
       }
       form {color: $blue; text-shadow: none;}
     }
-    
-  
-    
+
+
+
     ol,
     ul {
       margin: 0 0 30px 0;
-      
+
       li {
         list-style: none;
         padding-left: 40px;
@@ -453,24 +453,24 @@ section.section {
         background-position: top 3px left 10px;
         background-size: 20px;
         padding-bottom: 10px;
-        
+
         p {
           font-size: inherit;
         }
-        
+
         h3 {
           font-size: 1.8em;
         }
       }
     }
-    
+
     ol {
       li {
         list-style: none;
       }
     }
   }
-  
+
   section.section_icons {
     background: $blue;
     padding: 0;
@@ -478,32 +478,32 @@ section.section {
     img {
       box-shadow: none!important;
     }
-    
+
     &.visible {
       ul {
         li {
           animation: fadeInAndSlide 1s forwards;
-          
+
           &:nth-child(1) {
             animation-delay: 0.5s;
           }
-          
+
           &:nth-child(2) {
             animation-delay: 1s;
           }
-          
+
           &:nth-child(3) {
             animation-delay: 1.5s;
           }
-          
+
           &:nth-child(4) {
             animation-delay: 2s;
           }
-          
+
           &:nth-child(5) {
             animation-delay: 2.5s;
           }
-          
+
           &:nth-child(6) {
             animation-delay: 3s;
           }
@@ -521,7 +521,7 @@ section.section {
       justify-content: center;
       padding: 0 20px;
       margin: 0;
-      
+
       li {
         flex: 1 auto;
         width: #{(100% / 2)};
@@ -543,24 +543,24 @@ section.section {
           width: #{(100% / 6)};
           max-width: #{(100% / 6)};
         }
-        
+
         a {
           width: 100%;
-          
+
           span {
             display: block;
             position: absolute;
             height: 0;
             text-indent: -9999px;
           }
-          
+
           img {
             width: 100%;
             height: auto;
             margin-bottom: 12px;
           }
           display: block;
-          
+
           &:hover {
             transform: scale(1.05);
           }
@@ -569,16 +569,16 @@ section.section {
     }
   }
   // .section_icons
-  
+
   section.section_slider_with_image,
   section.section_text_with_image {
     padding-top: 0;
     padding-bottom: 0;
-    
+
     h2 {
       padding-bottom: 50px;
       position: relative;
-      
+
       &:after {
         content: "";
         height: 0;
@@ -589,11 +589,11 @@ section.section {
         bottom: 30px;
       }
     }
-    
+
     .section_text {
       padding: $section_padding 0;
     }
-    
+
     ul.slick-dots {
       width: 50%;
       left: 50%;
@@ -604,16 +604,16 @@ section.section {
       }
     }
   }
-  
+
   section.section_slider {
     padding-top: 0;
     padding-bottom: 30px;
-    
+
     .slick-dots {
       bottom: 5px;
     }
   }
-  
+
   .slide_photo_background {
     background-repeat: no-repeat;
     background-position: center center;
@@ -623,7 +623,7 @@ section.section {
     display: block;
     position: relative;
   }
-  
+
   .slide_content {
     padding: 10px;
     background: transparentize(white, 0.3);
@@ -631,17 +631,17 @@ section.section {
     bottom: 0;
     left: 0;
     width: 100%;
-    
+
     p {
       padding: 0;
       font-weight: bold;
     }
   }
-  
+
   section.section_calendar {
     background: $blue;
     position: relative;
-    
+
     .title_row {
       position: relative;
       z-index: 10;
@@ -649,14 +649,14 @@ section.section {
       text-align: center;
       @media (min-width: $mobile_width) {}
     }
-    
+
     h2 {
       flex: 1 auto;
       color: white;
       text-align: center;
       width: 100%;
     }
-    
+
     a.button {
       border: 2px solid white;
       text-align: center;
@@ -664,7 +664,7 @@ section.section {
       font-size: 1.1em;
       padding: 10px;
     }
-    
+
     ul {
       display: flex;
       flex-wrap: wrap;
@@ -672,7 +672,7 @@ section.section {
       margin: 0 -10px;
       position: relative;
       z-index: 10;
-      
+
       li.ensr_event {
         flex: 1 auto;
         min-width: 48%;
@@ -692,41 +692,41 @@ section.section {
           min-width: calc(25% - 20px);
           width: calc(25% - 20px);
         }
-        
+
         &:hover {
           transform: scale(1.03);
         }
-        
+
         &.hide_on_mobile {
           display: none;
           @media (min-width: $mobile_width) {
             display: inline-block;
           }
         }
-        
+
         &.event_with_picture {
           color: white;
           background-size: cover;
           background-position: center center;
-          
+
           a {
             color: white;
             background-color: transparentize(black, 0.72);
           }
-          
+
           .date_container {
             color: white;
-            
+
             &:after {
               border-color: white;
             }
           }
-          
+
           .event_content {
             color: white;
           }
         }
-        
+
         a {
           display: block;
           padding: 10px;
@@ -735,22 +735,22 @@ section.section {
             padding: 20px;
           }
         }
-        
+
         .date_container {
           color: $blue;
         }
-        
+
         .event_content {
           color: $font_color;
           text-align: center;
-          
+
           p {
             font-size: 1.3em;
           }
         }
       }
     }
-    
+
     .shield_background {
       position: absolute;
       z-index: 1;
@@ -765,13 +765,13 @@ section.section {
     // .shield_background
   }
   // .section_calendar
-  
+
   .date_container {
     text-align: center;
     padding: 0 0 50px;
     position: relative;
     font-size: 1.2em;
-    
+
     &:after {
       content: "";
       height: 0;
@@ -781,21 +781,21 @@ section.section {
       right: 30%;
       bottom: 30px;
     }
-    
+
     .day {
       text-transform: lowercase;
     }
-    
+
     .date {
       font-size: 5em;
       padding: 26px 0 18px;
     }
-    
+
     .month {
       text-transform: lowercase;
     }
   }
-  
+
   .white_gradients {
     position: relative;
     min-height: 300px;
@@ -804,7 +804,7 @@ section.section {
     @media (min-width: $mobile_width) {
       min-height: 500px;
     }
-    
+
     // &:after,
     // &:before {
       //   content: "";
@@ -816,13 +816,13 @@ section.section {
       //   position: absolute;
       //   z-index: 10;
       // }
-      
+
       // &:before {
         //   left: auto;
         //   right: 0;
         //   background: linear-gradient(270deg, white, transparentize(white, 1));
         // }
-        
+
         .white_gradient_img {
           background: no-repeat center center;
           background-size: cover;
@@ -835,13 +835,13 @@ section.section {
           margin-top: 50px;
         }
       }
-      
+
       .imgmax {
         width: 600px;
         max-width: 100%;
         height: auto;
       }
-      
+
       .alignnone {
         margin: 0 auto 20px;
         width: 100%;
@@ -853,14 +853,14 @@ section.section {
           max-width: 100%;
         }
       }
-      
+
       img,
       img.alignone {
         max-width: 100% !important;
         margin: 0 0 20px;
         height: auto;
       }
-      
+
       .landing-page   div.wpcf7 form {
         top: -470px;
         margin-bottom: -600px;
@@ -876,12 +876,12 @@ section.section {
             padding: 30px;
             position: relative;
             background: rgba(255, 255, 255, 0.92);
-            
+
             input {
               padding: 8px;
               margin: 0 0 1px;
               font-size: 1.3em;
-              
+
               &[type="submit"] {
                 padding: 13px 30px;
                 font-size: 1em;
@@ -893,15 +893,15 @@ section.section {
                 }
               }
             }
-            
+
             p {
               padding: 0 0 5px;
             }
-            
+
           }
         }
       }
-      
+
       .message {
         position: absolute;
         top: 100px;
@@ -916,22 +916,22 @@ section.section {
         color: white;
         box-shadow: 0 3px 5px rgba(100, 100, 100, 0.3);
         z-index: 1000;
-        
+
         p {
           padding: 0;
           margin: 0;
         }
-        
+
         &.message_success {
           background: $green;
         }
-        
+
         &.closable {
           cursor: pointer;
         }
       }
-      
-      
+
+
       ul.social_icons {
         margin:0 0 0 -5px;
         padding:0;
@@ -948,7 +948,7 @@ section.section {
           a {
             display:block;
           }
-          
+
           &.icon_facebook {
             background-image: url('../images/social/facebook.svg');
           }
@@ -959,43 +959,47 @@ section.section {
             background-image: url('../images/social/map.svg');
             background-size: 14px;
           }
-          
+
           &:hover {
             transform: scale(1.1);
             background-color: transparentize(black, 0.9);
           }
-          
-          
+
+
         }
       }
-      
-      
-      
+
+
+
       .pagination {
-        
+
         margin: 20px 0;
-        
+
         .page-numbers {
           display: inline-block;
           font-size: 16px;
           padding: 10px;
           border: 1px solid $light_grey;
           margin: 0 5px 5px 0;
-          
+
           &:hover, &.current {
             background: $light_grey;
           }
-          
+
         }
       }
-      
+
       .map_container {
         box-shadow: 0 0 30px rgba(0,0,0,0.5);
+
+        img {
+            box-shadow: none!important;
+        }
       }
-      
-      
+
+
       #ib_english_banner {
-        
+
         text-align: center;
         padding: 14px 10px;
         background-color: $red;
@@ -1006,7 +1010,7 @@ section.section {
         width: 100%;
         z-index: 1000;
         box-shadow:  0 -20px 30px rgba(10, 10, 10, 0.2);
-        
+
         a {
           font-weight: bold;
           color: white;
@@ -1032,7 +1036,7 @@ section.section {
           box-shadow: 0 0 0;
           display:none;
         }
-   
+
 
          // .school_areas
     .shield_background {
@@ -1114,7 +1118,7 @@ $sidecontact_width: 300px;
 
 #sidecontactbutton {
   cursor: pointer;
-  
+
   background: url("../images/contact_text_arrow.svg") no-repeat center center  darken($blue, 5) ;
   background-size: contain;
   border-top: 15px solid   darken($blue, 5);
