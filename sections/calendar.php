@@ -71,7 +71,7 @@
                       </div>
                   <?php endif; ?>
 
-                  <?php if ($end_date) : ?>
+                  <?php if ($end_date AND false) : ?>
                       <div class="date_container side_date_container">
                           <?php
                           $end_event_date  = new DateTime($end_date);
