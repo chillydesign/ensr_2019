@@ -114,9 +114,9 @@ frameborder="0" allowfullscreen> </iframe> </div>
         <section class="section section_icons">
           <div class="top_title">
             <?php if (site_language() == 'en') : ?>
-              <div class="container"><h2>- Nos services -</h2></div>
-            <?php else: ?>
               <div class="container"><h2>- Our services -</h2></div>
+            <?php else: ?>
+              <div class="container"><h2>- Nos services -</h2></div>
             <?php endif; ?>
 </div>
             <div class="container" id="section_nos_services">
