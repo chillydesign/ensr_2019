@@ -67,7 +67,7 @@
                           ?>
                           <div class="day"><?php echo $day ; ?></div>
                           <div class="date"><?php echo $date; ?></div>
-                          <div class="month"><?php echo $month; ?></div>
+                          <div class="month"><?php echo utf8_encode($month); ?></div>
                       </div>
                   <?php endif; ?>
 
@@ -82,7 +82,7 @@
                           ?>
                           <div class="day"><?php echo $end_day ; ?></div>
                           <div class="date"><?php echo $end_date; ?></div>
-                          <div class="month"><?php echo $end_month; ?></div>
+                          <div class="month"><?php echo utf8_encode($end_month); ?></div>
                       </div>
                   <?php endif; ?>
                   </div>
