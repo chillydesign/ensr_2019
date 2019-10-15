@@ -1088,6 +1088,7 @@ strong {
         width: 100%;
         z-index: 1000;
         box-shadow:  0 -20px 30px rgba(10, 10, 10, 0.2);
+        // display: none;
 
         a {
           font-weight: bold;
@@ -1104,6 +1105,22 @@ strong {
             display:none;
             padding: 0 0 10px;
           }
+        }
+
+        a#cancel_ib_banner {
+          background: white;
+          color: $red;
+          display: inline-block;
+          position: absolute;
+
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          line-height: 24px;
+          right: 10px;
+          top: 10px;
+          font-size: 13px;
+          font-weight:  bold;
         }
 
         img {

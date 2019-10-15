@@ -140,6 +140,23 @@
       $home_page_message.show();
     }
 
+    var $ib_english_banner = $('#ib_english_banner');
+
+    $('#cancel_ib_banner').on('click', function (e) {
+      e.preventDefault();
+      $ib_english_banner.hide();
+      var d = new Date();
+      d.setTime(d.getTime() + (60 * 60 * 1000));
+      var expires = "expires=" + d.toUTCString();
+      document.cookie = "ib_english_banner_hide=true;" + expires + "; path=/";
+    });
+    var ib_english_banner_cookie = getCookie("ib_english_banner_hide");
+    if (ib_english_banner_cookie != "") {
+    } else {
+      $ib_english_banner.show();
+    }
+
+
 
 
 
