@@ -269,6 +269,12 @@ section.section {
     height: 110px;
   }
 
+  .featherlight-previous, .featherlight-next {
+    width: 30px!important;
+    span {font-size: 25px!important;}
+  }
+
+
   section.section_school_sections {
     h2 {
       text-align: center;
@@ -1112,7 +1118,7 @@ strong {
           color: $red;
           display: inline-block;
           position: absolute;
-
+          transform: rotate(45deg);
           border-radius: 50%;
           width: 24px;
           height: 24px;
