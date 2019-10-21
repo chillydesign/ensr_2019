@@ -1,23 +1,34 @@
 <?php get_header(); ?>
 
+<div class="slick_slider_no_dots">
 
-
-<?php $background_image  =  get_home_url () . '/wp-content/uploads/2019/07/buildings_1.jpg' ; ?>
-<!-- article -->
-<section id="post-404"  style="background-image: url(<?php echo $background_image;  ?>">
-
+  <div class="slide">
     <div class="container">
-        <h1>404 - Vous êtes perdu?</h1>
-        <p>
-            La page que vous recherchez n'existe pas ou a été déplacée.
-        </p>
+      <div class="row">
+        <div class="col-sm-6 col-sm-push-3" style="text-align: center">
 
-        <h6><a href="<?php echo get_home_url();?>">Retour à l'accueil</a></h6>
+          <div class="welcome_text_inner">
+            <h1>404 - Vous êtes perdu?</h1>
+            <p>
+                La page que vous recherchez n'existe pas ou a été déplacée.
+            </p>
 
+            <h6><a href="<?php echo get_home_url();?>">Retour à l'accueil</a></h6>
+          </div>
 
+        </div>
+        <?php endif; ?>
 
-    </section>
-    <!-- /section -->
+      </div>
+    </div>
+    <div class="background_image" style="background-image:url('<?php get_home_url () . '/wp-content/uploads/2019/07/buildings_1.jpg' ; ?>')"></div>
+
+  </div>
+
+  <?php endwhile; ?>
+</div>
+<!-- end slick_slider_no_dots -->
+
 
 
     <?php //get_sidebar(); ?>
