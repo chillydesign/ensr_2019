@@ -17,15 +17,12 @@
           </div>
 
         </div>
-        <?php endif; ?>
 
       </div>
     </div>
     <div class="background_image" style="background-image:url('<?php get_home_url () . '/wp-content/uploads/2019/07/buildings_1.jpg' ; ?>')"></div>
 
   </div>
-
-  <?php endwhile; ?>
 </div>
 <!-- end slick_slider_no_dots -->
 
