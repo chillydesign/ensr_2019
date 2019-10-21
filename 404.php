@@ -2,7 +2,7 @@
 
 
 
-<?php $background_image  =  get_home_url () . '/wp-content/uploads/2018/12/traveller.jpg' ; ?>
+<?php $background_image  =  get_home_url () . '/wp-content/uploads/2019/07/buildings_1.jpg' ; ?>
 <!-- article -->
 <section id="post-404"  style="background-image: url(<?php echo $background_image;  ?>">
 
