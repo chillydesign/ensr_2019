@@ -1183,7 +1183,7 @@ $sidecontact_width: 300px;
     transform: translateX( $sidecontact_width);
     background: $blue;
     padding: 20px;
-    z-index: 1000;
+    z-index: 3000;
     transition: all 0.3s;
 
     &.visible {
