@@ -6,6 +6,8 @@
     var $body = $("body");
     var $header = $("header");
 
+
+
     // mobile menu button
     var $menu_button = $("#menu_button");
     var $nav = $("#primary_nav");
@@ -28,27 +30,31 @@
 
     var $hasChildren = $('li.menu-item-has-children');
     $hasChildren.on('click', function (e) {
-      var $this = $(this);
-      var $hasExpanded = $this.hasClass('expanded');
-      const target = e.target;
-      const grandparent = target.parentElement.parentElement;
+      var $windowWidth = $window.width();
+      // mobile nav
+      if ($windowWidth < 768) {
 
+        var $this = $(this);
+        var $hasExpanded = $this.hasClass('expanded');
+        const target = e.target;
+        const grandparent = target.parentElement.parentElement;
 
-      if (target.nodeName == 'LI') {
-        $hasChildren.removeClass('expanded');
-        if (!$hasExpanded) {
-          $this.addClass('expanded');
-        }
-      } else {
-        if (grandparent.className == 'sub-menu') {
-          // if clicking on a sub menu item, let the user navigate to it
-        } else {
+        if (target.nodeName == 'LI') {
           $hasChildren.removeClass('expanded');
           if (!$hasExpanded) {
-            // if clicking on a parent link, dont let them navigate there
-            // unless the menu is already open
             $this.addClass('expanded');
-            e.preventDefault();
+          }
+        } else {
+          if (grandparent.className == 'sub-menu') {
+            // if clicking on a sub menu item, let the user navigate to it
+          } else {
+            $hasChildren.removeClass('expanded');
+            if (!$hasExpanded) {
+              // if clicking on a parent link, dont let them navigate there
+              // unless the menu is already open
+              $this.addClass('expanded');
+              e.preventDefault();
+            }
           }
         }
       }
