@@ -74,7 +74,7 @@ Functions
 
 function wf_version()
 {
-    return '0.2.3';
+    return '0.2.4';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -148,6 +148,7 @@ function register_html5_menu()
     register_nav_menus(array( // Using array to specify more menus if needed
         'primary-navigation' => __('Primary Menu', 'webfactor'), // Main Navigation
         'footer-navigation' => __('Footer Menu', 'webfactor'), // Sidebar Navigation
+        'lang-navigation' => __('Language Menu', 'webfactor'), // Language switcher
         'top-navigation' => __('Top Menu', 'webfactor') // Extra Navigation if needed (duplicate as many as you need!)
     ));
 }
