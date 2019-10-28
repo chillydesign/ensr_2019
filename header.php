@@ -42,9 +42,14 @@
             <nav>
 
                 <a href="<?php echo home_url(); ?>" id="branding">ENSR</a>
+                <div id="prim_and_lang">
+                <ul>
+                    <?php chilly_nav('lang-navigation'); ?>
+                </ul>
                 <ul>
                     <?php chilly_nav('primary-navigation'); ?>
                 </ul>
+                </div>
             </nav>
         </div>
         <a href="#" id="menu_button">Menu</a>

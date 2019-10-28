@@ -1,5 +1,6 @@
 $logo_height: 50px;
 $top_nav_height: 35px;
+
 @media (min-width: $mobile_width) {}
 
 header {
@@ -9,6 +10,7 @@ header {
   background: white;
   left: 0;
   z-index: 2000;
+
   @media (min-width: $mobile_width) {
     //    position: static;
   }
@@ -31,12 +33,14 @@ header {
       &:focus {
         box-shadow: 0 0 0;
       }
+
       @media (min-width: $mobile_width) {
         width: 250px;
       }
     }
 
-    ul {
+    #prim_and_lang {
+
       flex: 1 auto;
       position: absolute;
       top: 0;
@@ -57,9 +61,16 @@ header {
       &.menu_visible {
         transform: translateX(0px);
       }
+
+
       @media (min-width: $mobile_width) {
-        display: block;
+        display: flex;
+
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        flex: 1 auto;
         text-align: right;
+
         position: static;
         width: auto;
         max-width: none;
@@ -67,6 +78,24 @@ header {
         height: auto;
         transform: translateX(0);
         overflow-y: visible;
+
+        &>ul {
+          display: inline-block;
+
+        }
+      }
+    }
+
+
+    ul {
+
+
+
+
+      @media (min-width: $mobile_width) {
+        display: inline-block;
+
+
       }
 
       li {
@@ -80,6 +109,7 @@ header {
         &.menu-item-language-current {
           display: none;
         }
+
         @media (min-width: $mobile_width) {
           display: inline-block;
           background: none;
@@ -105,6 +135,7 @@ header {
           &:hover {
             background: $blue;
           }
+
           @media (min-width: $mobile_width) {
             display: inline-block;
             color: $blue;
@@ -123,6 +154,7 @@ header {
             }
           }
         }
+
         //a
         ul.sub-menu {
           margin: 0;
@@ -131,18 +163,22 @@ header {
           width: 100%;
           flex: unset;
           height: auto;
+          overflow: auto;
+
           @media (min-width: $mobile_width) {
             position: absolute;
             right: 0;
             text-align: left;
             top: 40px;
             display: none;
+            z-index: 1000;
             width: 200px;
           }
 
           li {
             font-size: 0.9em;
             padding-left: 10px;
+
             @media (min-width: $mobile_width) {
               display: block;
               padding-left: 0;
@@ -164,20 +200,26 @@ header {
                 }
               }
             }
+
             // a
           }
         }
+
         //.sub-menu
         &:hover {
           ul.sub-menu {
             display: block;
+            overflow: visible;
           }
         }
+
         // li:hover
       }
+
       // li
     }
   }
+
   // nav
 }
 
@@ -196,33 +238,36 @@ header {
   .social_search {
     position: absolute;
     right: 210px;
-    top:0;
+    top: 0;
     width: 280px;
     z-index: 9999;
   }
+
   form {
     width: 150px;
     display: inline-block;
+
     ::placeholder {
-        color: white!important;
-      }
+      color: white !important;
+    }
 
   }
+
   input {
-    width:100%;
+    width: 100%;
     padding: 5px;
     border-radius: 1px;
     height: #{$top_nav_height - 7px};
-    background: transparentize(white , 0.85);
+    background: transparentize(white, 0.85);
     border: 0;
-    margin: 3px 0 0 ;
+    margin: 3px 0 0;
     color: darken($blue, 30);
   }
 
   ul.social_icons {
-  display: inline-block;
-  position: relative;
-  top: -3px;
+    display: inline-block;
+    position: relative;
+    top: -3px;
   }
 
   ul.top_nav_ul {
@@ -284,6 +329,7 @@ header {
     }
   }
 }
+
 // #top_nav
 
 #menu_button {
@@ -298,6 +344,7 @@ header {
   background-size: 30px;
   text-indent: -9999px;
   cursor: pointer;
+
   @media (min-width: $mobile_width) {
     display: none;
   }
@@ -312,9 +359,13 @@ body.lang_en {
     }
   }
 }
+
 // DONT SHOW HEADER NAVIGATION ON THE LANDING PAGE
 
-body.landing-page, body.landing-page-2, body.landing-page-3 {
+body.landing-page,
+body.landing-page-2,
+body.landing-page-3 {
+
   #top_nav,
   header {
     display: none !important;
@@ -323,7 +374,7 @@ body.landing-page, body.landing-page-2, body.landing-page-3 {
 
 
 .lang_fr #top_nav .social_search {
-right: 277px;
+  right: 277px;
 }
 
 header .wpml-ls-menu-item .wpml-ls-flag {

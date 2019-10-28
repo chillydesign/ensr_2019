@@ -8,7 +8,7 @@
 
     // mobile menu button
     var $menu_button = $("#menu_button");
-    var $nav = $("nav ul");
+    var $nav = $("#prim_and_lang");
     $menu_button.on("click", function (e) {
       e.preventDefault();
       $nav.toggleClass("menu_visible");
