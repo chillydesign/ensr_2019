@@ -90,7 +90,7 @@ function webfactor_header_scripts()
         wp_enqueue_script('modernizr'); // Enqueue it!
 
 
-        $gkey = 'AAIzaSyB8R30nSBXyDaB5tjb_WLLabbGkCnp_R2c';
+        $gkey = 'AIzaSyB8R30nSBXyDaB5tjb_WLLabbGkCnp_R2c';
         wp_register_script('maps', '//maps.google.com/maps/api/js?key='. $gkey, array(), 1, true);
         wp_enqueue_script('maps'); // Enqueue it!
 
