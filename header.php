@@ -43,7 +43,7 @@
 
                 <a href="<?php echo home_url(); ?>" id="branding">ENSR</a>
                
-                <ul>
+                <ul id="primary_nav">
                     <div id="hide_lang_desktop"><?php chilly_nav('lang-navigation', ''); ?></div>
                     <?php chilly_nav('primary-navigation'); ?>
                     <div id="hide_lang_mobile"><?php chilly_nav('lang-navigation'); ?></div>

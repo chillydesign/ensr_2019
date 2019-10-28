@@ -8,7 +8,7 @@
 
     // mobile menu button
     var $menu_button = $("#menu_button");
-    var $nav = $("nav ul");
+    var $nav = $("#primary_nav");
     $menu_button.on("click", function (e) {
       e.preventDefault();
       $nav.toggleClass("menu_visible");
@@ -24,6 +24,22 @@
     $("#main").on("click", function () {
       $nav.removeClass("menu_visible");
     });
+
+
+    var $hasChildren = $('li.menu-item-has-children');
+    $hasChildren.on('click', function (e) {
+      e.preventDefault();
+      var $this = $(this);
+      var $hasExpanded = $this.hasClass('expanded');
+      $hasChildren.removeClass('expanded');
+      if (!$hasExpanded) {
+        $this.addClass('expanded');
+      }
+
+    });
+
+
+
 
 
     $('.closable').on("click", function () {
