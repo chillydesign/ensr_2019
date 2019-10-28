@@ -39,8 +39,25 @@ header {
       }
     }
 
-    #prim_and_lang {
 
+    #hide_lang_desktop {
+      display: block;
+
+      @media (min-width: $mobile_width) {
+        display: none;
+      }
+    }
+
+    #hide_lang_mobile {
+      display: none;
+
+      @media (min-width: $mobile_width) {
+        display: inline-block;
+      }
+    }
+
+
+    ul {
       flex: 1 auto;
       position: absolute;
       top: 0;
@@ -62,15 +79,9 @@ header {
         transform: translateX(0px);
       }
 
-
       @media (min-width: $mobile_width) {
-        display: flex;
-
-        flex-wrap: wrap;
-        flex-direction: row-reverse;
-        flex: 1 auto;
+        display: inline-block;
         text-align: right;
-
         position: static;
         width: auto;
         max-width: none;
@@ -79,21 +90,6 @@ header {
         transform: translateX(0);
         overflow-y: visible;
 
-        &>ul {
-          display: inline-block;
-
-        }
-      }
-    }
-
-
-    ul {
-
-
-
-
-      @media (min-width: $mobile_width) {
-        display: inline-block;
 
 
       }
