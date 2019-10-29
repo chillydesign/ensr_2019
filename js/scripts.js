@@ -64,6 +64,17 @@
 
 
 
+    // GOOGLE TAG AND FACEBOOK PIXEL EVENTS ON CONTACT FORM SUBMIT
+
+
+    document.addEventListener('wpcf7mailsent', function (event) {
+      console.log(event);
+      console.log(event.detail);
+      console.log(event.detail.contactFormId);
+      console.log(event.detail.inputs);
+    });
+    // GOOGLE TAG AND FACEBOOK PIXEL EVENTS ON CONTACT FORM SUBMIT
+
 
 
     $('.closable').on("click", function () {

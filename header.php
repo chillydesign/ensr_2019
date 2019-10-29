@@ -19,6 +19,8 @@
         <meta name="theme-color" content="#ffffff">
 
         <?php wp_head(); ?>
+        <?php get_template_part('facebook_pixel'); ?>
+
     </head>
     <body <?php body_class(); ?>>
 
