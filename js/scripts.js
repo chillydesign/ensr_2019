@@ -68,10 +68,21 @@
 
 
     document.addEventListener('wpcf7mailsent', function (event) {
-      console.log(event);
-      console.log(event.detail);
-      console.log(event.detail.contactFormId);
-      console.log(event.detail.inputs);
+      var contactFormId = parseInt(event.detail.contactFormId, 10);
+
+      // 5416 Contact pop up EN
+      // 5415 Contact pop up FR
+
+      if (contactFormId == 5416 || contactFormId == 5415) {
+        fbq('track', 'Lead');
+        ga('send', 'event', 'lead', 'submit', 'contact_widget');
+        console.log(contactFormId, 'contact pop up');
+      }
+
+      // console.log(event);
+      // console.log(event.detail);
+      // console.log(event.detail.contactFormId);
+      // console.log(event.detail.inputs);
     });
     // GOOGLE TAG AND FACEBOOK PIXEL EVENTS ON CONTACT FORM SUBMIT
 
