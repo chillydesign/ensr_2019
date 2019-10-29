@@ -70,19 +70,42 @@
     document.addEventListener('wpcf7mailsent', function (event) {
       var contactFormId = parseInt(event.detail.contactFormId, 10);
 
-      // 5416 Contact pop up EN
-      // 5415 Contact pop up FR
+      // 5416 Contact pop up EN  contact_widget
+      // 5415 Contact pop up FR  contact_widget
 
-      if (contactFormId == 5416 || contactFormId == 5415) {
+      // 5020 Contact EN nouveau contact_page
+      // 4877 Contact FR nouveau contact_page
+
+      // [contact-form-7 id="5737" title="Book a visit"]
+      // [contact-form-7 id="5736" title="Réserver une visite"]
+
+      if (contactFormId == 5416) {
+        console.log(contactFormId, 'contact_widget');
         fbq('track', 'Lead');
         ga('send', 'event', 'lead', 'submit', 'contact_widget');
-        console.log(contactFormId, 'contact pop up');
+      } else if (contactFormId == 5415) {
+        console.log(contactFormId, 'contact_widget_french');
+        fbq('track', 'Lead');
+        ga('send', 'event', 'lead', 'submit', 'contact_widget_french');
+      } else if (contactFormId == 5020) {
+        console.log(contactFormId, 'contact_page');
+        fbq('track', 'Lead');
+        ga('send', 'event', 'lead', 'submit', 'contact_page');
+      } else if (contactFormId == 4877) {
+        console.log(contactFormId, 'contact_page_french');
+        fbq('track', 'Lead');
+        ga('send', 'event', 'lead', 'submit', 'contact_page_french');
+      } else if (contactFormId == 5737) {
+        console.log(contactFormId, 'visit_page');
+        fbq('track', 'Lead');
+        ga('send', 'event', 'lead', 'submit', 'visit_page');
+      } else if (contactFormId == 5736) {
+        console.log(contactFormId, 'visit_page_french');
+        fbq('track', 'Lead');
+        ga('send', 'event', 'lead', 'submit', 'visit_page_french');
       }
 
-      // console.log(event);
-      // console.log(event.detail);
-      // console.log(event.detail.contactFormId);
-      // console.log(event.detail.inputs);
+
     });
     // GOOGLE TAG AND FACEBOOK PIXEL EVENTS ON CONTACT FORM SUBMIT
 
