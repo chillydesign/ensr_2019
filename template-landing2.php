@@ -28,6 +28,7 @@
             <h1><?php echo $title; ?></h1>
             <p><?php echo $subtitle; ?></p>
             </div>
+            <div class="white_bg"></div>
           
         </section>
 
@@ -109,7 +110,7 @@
                 <div class="col-sm-6">
 
 
-                
+
                 </div>
             </div>
         </div>

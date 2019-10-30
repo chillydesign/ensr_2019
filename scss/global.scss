@@ -1373,6 +1373,21 @@ section.section_the_landing_welcome {
 
   text-align: center;
   padding: 180px 0;
+  position: relative;
+
+  .container {
+    position: relative;
+    z-index: 100;
+  }
+
+  .white_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparentize($color: white, $amount: 0.5);
+  }
 
   h1 {
     color: $blue;
@@ -1647,8 +1662,12 @@ section.section_the_landing_footer {
 }
 
 body.page-template-template-landing2 {
-  footer {
-    display: none;
+
+  footer,
+  #top_nav,
+  header {
+
+    display: none !important;
   }
 }
 
