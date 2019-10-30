@@ -88,9 +88,9 @@
 
 
         <div class="background_image_1"
-         style="background-image:url(<?php echo $footer_image_1['sizes']['large']; ?>)"></div>
+         style="background-image:url(<?php echo $footer_image_1['sizes']['medium']; ?>)"></div>
          <div class="background_image_2"
-         style="background-image:url(<?php echo $footer_image_2['sizes']['large']; ?>)"></div>
+         style="background-image:url(<?php echo $footer_image_2['sizes']['medium']; ?>)"></div>
 
 
         </section>
