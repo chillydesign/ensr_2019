@@ -1356,7 +1356,7 @@ section.section_the_landing_header {
   padding: 20px;
 
   a.branding {
-    background: url("../images/ENSR-logo-new.jpg") no-repeat left center;
+    background: url("../images/landing2/logo-ensr-landing.svg") no-repeat left center;
     background-size: contain;
     display: block;
     text-indent: -9999px;
@@ -1433,7 +1433,7 @@ section.section_the_landing_services {
         height: 100px;
         background: no-repeat center center $light_grey;
         background-size: cover;
-        border-radius: 50%;
+        // border-radius: 50%;
         margin: auto;
 
         @media (min-width: $mobile_width) {
@@ -1503,19 +1503,21 @@ section.section_the_landing_testimonials {
       }
 
       blockquote {
-        padding: 50px 20px 20px;
+        padding: 60px 20px 20px;
         position: relative;
         color: lighten($blue, 60);
 
         &:before {
-          content: '"';
+          content: '';
+          background: no-repeat center center url('../images/landing2/quotes.svg');
           color: lighten($blue, 30);
-          font-size: 6em;
+          height: 40px;
+          width: 100%;
           display: block;
           text-align: center;
           position: absolute;
           top: 0;
-          left: 49%;
+          left: 0;
         }
       }
 
@@ -1619,8 +1621,7 @@ section.section_the_landing_form {
       }
 
 
-      .wpcf7-form-control-wrap {}
-
+      // .wpcf7-form-control-wrap {}
 
     }
 
@@ -1651,21 +1652,36 @@ section.section_the_landing_footer {
   border-top: 4px solid $blue;
   padding: 30px 0;
 
+  img {
+    width: 100%;
+    height: auto;
+  }
+
   p {
-    padding: 0 0 5px 20px;
+    padding: 0 0 25px 25px;
     margin: 0;
-    background: no-repeat center left;
-    background-size: 20px;
+    background: no-repeat 0 7px;
+    background-size: 18px;
 
-    &.icon_phone {}
+    &.icon_phone {
+      background-image: url('../images/landing2/phone.svg');
+    }
 
-    &.icon_email {}
+    &.icon_email {
+      background-image: url('../images/landing2/mail.svg');
+    }
 
-    &.icon_address {}
+    &.icon_address {
+      background-image: url('../images/landing2/marker.svg');
+    }
   }
 }
 
 body.page-template-template-landing2 {
+
+  img {
+    box-shadow: 0 0 0;
+  }
 
   footer,
   #top_nav,

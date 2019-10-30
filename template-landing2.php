@@ -109,7 +109,7 @@
                 </div>
                 <div class="col-sm-6">
 
-
+<img src="<?php echo $tdu;?>/images/landing2/accreditations.jpg" alt="accreditations">
 
                 </div>
             </div>
