@@ -1485,10 +1485,12 @@ section.section_the_landing_testimonials {
 
     .testimonial {
       flex: 1 auto;
+      margin-bottom: 70px;
 
       @media (min-width: $mobile_width) {
         width: 33.33%;
         max-width: 33.33%;
+        margin-bottom: 0;
       }
 
       blockquote,
@@ -1683,6 +1685,7 @@ body.page-template-template-landing2 {
     box-shadow: 0 0 0;
   }
 
+  #ib_english_banner,
   footer,
   #top_nav,
   header {
