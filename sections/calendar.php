@@ -4,7 +4,7 @@
 
 <?php  $news_loop = new WP_Query(array(
     'post_type' => 'post',
-    'posts_per_page' => 3,
+    'posts_per_page' => 16,
     'meta_key' => 'date',
     'orderby' => 'meta_value', // ORDER BY DATE FROM  OLDEST TO NEWEST
     'order' => 'ASC',
