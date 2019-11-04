@@ -1648,6 +1648,27 @@ section.section_the_landing_form {
     color: $blue;
     padding: 6px 30px;
   }
+
+  &.section_the_landing_form_blue{
+    .form_container{
+      background: $blue;
+
+      h3{
+        color: white;
+      }
+      form{
+        label{
+          color: white;
+        }
+        button,
+        input[type=submit] {
+          background: $light_blue;
+          color: white;
+        }
+      }
+    }
+
+  }
 }
 
 section.section_the_landing_footer {
