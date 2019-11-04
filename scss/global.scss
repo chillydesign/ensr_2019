@@ -1633,6 +1633,8 @@ section.section_the_landing_form {
       background: $blue;
       color: white;
       border-radius: 4px;
+      text-transform: uppercase;
+      margin-top: 5px;
     }
 
 
@@ -1646,7 +1648,8 @@ section.section_the_landing_form {
     display: inline-block;
     font-size: 1.4em;
     color: $blue;
-    padding: 6px 30px;
+    padding: 8px 30px 6px;
+    margin-top: 5px;
   }
 
   &.section_the_landing_form_blue{
@@ -1665,6 +1668,11 @@ section.section_the_landing_form {
           background: $light_blue;
           color: white;
         }
+      }
+      a.button{
+        background: none;
+        border-color: $light_blue;
+        color: $light_blue;
       }
     }
 
@@ -1700,7 +1708,7 @@ section.section_the_landing_footer {
   }
 }
 
-body.page-template-template-landing2 {
+body.page-template-template-landing2, body.page-template-template-landing2-no-quotes {
 
   img {
     box-shadow: 0 0 0;

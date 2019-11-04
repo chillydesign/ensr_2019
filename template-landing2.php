@@ -29,7 +29,7 @@
             <p><?php echo $subtitle; ?></p>
             </div>
             <div class="white_bg"></div>
-          
+
         </section>
 
         <section class="section section_the_landing_services">
@@ -38,15 +38,15 @@
 
         <?php foreach($services as $service):  ?>
             <div class="service">
-               
+
                 <div class="service_image"
          style="background-image:url(<?php echo $service['image']['sizes']['medium']; ?>)"></div>
                <div class="service_content"><?php echo $service['content']; ?></div>
             </div>
 
         <?php endforeach; ?>
-       
-        
+
+
         </div>
         </div>
         </section>
@@ -73,13 +73,13 @@
 
         <div class="container">
             <div class="form_container">
-           
+
 
                 <h3>Contact Us</h3>
 
                 <?php echo $contact_form; ?>
 
-          
+
 
             <h3>Want to know more about ENSR International School?</h3>
                 <a href="#" class="button">Go to website</a>
@@ -101,15 +101,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <p class="icon_phone">+41 21 654 65 00</p> 
-                    <p class="icon_email"> admissions@ensr.ch</p> 
+                    <p class="icon_phone">+41 21 654 65 00</p>
+                    <p class="icon_email"> admissions@ensr.ch</p>
                     <p class="icon_address">  Ecole Nouvelle de la Suisse Romande Ch. de Rovéréaz 20 <br>
-                    C.P. 161 CH – 1000 Lausanne 12 Switzerland</p> 
+                    C.P. 161 CH – 1000 Lausanne 12 Switzerland</p>
 
                 </div>
                 <div class="col-sm-6">
 
-<img src="<?php echo $tdu;?>/images/landing2/accreditations.jpg" alt="accreditations">
+<img src="<?php echo $tdu;?>/images/landing2/accreditations.jpg" alt="accreditations" style="box-shadow:none;">
 
                 </div>
             </div>
