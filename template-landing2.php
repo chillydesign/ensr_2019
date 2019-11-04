@@ -74,15 +74,23 @@
         <div class="container">
             <div class="form_container">
 
-
+              <?php if ($lang == 'en'): ?>
                 <h3>Contact Us</h3>
+              <?php else: ?>
+                <h3>Contactez-nous</h3>
+              <?php endif; ?>
 
                 <?php echo $contact_form; ?>
 
 
 
-            <h3>Want to know more about ENSR International School?</h3>
-                <a href="#" class="button">Go to website</a>
+                <?php if ($lang == 'en'): ?>
+                  <h3>Want to know more about ENSR International School?</h3>
+                  <a href="<?php echo get_home_url(); ?>" class="button">Go to website</a>
+                <?php else: ?>
+                  <h3>Vous souhaitez en savoir plus sur l'ENSR?</h3>
+                  <a href="<?php echo get_home_url(); ?>" class="button">Accéder au site</a>
+                <?php endif; ?>
             </div>
         </div>
 
