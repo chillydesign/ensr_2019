@@ -59,7 +59,7 @@
         <div class="form_container">
 
 
-          <?php if ($lang == 'en'): ?>
+          <?php if (ICL_LANGUAGE_CODE == 'en'): ?>
             <h3>Contact Us</h3>
           <?php else: ?>
             <h3>Contactez-nous</h3>
@@ -68,7 +68,7 @@
           <?php echo $contact_form; ?>
 
 
-          <?php if ($lang == 'en'): ?>
+          <?php if (ICL_LANGUAGE_CODE == 'en'): ?>
             <h3>Want to know more about ENSR International School?</h3>
             <a href="<?php echo get_home_url(); ?>" class="button">Go to website</a>
           <?php else: ?>
