@@ -103,6 +103,14 @@
         console.log(contactFormId, 'visit_page_french');
         fbq('track', 'Lead');
         ga('send', 'event', 'lead', 'submit', 'visit_page_french');
+      } else if (contactFormId == 4426) {
+        console.log(contactFormId, 'landing_page');
+        fbq('track', 'Lead');
+        ga('send', 'event', 'lead', 'submit', 'landing_page');
+      } else if (contactFormId == 4422) {
+        console.log(contactFormId, 'landing_page_french');
+        fbq('track', 'Lead');
+        ga('send', 'event', 'lead', 'submit', 'landing_page_french');
       }
 
 
