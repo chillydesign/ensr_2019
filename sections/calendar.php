@@ -4,7 +4,7 @@
 
 <?php  $news_loop = new WP_Query(array(
     'post_type' => 'post',
-    'posts_per_page' => -1 ,
+    'posts_per_page' => 3,
     'meta_key' => 'date',
     'orderby' => 'meta_value', // ORDER BY DATE FROM  OLDEST TO NEWEST
     'order' => 'ASC',
@@ -14,6 +14,12 @@
             'field'    => 'term_id',
             'terms'    => $category_id,
         ),
+        array(  //    ONLY SHOW EVENTS THAT HAVENT FINISHED YET
+          'key' => 'date',
+          'value' => date('Y-m-d'),  // today
+          'compare' => '>=',
+          'type' => 'DATE'
+        )
     )
 )); ?>
 
@@ -72,7 +78,7 @@
               </div>
         <?php if ($read_more): ?> </a> <?php endif; ?>
             </div>
-               
+
             </li>
             <?php $p++; endwhile; // end while of news loop?>
 
