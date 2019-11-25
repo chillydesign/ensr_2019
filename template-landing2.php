@@ -117,7 +117,7 @@
                 </div>
                 <div class="col-sm-6">
 
-<img src="<?php echo $tdu;?>/images/landing2/accreditations.jpg" alt="accreditations" style="box-shadow:none;">
+<a href="<?php echo get_template_directory_uri(); ?>/images/accreditation.pdf" target="_blank" style="display:block;" alt="accreditation"><img src="<?php echo $tdu;?>/images/landing2/accreditations.jpg" alt="accreditations" style="box-shadow:none;"></a>
 
                 </div>
             </div>

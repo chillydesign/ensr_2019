@@ -171,6 +171,16 @@ section.section {
   }
 }
 
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+    border: 0!important;
+    background: rgba(255,0,0,0.6);
+    color: white;
+    font-size: 1.4em;
+    padding: 15px 10px;
+}
+
+
 .landing-page {
   .slide.slick-slide {
     height: 600px;

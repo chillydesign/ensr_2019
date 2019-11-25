@@ -13,7 +13,7 @@
                 </ul>
 
                 <?php get_template_part('social_links'); ?>
-                <img alt="accreditation" src="<?php echo get_template_directory_uri(); ?>/images/accreditation-ensr.png" style="box-shadow:none; margin:-8px 0 0"/>
+                <a href="<?php echo get_template_directory_uri(); ?>/images/accreditation.pdf" target="_blank" style="display:block;" alt="accreditation"><img alt="accreditation" src="<?php echo get_template_directory_uri(); ?>/images/accreditation-ensr.png" style="box-shadow:none; margin:-8px 0 0"/></a>
 
             </div>
             <div class="col-sm-4">
