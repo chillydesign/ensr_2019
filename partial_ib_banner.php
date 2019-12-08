@@ -20,6 +20,7 @@
     <?php else : ?>
       En utilisant ce site vous acceptez notre <a target="
       " href="https://ensr.ch/fr/politique-dutilisation-des-cookies/">politique d'utilisation des cookies</a>
+    <?php endif; ?>
   </div>
 </div>
 </div>
