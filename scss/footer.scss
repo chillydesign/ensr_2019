@@ -167,11 +167,11 @@ footer {
   font-size: 1.3em;
   font-style: italic;
   margin: 15px -10px -14px;
-  padding: 8px 15px 8px 130px;
+  padding: 8px 15px;
   border-top: solid 1px;
   a {
     font-size: 1em!important;
     display: inline!important;
   }
-  @media (min-width: 768px){padding: 8px 15px;}
+  @media (min-width: 768px){padding: 8px 15px 8px 130px;}
 }
