@@ -14,6 +14,8 @@
             'field'    => 'term_id',
             'terms'    => $category_id,
         ),
+    ),
+    'meta_query' => array(
         array(  //    ONLY SHOW EVENTS THAT HAVENT FINISHED YET
           'key' => 'date',
           'value' => date('Y-m-d'),  // today
@@ -23,23 +25,6 @@
     )
 )); ?>
 
-<?php  $news_loop = new WP_Query(
-  array(
-    'post_type' => 'post',
-    'posts_per_page' => 12 ,
-    'meta_key' => 'date',
-    'orderby' => 'meta_value',
-    'order' => 'ASC',
-    'meta_query' => array(
-      array(  //    ONLY SHOW EVENTS THAT HAVENT FINISHED YET
-        'key' => 'date',
-        'value' => date('Y-m-d'),  // today
-        'compare' => '>=',
-        'type' => 'DATE'
-      )
-    )
-  )
-); ?>
 
 
 
