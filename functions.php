@@ -74,7 +74,7 @@ Functions
 
 function wf_version()
 {
-    return '0.3.7';
+    return '0.3.8';
 }
 
 // Load HTML5 Blank scripts (header.php)

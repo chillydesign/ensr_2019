@@ -1,4 +1,5 @@
 <div class="slick_slider_no_dots">
+  <?php $i=1; ?>
   <?php while (have_rows('slides')) : the_row() ; ?>
 
   <?php $image =  get_sub_field('image'); ?>
@@ -24,8 +25,11 @@
         <div class="col-sm-6 col-sm-push-3" style="text-align: center">
 
           <div class="welcome_text_inner">
-            <h2>
-              <?php echo $slide_content; ?></h2>
+            <?php if($i == 1) : ?>
+              <h1><?php echo $slide_content; ?></h1>
+            <?php else : ?>
+              <h2><?php echo $slide_content; ?></h2>
+            <?php endif; ?>
             &nbsp;
           </div>
 
@@ -37,7 +41,7 @@
     <div class="background_image" style="background-image:url('<?php echo $image['sizes']['large'];  ?>')"></div>
 
   </div>
-
+<?php $i++; ?>
   <?php endwhile; ?>
 </div>
 <!-- end slick_slider_no_dots -->
