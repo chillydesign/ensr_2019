@@ -63,6 +63,12 @@
     });
 
 
+    // MATCH HEIGHT
+    // MATCH HEIGHT
+    $('.focus_image_match_height').matchHeight();
+    // MATCH HEIGHT
+    // MATCH HEIGHT
+
 
     // GOOGLE TAG AND FACEBOOK PIXEL EVENTS ON CONTACT FORM SUBMIT
 

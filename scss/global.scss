@@ -72,9 +72,13 @@ section.section {
     bottom: 0;
   }
 }
+
 body.page-template-default {
-  .welcome_text_inner h1 { font-size: 2.97em;}
+  .welcome_text_inner h1 {
+    font-size: 2.97em;
+  }
 }
+
 .welcome_text_inner {
   color: white;
   padding: 150px 0;
@@ -174,12 +178,13 @@ body.page-template-default {
 }
 
 
-div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
-    border: 0!important;
-    background: rgba(255,0,0,0.6);
-    color: white;
-    font-size: 1.4em;
-    padding: 15px 10px;
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+  border: 0 !important;
+  background: rgba(255, 0, 0, 0.6);
+  color: white;
+  font-size: 1.4em;
+  padding: 15px 10px;
 }
 
 
@@ -1664,24 +1669,27 @@ section.section_the_landing_form {
     margin-top: 5px;
   }
 
-  &.section_the_landing_form_blue{
-    .form_container{
+  &.section_the_landing_form_blue {
+    .form_container {
       background: $blue;
 
-      h3{
+      h3 {
         color: white;
       }
-      form{
-        label{
+
+      form {
+        label {
           color: white;
         }
+
         button,
         input[type=submit] {
           background: $light_blue;
           color: white;
         }
       }
-      a.button{
+
+      a.button {
         background: none;
         border-color: $light_blue;
         color: $light_blue;
@@ -1720,7 +1728,8 @@ section.section_the_landing_footer {
   }
 }
 
-body.page-template-template-landing2, body.page-template-template-landing2-no-quotes {
+body.page-template-template-landing2,
+body.page-template-template-landing2-no-quotes {
 
   img {
     box-shadow: 0 0 0;
@@ -1737,3 +1746,12 @@ body.page-template-template-landing2, body.page-template-template-landing2-no-qu
 
 // LANDING PAGE 2
 // LANDING PAGE 2
+
+
+
+.focus_image {
+  background-size: cover;
+  width: 100%;
+  min-height: 100px;
+  background-repeat: no-repeat;
+}

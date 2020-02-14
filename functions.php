@@ -74,7 +74,7 @@ Functions
 
 function wf_version()
 {
-    return '0.3.8';
+    return '0.3.9';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -103,8 +103,8 @@ function webfactor_header_scripts()
         wp_register_script('featherlightgallery', $tdu . '/js/min/featherlight.gallery.min.js', array(), wf_version(), true);
         wp_enqueue_script('featherlightgallery'); // Enqueue it!
 
-        // wp_register_script('matchHeight', $tdu . '/js/min/jquery.matchHeight.js', array('jquery'),  wf_version(), true );
-        // wp_enqueue_script('matchHeight'); // Enqueue it!
+        wp_register_script('matchHeight', $tdu . '/js/min/jquery.matchHeight.js', array('jquery'),  wf_version(), true );
+        wp_enqueue_script('matchHeight'); // Enqueue it!
 
         wp_register_script('scripts', $tdu . '/js/scripts.js', array('jquery'), wf_version(), true);
         wp_enqueue_script('scripts'); // Enqueue it!
