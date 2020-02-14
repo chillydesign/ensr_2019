@@ -1755,4 +1755,9 @@ body.page-template-template-landing2-no-quotes {
   min-height: 400px;
   background-repeat: no-repeat;
   text-indent: -9999px;
+
+
+  @media (min-width: $mobile_width) {
+    min-height: 120px;
+  }
 }
