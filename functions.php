@@ -751,4 +751,20 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 
+
+// takes a focal image object and returns a div with background position 
+function focImageToDiv($focal_image) {
+
+	$top = $focal_image['focal_point']['top'];
+	$bottom = $focal_image['focal_point']['bottom'];
+	$right = $focal_image['focal_point']['right'];
+	$left = $focal_image['focal_point']['left'];
+	$y = (($top+$bottom) /2 * 100);
+	$x = (($left + $right) /2 * 100);
+	$img = $focal_image['sizes']['large'];
+	$content = '<div class="focus_image focus_image_match_height" style="background-image:url('.$img.'); background-position: '.$x.'%  '. $y.'%">IMAGE</div>'; 
+	return $content;
+}
+
+
 ?>

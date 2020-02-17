@@ -16,9 +16,18 @@ if ($reverse_on_mobile) :
 	<div class="container">
 		<div class="row">
 			<?php $i = 0; while (have_rows('column')) : the_row(); ?>
+			<?php
+			$use_column_image =  get_sub_field('use_column_image');
+			if( $use_column_image ) {
+				$colimg =  get_sub_field('column_image');
+				$column_content = focImageToDiv($colimg);
+			} else {
+				$column_content =   '<div class="focus_image_match_height">' . get_sub_field('column_content') ."</div>";
+			}
+			?>
 			<div class="<?php echo $column_class   . ' ' . $rev_class[$i % $column_count] ; ?> ">
 				<div class="column">
-					<?php echo get_sub_field('column_content'); ?>
+					<?php echo $column_content; ?>
 				</div>
 			</div>
 			<?php $i++; endwhile; ?>
