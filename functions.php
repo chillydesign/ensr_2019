@@ -74,7 +74,7 @@ Functions
 
 function wf_version()
 {
-    return '0.3.9';
+    return '0.4.0';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -752,7 +752,7 @@ if( function_exists('acf_add_options_page') ) {
 
 
 
-// takes a focal image object and returns a div with background position 
+// takes a focal image object and returns a div with background position
 function focImageToDiv($focal_image) {
 
 	$top = $focal_image['focal_point']['top'];
@@ -762,7 +762,7 @@ function focImageToDiv($focal_image) {
 	$y = (($top+$bottom) /2 * 100);
 	$x = (($left + $right) /2 * 100);
 	$img = $focal_image['sizes']['large'];
-	$content = '<div class="focus_image focus_image_match_height" style="background-image:url('.$img.'); background-position: '.$x.'%  '. $y.'%">IMAGE</div>'; 
+	$content = '<div class="focus_image_match_height"><div class="focus_image" style="background-image:url('.$img.'); background-position: '.$x.'%  '. $y.'%">IMAGE</div></div>';
 	return $content;
 }
 
