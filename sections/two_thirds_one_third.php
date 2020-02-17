@@ -1,8 +1,8 @@
 <?php
 
-$small_col_position = get_sub_field('small_col_position'); 
-$use_two_thirds_image = get_sub_field('use_two_thirds_image'); 
-$use_one_third_image = get_sub_field('use_one_third_image'); 
+$small_col_position = get_sub_field('small_col_position');
+$use_two_thirds_image = get_sub_field('use_two_thirds_image');
+$use_one_third_image = get_sub_field('use_one_third_image');
 
 
 
@@ -10,7 +10,7 @@ $use_one_third_image = get_sub_field('use_one_third_image');
 if( $use_one_third_image ) {
 	$oti =  get_sub_field('one_third_image');
 	$one_third_content = focImageToDiv($oti);
-	
+
 } else {
 	$one_third_content =   '<div class="focus_image_match_height">' . get_sub_field('one_third_content') ."</div>";
 }
@@ -37,5 +37,6 @@ $classes = ($small_col_position == 'right') ?  [ 'col-sm-8 col-sm-text-right', '
 		</div>
 
 	</div>
-	<!-- END OF ROW -->
+</div>
+<!-- END OF ROW -->
 </div>
