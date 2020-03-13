@@ -66,7 +66,7 @@
 
 <?php if (site_language() == 'en') { ?>
   <div id="popupportesouvertes" style="display:none; position: fixed; top: 0; left: 0; right: 0; background: rgba(0,0,0,0.8); z-index: 9999;">
-  <div style="width: calc(100vw - 60px); margin: 30px auto; height: calc(100vh - 60px); background-image: url(<?php echo get_template_directory_uri();?>/images/ENSR-open-house.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;">
+  <div style="display:table; width: calc(100vw - 60px); margin: 30px auto; height: calc(100vh - 60px); background-image: url(<?php echo get_template_directory_uri();?>/images/ENSR-open-house.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;">
     <div style="display: table-cell;vertical-align: middle;padding-top: 160px;">
       <div style="width: 300px;margin: auto;text-align: center;padding: 20px;background: rgba(34, 46, 105, 0.95);color: white;">
           <h2 style="color: #7aa2d6;border-bottom: solid 1px white;padding-bottom: 5px;margin: 5px -20px 15px;">Kindly note:</h2>
@@ -78,7 +78,7 @@
 </div>
 <?php } else { ?>
   <div id="popupportesouvertes" style="display:none; position: fixed; top: 0; left: 0; right: 0; background: rgba(0,0,0,0.8); z-index: 9999;">
-    <div style="width: calc(100vw - 60px); margin: 30px auto; height: calc(100vh - 60px); background-image: url(<?php echo get_template_directory_uri();?>/images/ENSR-portes-ouvertes.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;">
+    <div style="display:table; width: calc(100vw - 60px); margin: 30px auto; height: calc(100vh - 60px); background-image: url(<?php echo get_template_directory_uri();?>/images/ENSR-portes-ouvertes.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;">
       <div style="display: table-cell;vertical-align: middle;padding-top: 160px;">
         <div style="width: 300px;margin: auto;text-align: center;padding: 20px;background: rgba(34, 46, 105, 0.95);color: white;">
             <h2 style="color: #7aa2d6;border-bottom: solid 1px white;padding-bottom: 5px;margin: 5px -20px 15px;">Veuillez noter :</h2>
