@@ -64,6 +64,34 @@
     <div class="footer_background"></div>
 </footer>
 
+<?php if (site_language() == 'en') { ?>
+  <div id="popupportesouvertes" style="display:none; position: fixed; top: 0; left: 0; right: 0; background: rgba(0,0,0,0.8); z-index: 9999;">
+  <div style="width: calc(100vw - 60px); margin: 30px auto; height: calc(100vh - 60px); background-image: url(<?php echo get_template_directory_uri();?>/images/ENSR-open-house.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;">
+    <div style="display: table-cell;vertical-align: middle;padding-top: 160px;">
+      <div style="width: 300px;margin: auto;text-align: center;padding: 20px;background: rgba(34, 46, 105, 0.95);color: white;">
+          <h2 style="color: #7aa2d6;border-bottom: solid 1px white;padding-bottom: 5px;margin: 5px -20px 15px;">Kindly note:</h2>
+          <p>This event has been postponed until further notice. <br>To arrange a school tour please contact us on:<br> <a href="mailto:admissions@ensr.ch" style="color: #7aa2d6;">admissions@ensr.ch</a>
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
+<?php } else { ?>
+  <div id="popupportesouvertes" style="display:none; position: fixed; top: 0; left: 0; right: 0; background: rgba(0,0,0,0.8); z-index: 9999;">
+    <div style="width: calc(100vw - 60px); margin: 30px auto; height: calc(100vh - 60px); background-image: url(<?php echo get_template_directory_uri();?>/images/ENSR-portes-ouvertes.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;">
+      <div style="display: table-cell;vertical-align: middle;padding-top: 160px;">
+        <div style="width: 300px;margin: auto;text-align: center;padding: 20px;background: rgba(34, 46, 105, 0.95);color: white;">
+            <h2 style="color: #7aa2d6;border-bottom: solid 1px white;padding-bottom: 5px;margin: 5px -20px 15px;">Veuillez noter :</h2>
+            <p>Cet événement a été reporté jusqu’à nouvel ordre. <br>Pour organiser une visite de l’école, veuillez nous contacter à l’adresse suivante :<br> <a href="mailto:admissions@ensr.ch" style="color: #7aa2d6;">admissions@ensr.ch</a>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php } ?>
+
+
+
 <?php $show_popup = get_field('show_popup', 'option'); ?>
 <?php if ($show_popup): ?>
 <div class="popup"  id="home_page_message">

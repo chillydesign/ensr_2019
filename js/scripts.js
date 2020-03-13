@@ -239,6 +239,26 @@
       $home_page_message.show();
     }
 
+
+    var $popupportesouvertes = $('#popupportesouvertes');
+    $popupportesouvertes.on('click', function (e) {
+      e.preventDefault();
+      $popupportesouvertes.hide();
+
+      var d = new Date();
+      d.setTime(d.getTime() + (60 * 60 * 1000));
+      var expires = "expires=" + d.toUTCString();
+      document.cookie = "$popupportesouvertes_hide=true;" + expires + "; path=/";
+
+
+    });
+    var $popupportesouvertes_cookie = getCookie("$popupportesouvertes_hide");
+    if ($popupportesouvertes_cookie != "") {
+
+    } else {
+      $popupportesouvertes.show();
+    }
+
     var $ib_english_banner = $('#ib_english_banner');
 
     $('#cancel_ib_banner').on('click', function (e) {
