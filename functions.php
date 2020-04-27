@@ -678,8 +678,8 @@ function translateString($string)
                 return "search";
             } elseif ($string == "Pas encore d'évènements") {
                 return "No events yet";
-            } elseif ($string == "Découvrez notre programme en anglais à partir de l'école primaire >>") {
-                return "Discover our English programme starting from primary school >>";
+            } elseif ($string == "Découvrez notre programme en anglais >>") {
+                return "Discover our English programme >>";
             } elseif ($string == "Préférez-vous que la langue principale d'enseignement de votre enfant soit l'anglais?") {
                 return "Would you prefer your child to be taught primarily in English?";
             } elseif ($string == 'Lire plus') {

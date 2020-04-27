@@ -64,6 +64,7 @@
     <div class="footer_background"></div>
 </footer>
 
+<?php if(false) :?>
 <?php if (site_language() == 'en') { ?>
   <div id="popupportesouvertes" style="display:none; position: fixed; top: 0; left: 0; right: 0; background: rgba(0,0,0,0.8); z-index: 9999;">
   <div style="display:table; width: calc(100vw - 60px); margin: 30px auto; height: calc(100vh - 60px); background-image: url(<?php echo get_template_directory_uri();?>/images/ENSR-open-house.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;">
@@ -112,7 +113,7 @@ background-image:url('<?php // echo get_field('image', 'option')['sizes']['large
 }  */
 </style>
 <?php endif; ?>
-
+<?php endif; ?>
 
 <?php get_template_part('partial_ib_banner'); ?>
 <?php get_template_part('partial_side_contact'); ?>

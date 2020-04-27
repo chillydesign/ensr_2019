@@ -7,7 +7,7 @@
 <img src="<?php echo $tdu; ?>/images/gb.png" alt="GB Flag" />
 <img src="<?php echo $tdu; ?>/images/ib2.png" alt="IB Logo" />
 <strong><?php echo translateString("Préférez-vous que la langue principale d'enseignement de votre enfant soit l'anglais?"); ?></strong>
-<?php echo translateString("Découvrez notre programme en anglais à partir de l'école primaire >>"); ?>
+<?php echo translateString("Découvrez notre programme en anglais >>"); ?>
 </a>
 <a href="#" id="cancel_ib_banner">+</a>
 <div class="shield_background"></div>
